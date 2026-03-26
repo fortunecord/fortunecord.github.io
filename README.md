@@ -1,5 +1,7 @@
 # fortunecord.github.io
 Your guardian stars, woven into a thread of fortune. 「将你的守护之星，织入命运之绳。」
+Dan, the Star Coin Alchemist and Astrological Alchemist.
+https://fortunecord.wordpress.com/
 “FortuneCord图文20260325”作品文件云盘备份（任选其一）：
 链接：https://pan.baidu.com/s/1Hq3CTUvtiQyvBuofIX8ltQ?pwd=qxf6  提取码: qxf6 
 链接：https://share.weiyun.com/9QxKsPU4
