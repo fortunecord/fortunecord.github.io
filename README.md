@@ -8,6 +8,7 @@ Dan, the Star Coin Alchemist and Astrological Alchemist.
 ### 2026年3月25日批次
 - ZIP文件：`FortuneCord图文20260325.zip`
 - OTS证明：`FortuneCord图文20260325.zip.ots`
+
 云盘备份（任选其一）：
 链接：https://pan.baidu.com/s/1Hq3CTUvtiQyvBuofIX8ltQ?pwd=qxf6  提取码: qxf6 
 链接：https://share.weiyun.com/9QxKsPU4
