@@ -24,6 +24,8 @@ Notice:
 
 This work is protected by copyright. Unauthorized commercial use or trademark registration is prohibited without the author’s written permission.
 
+
 For licensing inquiries, please contact:
 
-Sealofwealth (at) outlook.com    or    Fortunecord (at) qq.com
+Sealofwealth (at) outlook.com   or    
+Fortunecord (at) qq.com
