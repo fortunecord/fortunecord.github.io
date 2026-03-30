@@ -27,5 +27,7 @@ This work is protected by copyright. Unauthorized commercial use or trademark re
 
 For licensing inquiries, please contact:
 
-Sealofwealth (at) outlook.com   or    
-Fortunecord (at) qq.com
+Sealofwealth [at] outlook [dot] com
+Fortunecord [at] qq [dot] com
+
+(Please replace [at] with @ and [dot] with .)
