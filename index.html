@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>FortuneCord | Alchemist's Line Art</title>
+    <title>FortuneCord | 炼金术士的线稿世界</title>
     <style>
         * {
             margin: 0;
@@ -56,7 +56,7 @@
             font-weight: 600;
             letter-spacing: -0.5px;
             margin-bottom: 0.5rem;
-            color: #b8860b;   /* 金色大标题 */
+            color: #cb094b;  /* 玫红色 */
         }
 
         .tagline {
@@ -76,15 +76,52 @@
             color: #2c3e50;
         }
 
-        /* GIF 展示区 */
-        .gif-wrapper {
+        /* 新增视觉系统介绍区域 */
+        .system-intro {
             text-align: center;
             margin: 2rem 0;
+            padding: 1.5rem;
+            background: #f5f3ef;
+            border-radius: 32px;
         }
-        .gif-wrapper img {
-            max-width: 100%;
+        .system-intro h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #b8860b;
+        }
+        .system-intro p {
+            margin-bottom: 0.5rem;
+        }
+        .system-intro .note {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: #555;
+            border-top: 1px dashed #ccc;
+            padding-top: 1rem;
+        }
+
+        /* GIF 动图展示区 */
+        .gif-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        .gif-item {
+            text-align: center;
+            max-width: 300px;
+        }
+        .gif-item img {
+            width: 100%;
             border-radius: 20px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .gif-caption {
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #2c3e50;
         }
 
         .gallery {
@@ -122,7 +159,7 @@
         }
 
         p {
-            margin-bottom: 1em;  /* 段落空行 */
+            margin-bottom: 1em;
         }
 
         .contact {
@@ -182,12 +219,35 @@
             <div class="logo">✨ FortuneCord</div>
             <div class="tagline">将你的守护之星，织入命运之绳</div>
         </div>
-        <div class="author">丹 · 星币炼金术士 · 星象炼金术士</div>
 
-        <!-- GIF 动图展示区（请替换为你的 GIF 地址） -->
-        <div class="gif-wrapper">
-            <img src="你的gif图片地址.gif" alt="作品动图展示">
+        <!-- 视觉系统介绍 -->
+        <div class="system-intro">
+            <h2>“财绳”视觉系统</h2>
+            <p>以“绳串币”为语言体系转译：<br>
+            太极 · 八卦 · 河图洛书<br>
+            星宿 · 星座 · 其他星象</p>
+            <p>币形：<br>
+            花卉星币 · 水果星币<br>
+            毛绒星币 · 宝石星币</p>
+            <p class="note">本视频为作品合集展示<br>
+            每幅作品均为黑白线稿<br>
+            以线条与构图为唯一表达<br>
+            不设色彩，意在回归结构本身</p>
         </div>
+
+        <!-- 动图区（示例，请替换为你的 GIF 路径） -->
+        <div class="gif-gallery">
+            <div class="gif-item">
+                <img src="assets/动图1.gif" alt="财绳概念图">
+                <p class="gif-caption">财绳 · 币串</p>
+            </div>
+            <div class="gif-item">
+                <img src="assets/动图2.gif" alt="太极绳币">
+                <p class="gif-caption">太极绳币</p>
+            </div>
+        </div>
+
+        <div class="author">丹 · 星币炼金术士 · 星象炼金术士</div>
 
         <div class="intro-text">
             <p>我是一名炼金术士。我的工作，是看清炼金的本相。</p>
@@ -203,10 +263,10 @@
             <div class="section-title">✨ 作品精选</div>
             <div class="grid">
                 <!-- 请替换为你的实际图片链接 -->
-                <img src="https://via.placeholder.com/400x400?text=Work+1" alt="作品1">
-                <img src="https://via.placeholder.com/400x400?text=Work+2" alt="作品2">
-                <img src="https://via.placeholder.com/400x400?text=Work+3" alt="作品3">
-                <img src="https://via.placeholder.com/400x400?text=Work+4" alt="作品4">
+                <img src="assets/作品1.jpg" alt="作品1">
+                <img src="assets/作品2.jpg" alt="作品2">
+                <img src="assets/作品3.jpg" alt="作品3">
+                <img src="assets/作品4.jpg" alt="作品4">
             </div>
         </div>
 
@@ -222,12 +282,33 @@
             <div class="logo">✨ FortuneCord</div>
             <div class="tagline">Weave your guardian stars into a thread of fortune.</div>
         </div>
-        <div class="author">Dan, the Star Coin Alchemist and Astrological Alchemist</div>
 
-        <!-- GIF 动图展示区（请替换为你的 GIF 地址） -->
-        <div class="gif-wrapper">
-            <img src="你的gif图片地址.gif" alt="Artwork GIF">
+        <div class="system-intro">
+            <h2>“Fortune String” Visual System</h2>
+            <p>Translated through the language of “string through coin”:<br>
+            Taiji · Bagua · He Tu Luo Shu<br>
+            Constellations · Zodiac · Other Astral Signs</p>
+            <p>Coin shapes:<br>
+            Floral Star Coin · Fruit Star Coin<br>
+            Plush Star Coin · Gem Star Coin</p>
+            <p class="note">This video is a collection showcase.<br>
+            Each piece is black-and-white line art.<br>
+            Using lines and composition as the sole expression.<br>
+            No color, intended to return to the structure itself.</p>
         </div>
+
+        <div class="gif-gallery">
+            <div class="gif-item">
+                <img src="assets/动图1.gif" alt="Fortune String Concept">
+                <p class="gif-caption">Fortune String · Coin String</p>
+            </div>
+            <div class="gif-item">
+                <img src="assets/动图2.gif" alt="Taiji Coin String">
+                <p class="gif-caption">Taiji Coin String</p>
+            </div>
+        </div>
+
+        <div class="author">Dan, the Star Coin Alchemist and Astrological Alchemist</div>
 
         <div class="intro-text">
             <p>I am an alchemist. Not the kind that refines gold—I refine meaning.</p>
@@ -242,11 +323,10 @@
         <div class="gallery">
             <div class="section-title">✨ Selected Works</div>
             <div class="grid">
-                <!-- 请替换为你的实际图片链接 -->
-                <img src="https://via.placeholder.com/400x400?text=Work+1" alt="Work 1">
-                <img src="https://via.placeholder.com/400x400?text=Work+2" alt="Work 2">
-                <img src="https://via.placeholder.com/400x400?text=Work+3" alt="Work 3">
-                <img src="https://via.placeholder.com/400x400?text=Work+4" alt="Work 4">
+                <img src="assets/作品1.jpg" alt="Work 1">
+                <img src="assets/作品2.jpg" alt="Work 2">
+                <img src="assets/作品3.jpg" alt="Work 3">
+                <img src="assets/作品4.jpg" alt="Work 4">
             </div>
         </div>
 
