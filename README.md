@@ -35,15 +35,14 @@ c5de08b725056adc1bc12fe53a8b8c079aaad668a6b169763020fe5edccc4674
 
 
 
-Notice: 
+**Notice:** This work is protected by copyright.
 
-This work is protected by copyright. Unauthorized commercial use or trademark registration is prohibited without the author’s written permission.
+Interested in applying the Fortune Cord visual system to your own reinterpretations of Taiji, Zodiac, or astral symbols? We welcome inquiries regarding collaboration or licensing.
 
-
-For licensing inquiries, please contact:
-
-Sealofwealth [at] outlook [dot] com  or
-
-Fortunecord [at] qq [dot] com
+**Contact:**
+- fortunecord [at] qq [dot] com
+- Sealofwealth [at] outlook [dot] com
 
 (Please replace [at] with @ and [dot] with .)
+
+**Website:** [fortunecord.com](https://fortunecord.com)
