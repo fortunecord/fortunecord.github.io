@@ -33,8 +33,15 @@ c5de08b725056adc1bc12fe53a8b8c079aaad668a6b169763020fe5edccc4674
 - 云盘备份：https://share.weiyun.com/tFNMtUzg
 - SHA-256哈希：82066ea3b593a7b219de7692e079e32dbe76356d416cb076b08ad0fee4b351ed
 
+---
+### 2026年4月8日批次
+- ZIP文件：环球星币版星象_无孔草稿1.zip
+- OTS证明：环球星币版星象_无孔草稿1.zip.ots 
+- 云盘备份：https://share.weiyun.com/5eK4DMJg
+- SHA-256哈希：2f007f0f946ecf70c9f6c1ec17498c7b389b1f169106b0f2fd6daba8f80920f0
 
 
+---
 **Notice:** This work is protected by copyright.
 
 Interested in applying the Fortune Cord visual system to your own reinterpretations of Taiji, Zodiac, or astral symbols? We welcome inquiries regarding collaboration or licensing.
