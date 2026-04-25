@@ -40,6 +40,12 @@ SHA-256：c5de08b725056adc1bc12fe53a8b8c079aaad668a6b169763020fe5edccc4674
 - SHA-256：2f007f0f946ecf70c9f6c1ec17498c7b389b1f169106b0f2fd6daba8f80920f0
 
 ---
+### Batch: April 19, 2026 
+- Video file: fortune_cord_starry_night_video_clip_20260419.mp4
+- OTS proof: fortune_cord_starry_night_video_clip_20260419.mp4.ots  
+- SHA256: d080ac0a794df6944d596cf145970cfa2a57ed921a8a4549b950fa6c50d0f07e
+
+---
 ### Batch: April 25, 2026
 - PDF file：fortune-cord-visual-system-manual-v1.0.pdf 
 - OTS proof：fortune-cord-visual-system-manual-v1.0.pdf.ots
