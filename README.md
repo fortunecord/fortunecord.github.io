@@ -1,5 +1,5 @@
 # fortunecord.github.io
-Your guardian stars, woven into a thread of fortune. 「将你的守护之星，织入命运之绳。」
+Explore Star Coin Ceiling Art by FortuneCord – original black and white line art for car starlight headliners, building ceilings, and celestial interior design. 「星币·星空顶艺术 – 原创黑白线稿，适用于汽车星空顶、建筑吊顶、奢华内饰。」
 
 Dan, the Star Coin Alchemist and Astrological Alchemist.
 
