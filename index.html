@@ -21,7 +21,6 @@
             padding: 0;
             box-sizing: border-box;
         }
-
         body {
             font-family: system-ui, -apple-system, 'Segoe UI', 'Roboto', '思源黑体', 'Noto Sans', sans-serif;
             background: #fefefe;
@@ -29,17 +28,14 @@
             line-height: 1.5;
             padding: 2rem 1rem;
         }
-
         .container {
             max-width: 1100px;
             margin: 0 auto;
         }
-
         .lang-switch {
             text-align: right;
             margin-bottom: 2rem;
         }
-
         .lang-btn {
             background: none;
             border: 1px solid #ccc;
@@ -50,18 +46,15 @@
             background: #fff;
             transition: all 0.2s;
         }
-
         .lang-btn.active {
             background: #1a1a1a;
             color: white;
             border-color: #1a1a1a;
         }
-
         .hero {
             text-align: center;
             margin-bottom: 3rem;
         }
-
         .logo {
             font-size: 2.8rem;
             font-weight: 600;
@@ -69,7 +62,6 @@
             margin-bottom: 0.5rem;
             color: #b8a310;
         }
-
         .tagline {
             font-size: 1rem;
             color: #555;
@@ -79,20 +71,17 @@
             padding: 0.5rem 0;
             margin-top: 0.5rem;
         }
-        
         .subtitle-en {
             font-size: 1.2rem;
             color: #747474;
             margin-top: 0.2rem;
         }
-
         .author {
             text-align: center;
             margin: 2rem 0;
             font-size: 1rem;
             color: #2c3e50;
         }
-
         .system-intro {
             text-align: center;
             margin: 2rem 0;
@@ -108,28 +97,23 @@
         .system-intro p {
             margin-bottom: 0.5rem;
         }
-
         .gallery {
             margin: 3rem 0;
         }
-
         .section-title {
             font-size: 1.5rem;
             font-weight: 500;
             margin-bottom: 1.5rem;
             text-align: center;
         }
-
         .grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 1.5rem;
         }
-
         .grid-item {
             text-align: center;
         }
-
         .grid-item img {
             width: 100%;
             height: auto;
@@ -140,11 +124,9 @@
             display: block;
             object-fit: contain;
         }
-
         .grid-item img:hover {
             transform: scale(1.02);
         }
-
         .image-caption {
             margin-top: 0.6rem;
             font-size: 0.85rem;
@@ -155,16 +137,13 @@
             align-items: center;
             justify-content: center;
         }
-
         .intro-text {
             margin: 2rem 0;
             line-height: 1.6;
         }
-
         p {
             margin-bottom: 1em;
         }
-
         .contact {
             text-align: center;
             margin: 3rem 0;
@@ -172,13 +151,11 @@
             background: #f8f8f8;
             border-radius: 32px;
         }
-
         .contact a {
             color: #1a1a1a;
             text-decoration: none;
             border-bottom: 1px dotted #888;
         }
-
         footer {
             text-align: center;
             margin-top: 4rem;
@@ -187,19 +164,16 @@
             font-size: 0.85rem;
             color: #777;
         }
-
         footer a {
             color: #555;
             text-decoration: none;
         }
-
         @media (max-width: 900px) {
             .grid {
                 grid-template-columns: 1fr;
                 gap: 1.8rem;
             }
         }
-
         @media (max-width: 640px) {
             body {
                 padding: 1rem;
@@ -214,7 +188,6 @@
                 font-size: 1.5rem;
             }
         }
-
         .modal {
             display: none;
             position: fixed;
@@ -280,6 +253,9 @@
             <p>币形：<br>
             方孔圆币 · 心形星币 · 环球星币 · 元宝星币<br>
             花卉星币 · 水果星币 · 毛茸星币 · 宝石星币</p>
+            <div style="text-align:center; margin-top: 1rem;">
+                <a href="/symbols.html" style="display:inline-block; background:#f0f0f0; padding:6px 16px; border-radius:30px; text-decoration:none; color:#b8a310; border:1px solid #e0e0e0; font-size:0.9rem;">📖 符号释义 →</a>
+            </div>
         </div>
         
         <div class="video-wrapper" style="text-align: center; margin-bottom: 2rem; max-width: 800px; margin-left: auto; margin-right: auto;">
@@ -323,23 +299,23 @@
                     <div class="image-caption">无耳毛茸 · 蜷缩兽背 · 直线尾</div>
                 </div>
                 <div class="grid-item">
-                    <img loading="lazy" src="https://raw.githubusercontent.com/fortunecord/fortunecord-artworks/main/6-big-dipper-collection/3-fortune-cord-big-dipper-seven-pets-v1.0-1.8/v1.1-two-eared-beast-front-back/coin-cord-big-dipper-coins-fluffy-tail.jpg" alt="北斗二耳兽币" onclick="openModal(this)">
+                    <img loading="lazy" src="https://fortunecord.github.io/fortunecord-artworks/6-big-dipper-collection/3-fortune-cord-big-dipper-seven-pets-v1.0-1.8/v1.1-two-eared-beast-front-back/coin-cord-big-dipper-coins-fluffy-tail.jpg" alt="北斗二耳兽币" onclick="openModal(this)">
                     <div class="image-caption">北斗二耳兽币</div>
                 </div>
                 <div class="grid-item">
-                    <img loading="lazy" src="https://raw.githubusercontent.com/fortunecord/fortunecord-artworks/main/6-big-dipper-collection/3-fortune-cord-big-dipper-seven-pets-v1.0-1.8/v1.4-earless-single-ear-beast-back/fortune-cord-big-dipper-7-coins-back-single-ear-furry-straight-thin-tail.jpg" alt="单耳毛茸_北斗七币_方形口袋" onclick="openModal(this)">
+                    <img loading="lazy" src="https://fortunecord.github.io/fortunecord-artworks/6-big-dipper-collection/3-fortune-cord-big-dipper-seven-pets-v1.0-1.8/v1.4-earless-single-ear-beast-back/fortune-cord-big-dipper-7-coins-back-single-ear-furry-straight-thin-tail.jpg" alt="单耳毛茸_北斗七币_方形口袋" onclick="openModal(this)">
                     <div class="image-caption">单耳毛茸 · 北斗七币 · 方形口袋</div>
                 </div>
                 <div class="grid-item">
-                    <img loading="lazy" src="https://raw.githubusercontent.com/fortunecord/fortunecord-artworks/main/6-big-dipper-collection/3-fortune-cord-big-dipper-seven-pets-v1.0-1.8/v1.5-pomeranian-samoyed-prick-ear/fortune-cord-big-dipper-7-samoyed-star-coins-furry-coiled-cord-tail.jpg" alt="北斗七萨摩耶卷尾币" onclick="openModal(this)">
+                    <img loading="lazy" src="https://fortunecord.github.io/fortunecord-artworks/6-big-dipper-collection/3-fortune-cord-big-dipper-seven-pets-v1.0-1.8/v1.5-pomeranian-samoyed-prick-ear/fortune-cord-big-dipper-7-samoyed-star-coins-furry-coiled-cord-tail.jpg" alt="北斗七萨摩耶卷尾币" onclick="openModal(this)">
                     <div class="image-caption">北斗七萨摩耶 · 卷尾币</div>
                 </div>
                 <div class="grid-item">
-                    <img loading="lazy" src="https://raw.githubusercontent.com/fortunecord/fortunecord-artworks/main/6-big-dipper-collection/3-fortune-cord-big-dipper-seven-pets-v1.0-1.8/v1.5-pomeranian-samoyed-prick-ear/fortune-cord-big-dipper-7-pomeranian-star-coins-furry-straight-thin-tail.jpg" alt="北斗七博美犬币" onclick="openModal(this)">
+                    <img loading="lazy" src="https://fortunecord.github.io/fortunecord-artworks/6-big-dipper-collection/3-fortune-cord-big-dipper-seven-pets-v1.0-1.8/v1.5-pomeranian-samoyed-prick-ear/fortune-cord-big-dipper-7-pomeranian-star-coins-furry-straight-thin-tail.jpg" alt="北斗七博美犬币" onclick="openModal(this)">
                     <div class="image-caption">北斗七博美犬币</div>
                 </div>
                 <div class="grid-item">
-                    <img loading="lazy" src="https://raw.githubusercontent.com/fortunecord/fortunecord-artworks/main/7-little-dipper-collection/5-gemstone-star-coin-ursa-minor/fortune-cord-little-dipper-7-gem-4-star-coin-2.jpg" alt="小熊座小北斗七宝石星币" onclick="openModal(this)">
+                    <img loading="lazy" src="https://fortunecord.github.io/fortunecord-artworks/7-little-dipper-collection/5-gemstone-star-coin-ursa-minor/fortune-cord-little-dipper-7-gem-4-star-coin-2.jpg" alt="小熊座小北斗七宝石星币" onclick="openModal(this)">
                     <div class="image-caption">小熊座 · 小北斗七宝石星币</div>
                 </div>
                 <div class="grid-item">
@@ -357,7 +333,6 @@
             </div>
         </div>
 
-        <!-- 修复：删除多余的 div，并确保简体内容正确 -->
         <div class="intro-text">
             <p>我是一名炼金术士。我的工作，是看清炼金的本相。</p>
             <p>铜钱的本相，是圆和方。圆，是出去还能回来；方，是赚多少、留多少，心里有数。绳的本相，是连接。把散着的串起来，把断着的接起来。线，是绳的影子，是它安静时候的样子。炼金术士的工作，就是把这些本相，一点一点画出来。</p>
@@ -391,6 +366,9 @@
             <p>幣形：<br>
             方孔圓幣 · 心形星幣 · 環球星幣 · 元寶星幣<br>
             花卉星幣 · 水果星幣 · 毛茸星幣 · 寶石星幣</p>
+            <div style="text-align:center; margin-top: 1rem;">
+                <a href="/symbols.html" style="display:inline-block; background:#f0f0f0; padding:6px 16px; border-radius:30px; text-decoration:none; color:#b8a310; border:1px solid #e0e0e0; font-size:0.9rem;">📖 符號釋義 →</a>
+            </div>
         </div>
         
         <div class="video-wrapper" style="text-align: center; margin-bottom: 2rem; max-width: 800px; margin-left: auto; margin-right: auto;">
@@ -434,23 +412,23 @@
                     <div class="image-caption">無耳毛茸 · 蜷縮獸背 · 直線尾</div>
                 </div>
                 <div class="grid-item">
-                    <img loading="lazy" src="https://raw.githubusercontent.com/fortunecord/fortunecord-artworks/main/6-big-dipper-collection/3-fortune-cord-big-dipper-seven-pets-v1.0-1.8/v1.1-two-eared-beast-front-back/coin-cord-big-dipper-coins-fluffy-tail.jpg" alt="北斗二耳獸幣" onclick="openModal(this)">
+                    <img loading="lazy" src="https://fortunecord.github.io/fortunecord-artworks/6-big-dipper-collection/3-fortune-cord-big-dipper-seven-pets-v1.0-1.8/v1.1-two-eared-beast-front-back/coin-cord-big-dipper-coins-fluffy-tail.jpg" alt="北斗二耳獸幣" onclick="openModal(this)">
                     <div class="image-caption">北斗二耳獸幣</div>
                 </div>
                 <div class="grid-item">
-                    <img loading="lazy" src="https://raw.githubusercontent.com/fortunecord/fortunecord-artworks/main/6-big-dipper-collection/3-fortune-cord-big-dipper-seven-pets-v1.0-1.8/v1.4-earless-single-ear-beast-back/fortune-cord-big-dipper-7-coins-back-single-ear-furry-straight-thin-tail.jpg" alt="單耳毛茸_北斗七幣_方形口袋" onclick="openModal(this)">
+                    <img loading="lazy" src="https://fortunecord.github.io/fortunecord-artworks/6-big-dipper-collection/3-fortune-cord-big-dipper-seven-pets-v1.0-1.8/v1.4-earless-single-ear-beast-back/fortune-cord-big-dipper-7-coins-back-single-ear-furry-straight-thin-tail.jpg" alt="單耳毛茸_北斗七幣_方形口袋" onclick="openModal(this)">
                     <div class="image-caption">單耳毛茸 · 北斗七幣 · 方形口袋</div>
                 </div>
                 <div class="grid-item">
-                    <img loading="lazy" src="https://raw.githubusercontent.com/fortunecord/fortunecord-artworks/main/6-big-dipper-collection/3-fortune-cord-big-dipper-seven-pets-v1.0-1.8/v1.5-pomeranian-samoyed-prick-ear/fortune-cord-big-dipper-7-samoyed-star-coins-furry-coiled-cord-tail.jpg" alt="北斗七薩摩耶捲尾幣" onclick="openModal(this)">
+                    <img loading="lazy" src="https://fortunecord.github.io/fortunecord-artworks/6-big-dipper-collection/3-fortune-cord-big-dipper-seven-pets-v1.0-1.8/v1.5-pomeranian-samoyed-prick-ear/fortune-cord-big-dipper-7-samoyed-star-coins-furry-coiled-cord-tail.jpg" alt="北斗七薩摩耶捲尾幣" onclick="openModal(this)">
                     <div class="image-caption">北斗七薩摩耶 · 捲尾幣</div>
                 </div>
                 <div class="grid-item">
-                    <img loading="lazy" src="https://raw.githubusercontent.com/fortunecord/fortunecord-artworks/main/6-big-dipper-collection/3-fortune-cord-big-dipper-seven-pets-v1.0-1.8/v1.5-pomeranian-samoyed-prick-ear/fortune-cord-big-dipper-7-pomeranian-star-coins-furry-straight-thin-tail.jpg" alt="北斗七博美犬幣" onclick="openModal(this)">
+                    <img loading="lazy" src="https://fortunecord.github.io/fortunecord-artworks/6-big-dipper-collection/3-fortune-cord-big-dipper-seven-pets-v1.0-1.8/v1.5-pomeranian-samoyed-prick-ear/fortune-cord-big-dipper-7-pomeranian-star-coins-furry-straight-thin-tail.jpg" alt="北斗七博美犬幣" onclick="openModal(this)">
                     <div class="image-caption">北斗七博美犬幣</div>
                 </div>
                 <div class="grid-item">
-                    <img loading="lazy" src="https://raw.githubusercontent.com/fortunecord/fortunecord-artworks/main/7-little-dipper-collection/5-gemstone-star-coin-ursa-minor/fortune-cord-little-dipper-7-gem-4-star-coin-2.jpg" alt="小熊座小北斗七寶石星幣" onclick="openModal(this)">
+                    <img loading="lazy" src="https://fortunecord.github.io/fortunecord-artworks/7-little-dipper-collection/5-gemstone-star-coin-ursa-minor/fortune-cord-little-dipper-7-gem-4-star-coin-2.jpg" alt="小熊座小北斗七寶石星幣" onclick="openModal(this)">
                     <div class="image-caption">小熊座 · 小北斗七寶石星幣</div>
                 </div>
                 <div class="grid-item">
@@ -502,6 +480,9 @@
           <p>Coin shapes:<br>
           Currency Coin · Heart Star Coin · Global Star Coin · Sycee Ingot<br>
           Floral Star Coin · Fruit Star Coin · Furry Star Coin · Gem Star Coin</p>
+          <div style="text-align:center; margin-top: 1rem;">
+              <a href="/symbols.html" style="display:inline-block; background:#f0f0f0; padding:6px 16px; border-radius:30px; text-decoration:none; color:#b8a310; border:1px solid #e0e0e0; font-size:0.9rem;">📖 Symbolism →</a>
+          </div>
         </div>
         
         <div class="video-wrapper" style="text-align: center; margin-bottom: 2rem; max-width: 800px; margin-left: auto; margin-right: auto;">
@@ -545,23 +526,23 @@
                     <div class="image-caption">Earless Furry · Curled Beast Back · Square Pocket</div>
                 </div>
                 <div class="grid-item">
-                    <img loading="lazy" src="https://raw.githubusercontent.com/fortunecord/fortunecord-artworks/main/6-big-dipper-collection/3-fortune-cord-big-dipper-seven-pets-v1.0-1.8/v1.1-two-eared-beast-front-back/coin-cord-big-dipper-coins-fluffy-tail.jpg" alt="Big Dipper Two-Eared Beast Coins" onclick="openModal(this)">
+                    <img loading="lazy" src="https://fortunecord.github.io/fortunecord-artworks/6-big-dipper-collection/3-fortune-cord-big-dipper-seven-pets-v1.0-1.8/v1.1-two-eared-beast-front-back/coin-cord-big-dipper-coins-fluffy-tail.jpg" alt="Big Dipper Two-Eared Beast Coins" onclick="openModal(this)">
                     <div class="image-caption">Big Dipper Two-Eared Beast Coins</div>
                 </div>
                 <div class="grid-item">
-                    <img loading="lazy" src="https://raw.githubusercontent.com/fortunecord/fortunecord-artworks/main/6-big-dipper-collection/3-fortune-cord-big-dipper-seven-pets-v1.0-1.8/v1.4-earless-single-ear-beast-back/fortune-cord-big-dipper-7-coins-back-single-ear-furry-straight-thin-tail.jpg" alt="Single-Eared Furry · Big Dipper Seven Coins · Square Pocket" onclick="openModal(this)">
+                    <img loading="lazy" src="https://fortunecord.github.io/fortunecord-artworks/6-big-dipper-collection/3-fortune-cord-big-dipper-seven-pets-v1.0-1.8/v1.4-earless-single-ear-beast-back/fortune-cord-big-dipper-7-coins-back-single-ear-furry-straight-thin-tail.jpg" alt="Single-Eared Furry · Big Dipper Seven Coins · Square Pocket" onclick="openModal(this)">
                     <div class="image-caption">Single-Eared Furry · Big Dipper · Square Pocket</div>
                 </div>
                 <div class="grid-item">
-                    <img loading="lazy" src="https://raw.githubusercontent.com/fortunecord/fortunecord-artworks/main/6-big-dipper-collection/3-fortune-cord-big-dipper-seven-pets-v1.0-1.8/v1.5-pomeranian-samoyed-prick-ear/fortune-cord-big-dipper-7-samoyed-star-coins-furry-coiled-cord-tail.jpg" alt="Big Dipper Seven Samoyed Dog Coiled Cord Tail" onclick="openModal(this)">
+                    <img loading="lazy" src="https://fortunecord.github.io/fortunecord-artworks/6-big-dipper-collection/3-fortune-cord-big-dipper-seven-pets-v1.0-1.8/v1.5-pomeranian-samoyed-prick-ear/fortune-cord-big-dipper-7-samoyed-star-coins-furry-coiled-cord-tail.jpg" alt="Big Dipper Seven Samoyed Dog Coiled Cord Tail" onclick="openModal(this)">
                     <div class="image-caption">Big Dipper Seven Samoyed Dog Coiled Tail Coin</div>
                 </div>
                 <div class="grid-item">
-                    <img loading="lazy" src="https://raw.githubusercontent.com/fortunecord/fortunecord-artworks/main/6-big-dipper-collection/3-fortune-cord-big-dipper-seven-pets-v1.0-1.8/v1.5-pomeranian-samoyed-prick-ear/fortune-cord-big-dipper-7-pomeranian-star-coins-furry-straight-thin-tail.jpg" alt="Big Dipper Seven Pomeranian Dog Coins" onclick="openModal(this)">
+                    <img loading="lazy" src="https://fortunecord.github.io/fortunecord-artworks/6-big-dipper-collection/3-fortune-cord-big-dipper-seven-pets-v1.0-1.8/v1.5-pomeranian-samoyed-prick-ear/fortune-cord-big-dipper-7-pomeranian-star-coins-furry-straight-thin-tail.jpg" alt="Big Dipper Seven Pomeranian Dog Coins" onclick="openModal(this)">
                     <div class="image-caption">Big Dipper Seven Pomeranian Dog Coins</div>
                 </div>
                 <div class="grid-item">
-                    <img loading="lazy" src="https://raw.githubusercontent.com/fortunecord/fortunecord-artworks/main/7-little-dipper-collection/5-gemstone-star-coin-ursa-minor/fortune-cord-little-dipper-7-gem-4-star-coin-2.jpg" alt="Ursa Minor Little Dipper Seven Gem Star Coins" onclick="openModal(this)">
+                    <img loading="lazy" src="https://fortunecord.github.io/fortunecord-artworks/7-little-dipper-collection/5-gemstone-star-coin-ursa-minor/fortune-cord-little-dipper-7-gem-4-star-coin-2.jpg" alt="Ursa Minor Little Dipper Seven Gem Star Coins" onclick="openModal(this)">
                     <div class="image-caption">Ursa Minor · Little Dipper Gem Coins</div>
                 </div>
                 <div class="grid-item">
