@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>FortuneCord - Star Coin Ceiling Art | Alchemist's Coin & Cord Zodiac Line Art</title>
+    <title>FortuneCord – Star Coin Ceiling Art | Alchemist's Coin & Cord Zodiac Line Art</title>
     <meta name="description" content="Star Coin Ceiling Art – original line art for car starlight headliners, architectural ceilings, interiors. Big Dipper 7 Coins, 7 Cats, 7 Dogs.">
     <link rel="canonical" href="https://fortunecord.com/">
     <link rel="alternate" hreflang="en" href="https://fortunecord.com/">
@@ -23,14 +23,36 @@
         }
         body {
             font-family: system-ui, -apple-system, 'Segoe UI', 'Roboto', '思源黑体', 'Noto Sans', sans-serif;
-            background: #0f0f0f;
+            background: #0a1128; /* 深蓝底色 */
             color: #e0e0e0;
             line-height: 1.5;
             padding: 2rem max(1rem, env(safe-area-inset-right)) 2rem max(1rem, env(safe-area-inset-left));
+            position: relative;
+        }
+        /* 星空效果 */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            background-image: 
+                radial-gradient(2px 2px at 15% 30%, #fff, rgba(0,0,0,0)),
+                radial-gradient(1px 1px at 75% 20%, #ffd, rgba(0,0,0,0)),
+                radial-gradient(1.5px 1.5px at 40% 70%, #f0f0f0, rgba(0,0,0,0)),
+                radial-gradient(2px 2px at 95% 85%, #fff, rgba(0,0,0,0)),
+                radial-gradient(1px 1px at 5% 50%, #ffd, rgba(0,0,0,0));
+            background-size: 200px 200px, 300px 300px, 250px 250px, 350px 350px, 180px 180px;
+            background-repeat: no-repeat;
+            opacity: 0.4;
         }
         .container {
             max-width: 1100px;
             margin: 0 auto;
+            position: relative;
+            z-index: 1;
         }
         .lang-switch {
             text-align: right;
@@ -46,6 +68,8 @@
             background: #1a1a1a;
             color: #ddd;
             transition: all 0.2s;
+            text-decoration: none;
+            display: inline-block;
         }
         .lang-btn.active {
             background: #b8a310;
@@ -102,8 +126,9 @@
             text-align: center;
             margin: 2rem 0;
             padding: 1.5rem;
-            background: #1a1a1a;
+            background: rgba(26,26,26,0.8);
             border-radius: 32px;
+            backdrop-filter: blur(4px);
         }
         .system-intro h2 {
             font-size: 1.5rem;
@@ -131,6 +156,9 @@
         }
         .grid-item {
             text-align: center;
+            background: rgba(184, 163, 16, 0.12); /* 金色半透明底，增强线条质感 */
+            border-radius: 16px;
+            padding: 0.5rem;
         }
         .grid-item img {
             width: 100%;
@@ -141,8 +169,9 @@
             box-shadow: 0 4px 12px rgba(0,0,0,0.3);
             display: block;
             object-fit: contain;
-            background: white;
-            padding: 0.5rem;
+            /* 关键：mix-blend-mode: multiply 让黑色线条加深背景，白色变透明，与金色底结合呈现暖金色线条 */
+            mix-blend-mode: multiply;
+            background: transparent;
         }
         .grid-item img:hover {
             transform: scale(1.02);
@@ -168,8 +197,9 @@
             text-align: center;
             margin: 3rem 0;
             padding: 2rem 1rem;
-            background: #1a1a1a;
+            background: rgba(26,26,26,0.8);
             border-radius: 32px;
+            backdrop-filter: blur(4px);
         }
         .contact a {
             color: #b8a310;
@@ -305,66 +335,66 @@
     <div class="gallery">
         <div class="section-title">Selected Works</div>
         <div class="grid">
-            <div class="grid-item">
-                <img loading="lazy" src="assets/coin-cord-big-dipper-seven-coins-chart.jpg" alt="Big Dipper Seven Coins Chart – Star Ceiling Art Design" onclick="openModal(this)">
+              <div class="grid-item">
+                <img loading="lazy" src="assets/coin-cord-big-dipper-seven-coins-chart.jpg" alt="Big Dipper Seven Coins Chart" onclick="openModal(this)">
                 <div class="image-caption">Big Dipper Seven Coins Chart</div>
-            </div>
-            <div class="grid-item">
-                <img loading="lazy" src="assets/sycee-yuanbao-ingot-big-dipper-seven-coins-chart.jpg" alt="Big Dipper Seven Yuanbao Chart – Star Ceiling Art Design" onclick="openModal(this)">
+              </div>
+              <div class="grid-item">
+                <img loading="lazy" src="assets/sycee-yuanbao-ingot-big-dipper-seven-coins-chart.jpg" alt="Big Dipper Seven Yuanbao Chart" onclick="openModal(this)">
                 <div class="image-caption">Big Dipper Seven Yuanbao Chart</div>
-            </div>
-            <div class="grid-item">
-                <img loading="lazy" src="assets/mulberry-fruit-star-coin-big-dipper-seven-coins-chart.jpg" alt="Mulberry Fruit Star Coin: Big Dipper Seven Coins Chart – Star Ceiling Art Design" onclick="openModal(this)">
+              </div>
+              <div class="grid-item">
+                <img loading="lazy" src="assets/mulberry-fruit-star-coin-big-dipper-seven-coins-chart.jpg" alt="Mulberry Fruit Star Coin: Big Dipper Seven Coins Chart" onclick="openModal(this)">
                 <div class="image-caption">Mulberry Fruit Star Coin · Big Dipper</div>
-            </div>
-            <div class="grid-item">
-                <img loading="lazy" src="assets/peony-flower-star-coin-big-dipper-seven-coins-chart.jpg" alt="Peony Flower Star Coin: Big Dipper Seven Coins Chart – Star Ceiling Art Design" onclick="openModal(this)">
+              </div>
+              <div class="grid-item">
+                <img loading="lazy" src="assets/peony-flower-star-coin-big-dipper-seven-coins-chart.jpg" alt="Peony Flower Star Coin: Big Dipper Seven Coins Chart" onclick="openModal(this)">
                 <div class="image-caption">Peony Flower Star Coin · Big Dipper</div>
-            </div>
-            <div class="grid-item">
-                <img loading="lazy" src="assets/watermelon-fruit-star-coin-big-dipper-seven-coins-chart.jpg" alt="Watermelon Fruit Star Coin: Big Dipper Seven Coins Chart – Star Ceiling Art Design" onclick="openModal(this)">
+              </div>
+              <div class="grid-item">
+                <img loading="lazy" src="assets/watermelon-fruit-star-coin-big-dipper-seven-coins-chart.jpg" alt="Watermelon Fruit Star Coin: Big Dipper Seven Coins Chart" onclick="openModal(this)">
                 <div class="image-caption">Watermelon Fruit Star Coin · Big Dipper</div>
-            </div>
-            <div class="grid-item">
-                <img loading="lazy" src="assets/big-dipper-seven-cats-chart.jpg" alt="Big Dipper Seven Cats: Big Dipper Seven Coins Chart – Star Ceiling Art Design" onclick="openModal(this)">
+              </div>
+              <div class="grid-item">
+                <img loading="lazy" src="assets/big-dipper-seven-cats-chart.jpg" alt="Big Dipper Seven Cats: Big Dipper Seven Coins Chart" onclick="openModal(this)">
                 <div class="image-caption">Big Dipper Seven Cats · Seven Coins Chart</div>
-            </div>
-            <div class="grid-item">
-                <img loading="lazy" src="assets/big-dipper-beast-back-earless-furry-straight-line-tail.jpg" alt="Earless Furry · Curled Beast Back · Square Pocket – Star Ceiling Art Design" onclick="openModal(this)">
+              </div>
+              <div class="grid-item">
+                <img loading="lazy" src="assets/big-dipper-beast-back-earless-furry-straight-line-tail.jpg" alt="Earless Furry · Curled Beast Back · Square Pocket" onclick="openModal(this)">
                 <div class="image-caption">Earless Furry · Curled Beast Back · Square Pocket</div>
-            </div>
-            <div class="grid-item">
-                <img loading="lazy" src="https://fortunecord.github.io/fortunecord-artworks/6-big-dipper-collection/3-fortune-cord-big-dipper-seven-pets-v1.0-1.8/v1.1-two-eared-beast-front-back/coin-cord-big-dipper-coins-fluffy-tail.jpg" alt="Big Dipper Two-Eared Beast Coins – Star Ceiling Art Design" onclick="openModal(this)">
+              </div>
+              <div class="grid-item">
+                <img loading="lazy" src="https://fortunecord.github.io/fortunecord-artworks/6-big-dipper-collection/3-fortune-cord-big-dipper-seven-pets-v1.0-1.8/v1.1-two-eared-beast-front-back/coin-cord-big-dipper-coins-fluffy-tail.jpg" alt="Big Dipper Two-Eared Beast Coins" onclick="openModal(this)">
                 <div class="image-caption">Big Dipper Two-Eared Beast Coins</div>
-            </div>
-            <div class="grid-item">
-                <img loading="lazy" src="https://fortunecord.github.io/fortunecord-artworks/6-big-dipper-collection/3-fortune-cord-big-dipper-seven-pets-v1.0-1.8/v1.4-earless-single-ear-beast-back/fortune-cord-big-dipper-7-coins-back-single-ear-furry-straight-thin-tail.jpg" alt="Single-Eared Furry · Big Dipper Seven Coins · Square Pocket – Star Ceiling Art Design" onclick="openModal(this)">
+              </div>
+              <div class="grid-item">
+                <img loading="lazy" src="https://fortunecord.github.io/fortunecord-artworks/6-big-dipper-collection/3-fortune-cord-big-dipper-seven-pets-v1.0-1.8/v1.4-earless-single-ear-beast-back/fortune-cord-big-dipper-7-coins-back-single-ear-furry-straight-thin-tail.jpg" alt="Single-Eared Furry · Big Dipper Seven Coins · Square Pocket" onclick="openModal(this)">
                 <div class="image-caption">Single-Eared Furry · Big Dipper · Square Pocket</div>
-            </div>
-            <div class="grid-item">
-                <img loading="lazy" src="https://fortunecord.github.io/fortunecord-artworks/6-big-dipper-collection/3-fortune-cord-big-dipper-seven-pets-v1.0-1.8/v1.5-pomeranian-samoyed-prick-ear/fortune-cord-big-dipper-7-samoyed-star-coins-furry-coiled-cord-tail.jpg" alt="Big Dipper Seven Samoyed Dog Coiled Cord Tail – Star Ceiling Art Design" onclick="openModal(this)">
+              </div>
+              <div class="grid-item">
+                <img loading="lazy" src="https://fortunecord.github.io/fortunecord-artworks/6-big-dipper-collection/3-fortune-cord-big-dipper-seven-pets-v1.0-1.8/v1.5-pomeranian-samoyed-prick-ear/fortune-cord-big-dipper-7-samoyed-star-coins-furry-coiled-cord-tail.jpg" alt="Big Dipper Seven Samoyed Dog Coiled Cord Tail" onclick="openModal(this)">
                 <div class="image-caption">Big Dipper Seven Samoyed Dog Coiled Tail Coin</div>
-            </div>
-            <div class="grid-item">
-                <img loading="lazy" src="https://fortunecord.github.io/fortunecord-artworks/6-big-dipper-collection/3-fortune-cord-big-dipper-seven-pets-v1.0-1.8/v1.5-pomeranian-samoyed-prick-ear/fortune-cord-big-dipper-7-pomeranian-star-coins-furry-straight-thin-tail.jpg" alt="Big Dipper Seven Pomeranian Dog Coins – Star Ceiling Art Design" onclick="openModal(this)">
+              </div>
+              <div class="grid-item">
+                <img loading="lazy" src="https://fortunecord.github.io/fortunecord-artworks/6-big-dipper-collection/3-fortune-cord-big-dipper-seven-pets-v1.0-1.8/v1.5-pomeranian-samoyed-prick-ear/fortune-cord-big-dipper-7-pomeranian-star-coins-furry-straight-thin-tail.jpg" alt="Big Dipper Seven Pomeranian Dog Coins" onclick="openModal(this)">
                 <div class="image-caption">Big Dipper Seven Pomeranian Dog Coins</div>
-            </div>
-            <div class="grid-item">
-                <img loading="lazy" src="https://fortunecord.github.io/fortunecord-artworks/7-little-dipper-collection/5-gemstone-star-coin-ursa-minor/fortune-cord-little-dipper-7-gem-4-star-coin-2.jpg" alt="Ursa Minor Little Dipper Seven Gem Star Coins – Star Ceiling Art Design" onclick="openModal(this)">
+              </div>
+              <div class="grid-item">
+                <img loading="lazy" src="https://fortunecord.github.io/fortunecord-artworks/7-little-dipper-collection/5-gemstone-star-coin-ursa-minor/fortune-cord-little-dipper-7-gem-4-star-coin-2.jpg" alt="Ursa Minor Little Dipper Seven Gem Star Coins" onclick="openModal(this)">
                 <div class="image-caption">Ursa Minor · Little Dipper Gem Coins</div>
-            </div>
-            <div class="grid-item">
-                <img loading="lazy" src="assets/carnation-star-coin-2-orion.jpg" alt="Carnation Star Coin: Orion – Star Ceiling Art Design" onclick="openModal(this)">
+              </div>
+              <div class="grid-item">
+                <img loading="lazy" src="assets/carnation-star-coin-2-orion.jpg" alt="Carnation Star Coin: Orion" onclick="openModal(this)">
                 <div class="image-caption">Carnation Star Coin · Orion</div>
-            </div>
-            <div class="grid-item">
-                <img loading="lazy" src="assets/plush-star-coin-cancer-star-chart-connection-line-10.jpg" alt="Furry Star Coin: Cancer Star Chart Connection Line – Star Ceiling Art Design" onclick="openModal(this)">
+              </div>
+              <div class="grid-item">
+                <img loading="lazy" src="assets/plush-star-coin-cancer-star-chart-connection-line-10.jpg" alt="Furry Star Coin: Cancer Star Chart Connection Line" onclick="openModal(this)">
                 <div class="image-caption">Furry Star Coin · Cancer Line</div>
-            </div>
-            <div class="grid-item">
-                <img loading="lazy" src="assets/yuanbao-pisces-zodiac-connection-diagram.jpg" alt="Yuanbao Pisces Zodiac Connection Diagram – Star Ceiling Art Design" onclick="openModal(this)">
+              </div>
+              <div class="grid-item">
+                <img loading="lazy" src="assets/yuanbao-pisces-zodiac-connection-diagram.jpg" alt="Yuanbao Pisces Zodiac Connection Diagram" onclick="openModal(this)">
                 <div class="image-caption">Yuanbao Pisces Zodiac Connection Diagram</div>
-            </div>
+              </div>
         </div>
     </div>
 
