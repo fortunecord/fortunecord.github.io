@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>FortuneCord – 星幣星空頂藝術 | 煉金術士的線稿世界</title>
+    <meta name="description" content="星幣星空頂藝術 – 原創黑白線稿，適用於汽車星空頂、建築吊頂、奢華內飾。北斗七幣、七貓、七狗系列。">
+    <link rel="canonical" href="https://fortunecord.com/zh-tw.html">
+    <link rel="alternate" hreflang="en" href="https://fortunecord.com/">
+    <link rel="alternate" hreflang="zh-CN" href="https://fortunecord.com/zh.html">
+    <link rel="alternate" hreflang="zh-TW" href="https://fortunecord.com/zh-tw.html">
+    <meta property="og:title" content="FortuneCord | 星幣系統">
+    <meta property="og:description" content="探索 FortuneCord 視覺系統，繩串幣重構古老符號與星圖。亮點包括北斗七幣、北斗七狗、北斗七貓。原創線稿 by 丹，星幣煉金術士。">
+    <meta property="og:image" content="https://raw.githubusercontent.com/fortunecord/fortunecord.github.io/main/assets/big-dipper-seven-cats-chart.jpg">
+    <meta property="og:url" content="https://fortunecord.com/zh-tw.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="robots" content="index, follow">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', 'Roboto', '思源黑體', 'Noto Sans', sans-serif;
+            background: #0f0f0f;
+            color: #e0e0e0;
+            line-height: 1.5;
+            padding: 2rem max(1rem, env(safe-area-inset-right)) 2rem max(1rem, env(safe-area-inset-left));
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .lang-switch {
+            text-align: right;
+            margin-bottom: 2rem;
+        }
+        .lang-btn {
+            background: none;
+            border: 1px solid #444;
+            padding: 0.4rem 1rem;
+            font-size: 0.9rem;
+            cursor: pointer;
+            border-radius: 30px;
+            background: #1a1a1a;
+            color: #ddd;
+            transition: all 0.2s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .lang-btn.active {
+            background: #b8a310;
+            color: #0f0f0f;
+            border-color: #b8a310;
+        }
+        .hero {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        .hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+        .hero-text {
+            text-align: left;
+        }
+        .logo-img {
+            max-width: 100%;
+            height: auto;
+            max-height: 100px;
+        }
+        .logo {
+            font-size: 2.8rem;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+            margin-bottom: 0.2rem;
+            color: #b8a310;
+        }
+        .tagline {
+            font-size: 1rem;
+            color: #aaa;
+            border-top: 1px solid #333;
+            border-bottom: 1px solid #333;
+            display: inline-block;
+            padding: 0.5rem 0;
+            margin-top: 0.5rem;
+        }
+        .subtitle-zh {
+            font-size: 1.2rem;
+            color: #aaa;
+            margin-top: 0.2rem;
+        }
+        .author {
+            text-align: center;
+            margin: 2rem 0;
+            font-size: 1rem;
+            color: #ccc;
+        }
+        .system-intro {
+            text-align: center;
+            margin: 2rem 0;
+            padding: 1.5rem;
+            background: #1a1a1a;
+            border-radius: 32px;
+        }
+        .system-intro h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #b8a310;
+        }
+        .system-intro p {
+            margin-bottom: 0.5rem;
+            color: #ccc;
+        }
+        .gallery {
+            margin: 3rem 0;
+        }
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            color: #b8a310;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+        .grid-item {
+            text-align: center;
+        }
+        .grid-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            transition: transform 0.2s ease;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            display: block;
+            object-fit: contain;
+            background: white;
+            padding: 0.5rem;
+        }
+        .grid-item img:hover {
+            transform: scale(1.02);
+        }
+        .image-caption {
+            margin-top: 0.6rem;
+            font-size: 0.85rem;
+            color: #aaa;
+            line-height: 1.4;
+            min-height: 2.4em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .intro-text {
+            margin: 2rem 0;
+            line-height: 1.6;
+        }
+        p {
+            margin-bottom: 1em;
+        }
+        .contact {
+            text-align: center;
+            margin: 3rem 0;
+            padding: 2rem 1rem;
+            background: #1a1a1a;
+            border-radius: 32px;
+        }
+        .contact a {
+            color: #b8a310;
+            text-decoration: none;
+            border-bottom: 1px dotted #555;
+        }
+        footer {
+            text-align: center;
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid #2a2a2a;
+            font-size: 0.85rem;
+            color: #888;
+        }
+        footer a {
+            color: #b8a310;
+            text-decoration: none;
+        }
+        @media (max-width: 900px) {
+            .grid {
+                grid-template-columns: 1fr;
+                gap: 1.8rem;
+            }
+        }
+        @media (max-width: 640px) {
+            body {
+                padding: 1rem;
+            }
+            .logo {
+                font-size: 2rem;
+            }
+            .tagline {
+                font-size: 0.9rem;
+            }
+            .section-title {
+                font-size: 1.5rem;
+            }
+            .hero-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            .hero-text {
+                text-align: center;
+            }
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.9);
+            z-index: 9999;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            backdrop-filter: blur(8px);
+            transition: opacity 0.3s ease;
+        }
+        .modal img {
+            max-width: 95%;
+            max-height: 95%;
+            border-radius: 12px;
+            object-fit: contain;
+        }
+        .close-btn {
+            position: absolute;
+            top: 1rem;
+            right: 2rem;
+            color: white;
+            font-size: 2.2rem;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+        .video-wrapper {
+            text-align: center;
+            margin-bottom: 2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        video {
+            width: 100%;
+            border-radius: 16px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="lang-switch">
+        <a href="/" class="lang-btn">English</a>
+        <a href="zh.html" class="lang-btn">简体</a>
+        <a href="zh-tw.html" class="lang-btn active">繁體</a>
+    </div>
+
+    <!-- 繁體中文內容 -->
+    <div class="hero">
+        <div class="hero-content">
+            <img src="assets/fortunecord-coin-cord-logo-main.svg" alt="FortuneCord Logo" class="logo-img">
+            <div class="hero-text">
+                <h1 class="logo">FortuneCord<span style="font-size:0.5em;">™</span> | 煉金術士的線稿世界</h1>
+                <div class="tagline">星幣系統——將您的守護之星，織入命運之繩。</div>
+            </div>
+        </div>
+        <a href="https://fortunecord.github.io/fortunecord-artworks/" style="display:inline-block; margin-top:1rem; padding:0.5rem 1rem; background:#b8a310; color:#0f0f0f; text-decoration:none; border-radius:30px; font-weight:500;">查看星幣頂作品集 →</a>
+    </div>
+
+    <div class="system-intro">
+        <h2>“財繩”視覺系統</h2>
+        <p>以“繩串幣”為核心語言，轉譯：<br>
+        太極 · 八卦 · 河圖 · 洛書<br>
+        星宿 · 星官 · 星座 · 其他星象</p>
+        <p>幣形：<br>
+        方孔圓幣 · 心形星幣 · 環球星幣 · 元寶星幣<br>
+        花卉星幣 · 水果星幣 · 毛茸星幣 · 寶石星幣</p>
+        <div style="text-align:center; margin-top: 1rem;">
+            <a href="/symbols.html?lang=zh-tw" style="display:inline-block; background:#2a2a2a; padding:6px 16px; border-radius:30px; text-decoration:none; color:#b8a310; border:1px solid #444; font-size:0.9rem;">📖 符號釋義 →</a>
+        </div>
+    </div>
+
+    <div class="video-wrapper">
+        <video width="100%" controls preload="metadata" muted playsinline>
+            <source src="assets/fortune_cord_starry_night_video_clip_20260419.mp4" type="video/mp4">
+            星幣星空頂精選集。
+        </video>
+    </div>
+
+    <div class="author">丹 · 星幣煉金術士 · 星象煉金術士</div>
+
+    <div class="gallery">
+        <div class="section-title">作品精選</div>
+        <div class="grid">
+            <div class="grid-item">
+                <img loading="lazy" src="assets/coin-cord-big-dipper-seven-coins-chart.jpg" alt="錢繩版北斗七幣圖 – 星空頂藝術設計" onclick="openModal(this)">
+                <div class="image-caption">錢繩版北斗七幣圖</div>
+            </div>
+            <div class="grid-item">
+                <img loading="lazy" src="assets/sycee-yuanbao-ingot-big-dipper-seven-coins-chart.jpg" alt="元寶版北斗七幣圖 – 星空頂藝術設計" onclick="openModal(this)">
+                <div class="image-caption">元寶版北斗七幣圖</div>
+            </div>
+            <div class="grid-item">
+                <img loading="lazy" src="assets/mulberry-fruit-star-coin-big-dipper-seven-coins-chart.jpg" alt="桑葚水果星幣_北斗七幣圖 – 星空頂藝術設計" onclick="openModal(this)">
+                <div class="image-caption">桑葚水果星幣 · 北斗七幣圖</div>
+            </div>
+            <div class="grid-item">
+                <img loading="lazy" src="assets/peony-flower-star-coin-big-dipper-seven-coins-chart.jpg" alt="牡丹花卉星幣_北斗七幣圖 – 星空頂藝術設計" onclick="openModal(this)">
+                <div class="image-caption">牡丹花卉星幣 · 北斗七幣圖</div>
+            </div>
+            <div class="grid-item">
+                <img loading="lazy" src="assets/watermelon-fruit-star-coin-big-dipper-seven-coins-chart.jpg" alt="西瓜水果星幣_北斗七幣圖 – 星空頂藝術設計" onclick="openModal(this)">
+                <div class="image-caption">西瓜水果星幣 · 北斗七幣圖</div>
+            </div>
+            <div class="grid-item">
+                <img loading="lazy" src="assets/big-dipper-seven-cats-chart.jpg" alt="北斗七寵_北斗七幣圖 – 星空頂藝術設計" onclick="openModal(this)">
+                <div class="image-caption">北斗七寵 · 北斗七幣圖</div>
+            </div>
+            <div class="grid-item">
+                <img loading="lazy" src="assets/big-dipper-beast-back-earless-furry-straight-line-tail.jpg" alt="無耳毛茸_蜷縮獸背_直線尾 – 星空頂藝術設計" onclick="openModal(this)">
+                <div class="image-caption">無耳毛茸 · 蜷縮獸背 · 直線尾</div>
+            </div>
+            <div class="grid-item">
+                <img loading="lazy" src="https://fortunecord.github.io/fortunecord-artworks/6-big-dipper-collection/3-fortune-cord-big-dipper-seven-pets-v1.0-1.8/v1.1-two-eared-beast-front-back/coin-cord-big-dipper-coins-fluffy-tail.jpg" alt="北斗二耳獸幣 – 星空頂藝術設計" onclick="openModal(this)">
+                <div class="image-caption">北斗二耳獸幣</div>
+            </div>
+            <div class="grid-item">
+                <img loading="lazy" src="https://fortunecord.github.io/fortunecord-artworks/6-big-dipper-collection/3-fortune-cord-big-dipper-seven-pets-v1.0-1.8/v1.4-earless-single-ear-beast-back/fortune-cord-big-dipper-7-coins-back-single-ear-furry-straight-thin-tail.jpg" alt="單耳毛茸_北斗七幣_方形口袋 – 星空頂藝術設計" onclick="openModal(this)">
+                <div class="image-caption">單耳毛茸 · 北斗七幣 · 方形口袋</div>
+            </div>
+            <div class="grid-item">
+                <img loading="lazy" src="https://fortunecord.github.io/fortunecord-artworks/6-big-dipper-collection/3-fortune-cord-big-dipper-seven-pets-v1.0-1.8/v1.5-pomeranian-samoyed-prick-ear/fortune-cord-big-dipper-7-samoyed-star-coins-furry-coiled-cord-tail.jpg" alt="北斗七薩摩耶捲尾幣 – 星空頂藝術設計" onclick="openModal(this)">
+                <div class="image-caption">北斗七薩摩耶 · 捲尾幣</div>
+            </div>
+            <div class="grid-item">
+                <img loading="lazy" src="https://fortunecord.github.io/fortunecord-artworks/6-big-dipper-collection/3-fortune-cord-big-dipper-seven-pets-v1.0-1.8/v1.5-pomeranian-samoyed-prick-ear/fortune-cord-big-dipper-7-pomeranian-star-coins-furry-straight-thin-tail.jpg" alt="北斗七博美犬幣 – 星空頂藝術設計" onclick="openModal(this)">
+                <div class="image-caption">北斗七博美犬幣</div>
+            </div>
+            <div class="grid-item">
+                <img loading="lazy" src="https://fortunecord.github.io/fortunecord-artworks/7-little-dipper-collection/5-gemstone-star-coin-ursa-minor/fortune-cord-little-dipper-7-gem-4-star-coin-2.jpg" alt="小熊座小北斗七寶石星幣 – 星空頂藝術設計" onclick="openModal(this)">
+                <div class="image-caption">小熊座 · 小北斗七寶石星幣</div>
+            </div>
+            <div class="grid-item">
+                <img loading="lazy" src="assets/carnation-star-coin-2-orion.jpg" alt="康乃馨星幣_獵戶座 – 星空頂藝術設計" onclick="openModal(this)">
+                <div class="image-caption">康乃馨星幣 · 獵戶座</div>
+            </div>
+            <div class="grid-item">
+                <img loading="lazy" src="assets/plush-star-coin-cancer-star-chart-connection-line-10.jpg" alt="毛球星幣_巨蟹星象連接線 – 星空頂藝術設計" onclick="openModal(this)">
+                <div class="image-caption">毛球星幣 · 巨蟹星象連接線</div>
+            </div>
+            <div class="grid-item">
+                <img loading="lazy" src="assets/yuanbao-pisces-zodiac-connection-diagram.jpg" alt="元寶雙魚星座連線圖 – 星空頂藝術設計" onclick="openModal(this)">
+                <div class="image-caption">元寶雙魚星座連線圖</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="intro-text">
+        <p>我是一名煉金術士。我的工作，是看清煉金的本相。</p>
+        <p>銅錢的本相，是圓和方。圓，是出去還能回來；方，是賺多少、留多少，心裡有數。繩的本相，是連接。把散著的串起來，把斷著的接起來。線，是繩的影子，是它安靜時候的樣子。煉金術士的工作，就是將這些本相，一點一點畫出來。</p>
+        <p>畫圓的時候，我在想：錢是不是也該這樣？走得遠，還能回得來。畫方的時候，我在想：手裡的線，該畫在哪裡收住。畫繩的時候，我在想：哪些東西該串在一起，哪些該留著。</p>
+        <p>於是，圓畫了無數個，方畫了無數個，繩畫了無數條。畫到後來，它們自己會說話。圓告訴我：別怕流出去。方告訴我：別越過那條線。繩告訴我：你連著的，終會連起來。</p>
+        <p>我是個轉譯者。我只是一個把已經存在的東西，一筆一筆請出來的人。</p>
+        <p>今天，把這些年請出來的東西，放在這裡。黑白，線稿，不設顏色。顏色是後來的事，線本身就是顏色。</p>
+        <p>你看到的，是一個煉金術士的日常。也是她的“心繩”——那根連接財富與內心的線。</p>
+    </div>
+
+    <div class="contact">
+        <p>對“財繩”視覺系統感興趣，希望將其應用於您自己的太極、星座或星象符號再創作？歡迎聯繫合作或授權。</p>
+        <p>📧 授權與合作：fortunecord [at] qq [dot] com <span style="font-size:0.85rem;">（請將 [at] 替換為 @，[dot] 替換為 .）</span></p>
+        <p style="margin-top: 0.5rem;">小紅書｜微博｜B站：<strong>@FortuneCord</strong></p>
+    </div>
+
+    <footer>
+        <div class="footer-logo" style="margin-bottom: 10px;">
+            <img src="assets/coin-cord-star-coin-logo-secondary.svg" alt="Coin Cord Logo" style="height: 80px;">
+        </div>
+        <p>© 2026 FortuneCord | 版權所有。</p>
+        <p>部落格 Blog：<a href="https://fortunecord.wordpress.com" target="_blank" rel="noopener noreferrer">fortunecord.wordpress.com</a></p>
+        <p>作品已進行區塊鏈存證：<a href="https://github.com/fortunecord/fortunecord.github.io" target="_blank" rel="noopener noreferrer">https://github.com/fortunecord/fortunecord.github.io</a></p>
+        <p style="font-size:0.75rem;"><a href="/legal.html">Legal Notice</a></p>
+    </footer>
+</div>
+
+<div class="modal" id="imageModal">
+    <button class="close-btn" onclick="closeModal()">&times;</button>
+    <img id="modalImage" src="" alt="Preview">
+</div>
+
+<script>
+    const modal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage');
+    function openModal(img) {
+        modalImage.src = img.src;
+        modalImage.alt = img.alt;
+        modal.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+    }
+    function closeModal() {
+        modal.style.display = 'none';
+        document.body.style.overflow = '';
+    }
+    modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+</script>
+</body>
+</html> 
