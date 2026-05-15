@@ -3,7 +3,7 @@ Explore Star Coin Ceiling Art by FortuneCord – original black and white line a
 
 Dan, the Star Coin Alchemist and Astrological Alchemist.
 
-Original works published at：https：//fortunecord.wordpress.com/
+Blog：https：//fortunecord.wordpress.com/
 
 ## Timestamped Files
 
