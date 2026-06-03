@@ -61,7 +61,7 @@ Interested in applying the Fortune Cord visual system to your own reinterpretati
 
 **Contact:**
 - fortunecord [at] qq [dot] com
-- Sealofwealth [at] outlook [dot] com
+- Hdzjw [at] msn [dot] com
 
 (Please replace [at] with @ and [dot] with .)
 
