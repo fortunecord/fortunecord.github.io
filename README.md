@@ -1,3 +1,6 @@
+⚠️ IMPORTANT: This is an art portfolio, NOT software. No code is included.
+
+
 # fortunecord.github.io
 
 Explore Star Coin Ceiling Art by FortuneCord – original black and white line art for car starlight headliners, building ceilings, and celestial interior design. 「星币·星空顶艺术 – 原创黑白线稿，适用于汽车星空顶、建筑吊顶、奢华内饰。」
