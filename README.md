@@ -1,9 +1,9 @@
-⚠️ IMPORTANT: This is an art portfolio, NOT software. No code is included.
+⚠️ IMPORTANT: This repository contains the source code for the FortuneCord official website. For original line art works, see [fortunecord-artworks](https://github.com/fortunecord/fortunecord-artworks).
 
 
 # fortunecord.github.io
 
-Explore Star Coin Ceiling Art by FortuneCord – original black and white line art for car starlight headliners, building ceilings, and celestial interior design. 「星币·星空顶艺术 – 原创黑白线稿，适用于汽车星空顶、建筑吊顶、奢华内饰。」
+FortuneCord: Star Coin Ceiling Art. Black & white line art for starlight headliners, interiors, and licensing.
 
 Dan, the Star Coin Alchemist and Astrological Alchemist.
 
@@ -27,7 +27,7 @@ Interested in applying the Fortune Cord visual system to your own reinterpretati
 
 
 
-**Blog**：https：//fortunecord.wordpress.com/
+**Blog**: https://fortunecord.wordpress.com/
 **Website:** [fortunecord.com](https://fortunecord.com)
 
 
