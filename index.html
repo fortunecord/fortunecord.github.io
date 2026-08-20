@@ -23,7 +23,7 @@
             box-sizing: border-box;
         }
         body {
-            font-family: system-ui, -apple-system, 'Segoe UI', 'Roboto', '思源黑体', 'Noto Sans', sans-serif;
+            font-family: system-ui, -apple-system, 'Segoe UI', 'Roboto', sans-serif;
             background: #0a1128;
             color: #e0e0e0;
             line-height: 1.5;
@@ -87,14 +87,9 @@
         }
         .hero-content {
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
-            flex-wrap: wrap;
-            gap: 1.5rem;
-        }
-        .hero-text {
-            text-align: left;
-            flex: 1;
         }
         .logo-img {
             max-width: 100%;
@@ -109,45 +104,6 @@
             margin-bottom: 0.2rem;
             color: #b8a310;
         }
-        .hero-top {
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-        }
-        .subtitle-wrapper {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 1rem;
-            width: 100%;
-        }
-        .subtitle-en {
-            font-size: 1.2rem;
-            color: #aaa;
-            margin: 0;
-        }
-        .hero-buttons {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-            margin: 0;
-        }
-        .btn-primary {
-            display: inline-block;
-            padding: 0.4rem 1.2rem;
-            background: #7B2FBE;
-            color: #ffffff;
-            text-decoration: none;
-            border-radius: 30px;
-            font-weight: 500;
-            font-size: 0.95rem;
-            transition: background 0.2s ease;
-            white-space: nowrap;
-        }
-        .btn-primary:hover {
-            background: #6A1F9E;
-        }
         .tagline {
             font-size: 1rem;
             color: #aaa;
@@ -156,7 +112,34 @@
             display: inline-block;
             padding: 0.5rem 0;
             margin-top: 0.5rem;
-            width: 100%;
+        }
+        .subtitle-en {
+            font-size: 1.2rem;
+            color: #aaa;
+            margin-top: 0.2rem;
+        }
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
+        }
+        .btn-primary {
+            display: inline-block;
+            padding: 0.5rem 1.8rem;
+            background: transparent;
+            color: #b8a310;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 500;
+            font-size: 1rem;
+            border: 1.5px solid #b8a310;
+            transition: all 0.25s ease;
+        }
+        .btn-primary:hover {
+            background: #b8a310;
+            color: #0f0f0f;
         }
         .author {
             text-align: center;
@@ -269,13 +252,6 @@
                 grid-template-columns: 1fr;
                 gap: 1.8rem;
             }
-            .subtitle-wrapper {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            .hero-buttons {
-                width: 100%;
-            }
         }
         @media (max-width: 640px) {
             body {
@@ -297,12 +273,8 @@
             .hero-text {
                 text-align: center;
             }
-            .subtitle-wrapper {
-                flex-direction: column;
-                align-items: center;
-            }
             .hero-buttons {
-                justify-content: center;
+                gap: 1rem;
             }
         }
         .modal {
@@ -360,18 +332,12 @@
     <div class="hero">
         <div class="hero-content">
             <img src="assets/fortunecord-coin-cord-logo-main.svg" alt="FortuneCord Logo" class="logo-img">
-            <div class="hero-text">
-                <div class="hero-top">
-                    <h1 class="logo">FortuneCord<span style="font-size:0.5em;">™</span></h1>
-                    <div class="subtitle-wrapper">
-                        <div class="subtitle-en">An Alchemist's Line Art World</div>
-                        <div class="hero-buttons">
-                            <a href="https://fortunecord.github.io/fortunecord-artworks/" class="btn-primary">作品集</a>
-                            <a href="/symbols.html?lang=en" class="btn-primary">文化释义</a>
-                        </div>
-                    </div>
-                    <div class="tagline">Star Coin System — Weave your guardian stars into a thread of fortune.</div>
-                </div>
+            <h1 class="logo">FortuneCord<span style="font-size:0.5em;">™</span></h1>
+            <div class="subtitle-en">An Alchemist's Line Art World</div>
+            <div class="tagline">Star Coin System — Weave your guardian stars into a thread of fortune.</div>
+            <div class="hero-buttons">
+                <a href="https://fortunecord.github.io/fortunecord-artworks/" class="btn-primary">Gallery</a>
+                <a href="/symbols.html?lang=en" class="btn-primary">Symbols</a>
             </div>
         </div>
     </div>
