@@ -104,6 +104,38 @@
             margin-bottom: 0.2rem;
             color: #b8a310;
         }
+        .subtitle-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            margin: 0.2rem 0 0.5rem;
+        }
+        .subtitle-en {
+            font-size: 1.2rem;
+            color: #aaa;
+        }
+        .hero-buttons {
+            display: flex;
+            gap: 0.8rem;
+        }
+        .btn-primary {
+            display: inline-block;
+            padding: 0.5rem 1.8rem;
+            background: #2b1a5e;
+            color: #b8a310;
+            text-decoration: none;
+            border-radius: 0;
+            font-weight: 500;
+            font-size: 1rem;
+            border: none;
+            transition: background 0.25s ease, color 0.25s ease;
+        }
+        .btn-primary:hover {
+            background: #b8a310;
+            color: #0f0f0f;
+        }
         .tagline {
             font-size: 1rem;
             color: #aaa;
@@ -112,34 +144,6 @@
             display: inline-block;
             padding: 0.5rem 0;
             margin-top: 0.5rem;
-        }
-        .subtitle-en {
-            font-size: 1.2rem;
-            color: #aaa;
-            margin-top: 0.2rem;
-        }
-        .hero-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            flex-wrap: wrap;
-            margin-top: 1.5rem;
-        }
-        .btn-primary {
-            display: inline-block;
-            padding: 0.5rem 1.8rem;
-            background: transparent;
-            color: #b8a310;
-            text-decoration: none;
-            border-radius: 30px;
-            font-weight: 500;
-            font-size: 1rem;
-            border: 1.5px solid #b8a310;
-            transition: all 0.25s ease;
-        }
-        .btn-primary:hover {
-            background: #b8a310;
-            color: #0f0f0f;
         }
         .author {
             text-align: center;
@@ -252,6 +256,10 @@
                 grid-template-columns: 1fr;
                 gap: 1.8rem;
             }
+            .subtitle-row {
+                flex-direction: column;
+                gap: 0.8rem;
+            }
         }
         @media (max-width: 640px) {
             body {
@@ -269,12 +277,6 @@
             .hero-content {
                 flex-direction: column;
                 text-align: center;
-            }
-            .hero-text {
-                text-align: center;
-            }
-            .hero-buttons {
-                gap: 1rem;
             }
         }
         .modal {
@@ -333,12 +335,14 @@
         <div class="hero-content">
             <img src="assets/fortunecord-coin-cord-logo-main.svg" alt="FortuneCord Logo" class="logo-img">
             <h1 class="logo">FortuneCord<span style="font-size:0.5em;">™</span></h1>
-            <div class="subtitle-en">An Alchemist's Line Art World</div>
-            <div class="tagline">Star Coin System — Weave your guardian stars into a thread of fortune.</div>
-            <div class="hero-buttons">
-                <a href="https://fortunecord.github.io/fortunecord-artworks/" class="btn-primary">Gallery</a>
-                <a href="/symbols.html?lang=en" class="btn-primary">Symbols</a>
+            <div class="subtitle-row">
+                <span class="subtitle-en">An Alchemist's Line Art World</span>
+                <div class="hero-buttons">
+                    <a href="https://fortunecord.github.io/fortunecord-artworks/" class="btn-primary">Gallery</a>
+                    <a href="/symbols.html?lang=en" class="btn-primary">Symbols</a>
+                </div>
             </div>
+            <div class="tagline">Star Coin System — Weave your guardian stars into a thread of fortune.</div>
         </div>
     </div>
 
