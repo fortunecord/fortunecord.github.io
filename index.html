@@ -87,15 +87,19 @@
         }
         .hero-content {
             display: flex;
-            flex-direction: column;
             align-items: center;
             justify-content: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
         }
         .logo-img {
             max-width: 100%;
             height: auto;
             max-height: 100px;
             filter: brightness(0.75) saturate(0.8) drop-shadow(0 0 3px rgba(255,215,0,0.4)) drop-shadow(0 0 8px rgba(255,215,0,0.2));
+        }
+        .hero-text {
+            text-align: left;
         }
         .logo {
             font-size: 2.8rem;
@@ -107,7 +111,6 @@
         .subtitle-row {
             display: flex;
             align-items: center;
-            justify-content: center;
             gap: 1.5rem;
             flex-wrap: wrap;
             margin: 0.2rem 0 0.5rem;
@@ -258,6 +261,7 @@
             }
             .subtitle-row {
                 flex-direction: column;
+                align-items: flex-start;
                 gap: 0.8rem;
             }
         }
@@ -277,6 +281,13 @@
             .hero-content {
                 flex-direction: column;
                 text-align: center;
+            }
+            .hero-text {
+                text-align: center;
+            }
+            .subtitle-row {
+                flex-direction: column;
+                align-items: center;
             }
         }
         .modal {
@@ -334,15 +345,17 @@
     <div class="hero">
         <div class="hero-content">
             <img src="assets/fortunecord-coin-cord-logo-main.svg" alt="FortuneCord Logo" class="logo-img">
-            <h1 class="logo">FortuneCord<span style="font-size:0.5em;">™</span></h1>
-            <div class="subtitle-row">
-                <span class="subtitle-en">An Alchemist's Line Art World</span>
-                <div class="hero-buttons">
-                    <a href="https://fortunecord.github.io/fortunecord-artworks/" class="btn-primary">Gallery</a>
-                    <a href="/symbols.html?lang=en" class="btn-primary">Symbols</a>
+            <div class="hero-text">
+                <h1 class="logo">FortuneCord<span style="font-size:0.5em;">™</span></h1>
+                <div class="subtitle-row">
+                    <span class="subtitle-en">An Alchemist's Line Art World</span>
+                    <div class="hero-buttons">
+                        <a href="https://fortunecord.github.io/fortunecord-artworks/" class="btn-primary">Gallery</a>
+                        <a href="/symbols.html?lang=en" class="btn-primary">Symbols</a>
+                    </div>
                 </div>
+                <div class="tagline">Star Coin System — Weave your guardian stars into a thread of fortune.</div>
             </div>
-            <div class="tagline">Star Coin System — Weave your guardian stars into a thread of fortune.</div>
         </div>
     </div>
 
