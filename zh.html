@@ -16,7 +16,6 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="robots" content="index, follow">
     <style>
-        /* 样式与英文版完全相同，只修改了语言相关内容 */
         * {
             margin: 0;
             padding: 0;
@@ -39,15 +38,15 @@
             height: 100%;
             pointer-events: none;
             background-image: 
-                radial-gradient(2px 2px at 15% 25%, #fff, rgba(0,0,0,0)),     /* 左侧少量 */
-                radial-gradient(1.5px 1.5px at 30% 50%, #ffd, rgba(0,0,0,0)),  /* 中左 */
-                radial-gradient(2px 2px at 70% 35%, #fff, rgba(0,0,0,0)),      /* 右侧 */
-                radial-gradient(1px 1px at 85% 20%, #ffd, rgba(0,0,0,0)),      /* 右上 */
-                radial-gradient(1.8px 1.8px at 90% 75%, #ffe, rgba(0,0,0,0)),  /* 右下 */
-                radial-gradient(2.5px 2.5px at 65% 85%, #fff, rgba(0,0,0,0)),  /* 右中下 */
-                radial-gradient(1.2px 1.2px at 80% 55%, #ffc, rgba(0,0,0,0)),  /* 右中 */
-                radial-gradient(0.8px 0.8px at 95% 60%, #fff, rgba(0,0,0,0)),  /* 最右 */
-                radial-gradient(3px 3px at 5% 70%, #fff, rgba(0,0,0,0));        /* 左下微量 */  
+                radial-gradient(2px 2px at 15% 25%, #fff, rgba(0,0,0,0)),
+                radial-gradient(1.5px 1.5px at 30% 50%, #ffd, rgba(0,0,0,0)),
+                radial-gradient(2px 2px at 70% 35%, #fff, rgba(0,0,0,0)),
+                radial-gradient(1px 1px at 85% 20%, #ffd, rgba(0,0,0,0)),
+                radial-gradient(1.8px 1.8px at 90% 75%, #ffe, rgba(0,0,0,0)),
+                radial-gradient(2.5px 2.5px at 65% 85%, #fff, rgba(0,0,0,0)),
+                radial-gradient(1.2px 1.2px at 80% 55%, #ffc, rgba(0,0,0,0)),
+                radial-gradient(0.8px 0.8px at 95% 60%, #fff, rgba(0,0,0,0)),
+                radial-gradient(3px 3px at 5% 70%, #fff, rgba(0,0,0,0));
             background-repeat: no-repeat;
             background-size: 200px 200px, 180px 180px, 220px 220px, 160px 160px, 200px 200px,
                              240px 240px, 170px 170px, 190px 190px, 210px 210px;
@@ -92,14 +91,14 @@
             flex-wrap: wrap;
             gap: 1.5rem;
         }
-        .hero-text {
-            text-align: left;
-        }
         .logo-img {
             max-width: 100%;
             height: auto;
             max-height: 100px;
             filter: brightness(0.75) saturate(0.8) drop-shadow(0 0 3px rgba(255,215,0,0.4)) drop-shadow(0 0 8px rgba(255,215,0,0.2));
+        }
+        .hero-text {
+            text-align: left;
         }
         .logo {
             font-size: 2.8rem;
@@ -108,6 +107,13 @@
             margin-bottom: 0.2rem;
             color: #b8a310;
         }
+        .subtitle-row {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            margin: 0.2rem 0 0.5rem;
+        }
         .tagline {
             font-size: 1rem;
             color: #aaa;
@@ -115,7 +121,27 @@
             border-bottom: 1px solid #333;
             display: inline-block;
             padding: 0.5rem 0;
-            margin-top: 0;
+            margin: 0;
+        }
+        .hero-buttons {
+            display: flex;
+            gap: 0.8rem;
+        }
+        .btn-primary {
+            display: inline-block;
+            padding: 0.35rem 0.6rem;
+            background: #2b1a5e;
+            color: #b8a310;
+            text-decoration: none;
+            border-radius: 0;
+            font-weight: 500;
+            font-size: 0.85rem;
+            border: none;
+            transition: background 0.25s ease, color 0.25s ease;
+        }
+        .btn-primary:hover {
+            background: #b8a310;
+            color: #0f0f0f;
         }
         .author {
             text-align: center;
@@ -228,6 +254,11 @@
                 grid-template-columns: 1fr;
                 gap: 1.8rem;
             }
+            .subtitle-row {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.8rem;
+            }
         }
         @media (max-width: 640px) {
             body {
@@ -249,28 +280,10 @@
             .hero-text {
                 text-align: center;
             }
-            .hero-action {
+            .subtitle-row {
                 flex-direction: column;
-                align-items: center !important;
+                align-items: center;
             }
-        }
-        .hero-action {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            align-items: baseline;
-            flex-wrap: wrap;
-            margin-top: 1rem;
-        }
-        .btn {
-            display: inline-block;
-            padding: 0.5rem 1rem;
-            background: #b8a310;
-            color: #0f0f0f;
-            text-decoration: none;
-            border-radius: 30px;
-            font-weight: 500;
-            margin: 0;
         }
         .modal {
             display: none;
@@ -329,11 +342,14 @@
             <img src="assets/fortunecord-coin-cord-logo-main.svg" alt="FortuneCord Logo" class="logo-img">
             <div class="hero-text">
                 <h1 class="logo">FortuneCord<span style="font-size:0.5em;">™</span> | 炼金术士的线稿世界</h1>
+                <div class="subtitle-row">
+                    <span class="tagline">星币系统——将您的守护之星，织入命运之绳。</span>
+                    <div class="hero-buttons">
+                        <a href="https://fortunecord.github.io/fortunecord-artworks/" class="btn-primary">作品集</a>
+                        <a href="/symbols.html?lang=zh" class="btn-primary">文化释义</a>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="hero-action">
-            <div class="tagline">星币系统——将您的守护之星，织入命运之绳。</div>
-            <a href="https://fortunecord.github.io/fortunecord-artworks/" class="btn">查看星币顶作品集 →</a>
         </div>
     </div>
 
