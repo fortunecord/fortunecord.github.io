@@ -14,15 +14,77 @@
 
         body {
             font-family: system-ui, -apple-system, 'Segoe UI', 'Roboto', '思源黑体', 'Noto Sans', sans-serif;
-            background: #fefefe;
-            color: #1a1a1a;
+            background: #0a1128;
+            color: #e0e0e0;
             line-height: 1.6;
             padding: 2rem 1rem;
+            position: relative;
+        }
+
+        /* 星空背景 */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            background-image:
+                /* 大圆星点（稀疏）-- 减半 */
+                radial-gradient(1.5px 1.5px at 10% 15%, #fff, rgba(0,0,0,0)),
+                radial-gradient(2px 2px at 25% 65%, #ffd, rgba(0,0,0,0)),
+                radial-gradient(1px 1px at 80% 20%, #fff, rgba(0,0,0,0)),
+                radial-gradient(2.5px 2.5px at 45% 85%, #ffe, rgba(0,0,0,0)),
+                radial-gradient(1.5px 1.5px at 92% 70%, #fff, rgba(0,0,0,0)),
+                radial-gradient(3px 3px at 5% 92%, #ffc, rgba(0,0,0,0)),
+                radial-gradient(1px 1px at 60% 40%, #fff, rgba(0,0,0,0)),
+                radial-gradient(2px 2px at 78% 55%, #ffd, rgba(0,0,0,0)),
+                radial-gradient(1.5px 1.5px at 35% 30%, #fff, rgba(0,0,0,0)),
+                radial-gradient(2.5px 2.5px at 88% 88%, #ffe, rgba(0,0,0,0)),
+                /* 小圆星点（密集）-- 减半 */
+                radial-gradient(0.5px 0.5px at 15% 22%, #fff, rgba(0,0,0,0)),
+                radial-gradient(0.75px 0.75px at 30% 48%, #ffd, rgba(0,0,0,0)),
+                radial-gradient(0.5px 0.5px at 52% 18%, #fff, rgba(0,0,0,0)),
+                radial-gradient(0.6px 0.6px at 68% 75%, #ffe, rgba(0,0,0,0)),
+                radial-gradient(0.5px 0.5px at 75% 35%, #fff, rgba(0,0,0,0)),
+                radial-gradient(0.75px 0.75px at 42% 60%, #ffc, rgba(0,0,0,0)),
+                radial-gradient(0.5px 0.5px at 90% 42%, #fff, rgba(0,0,0,0)),
+                radial-gradient(0.6px 0.6px at 55% 92%, #ffd, rgba(0,0,0,0)),
+                radial-gradient(0.5px 0.5px at 20% 78%, #fff, rgba(0,0,0,0)),
+                radial-gradient(0.75px 0.75px at 72% 10%, #ffe, rgba(0,0,0,0)),
+                radial-gradient(0.5px 0.5px at 48% 48%, #fff, rgba(0,0,0,0)),
+                radial-gradient(0.6px 0.6px at 85% 65%, #ffc, rgba(0,0,0,0)),
+                radial-gradient(0.5px 0.5px at 12% 55%, #fff, rgba(0,0,0,0)),
+                radial-gradient(0.75px 0.75px at 65% 82%, #ffd, rgba(0,0,0,0)),
+                radial-gradient(0.5px 0.5px at 38% 12%, #fff, rgba(0,0,0,0)),
+                /* 五角星点（少量）-- 减半 */
+                radial-gradient(1px 1px at 18% 38%, #fff, rgba(0,0,0,0)),
+                radial-gradient(1.25px 1.25px at 58% 25%, #ffd, rgba(0,0,0,0)),
+                radial-gradient(1px 1px at 82% 48%, #fff, rgba(0,0,0,0)),
+                radial-gradient(1.25px 1.25px at 32% 72%, #ffe, rgba(0,0,0,0)),
+                radial-gradient(1px 1px at 95% 30%, #fff, rgba(0,0,0,0)),
+                /* 六角星点（极少）-- 减半 */
+                radial-gradient(1.5px 1.5px at 50% 5%, #ffd, rgba(0,0,0,0)),
+                radial-gradient(1.5px 1.5px at 8% 82%, #fff, rgba(0,0,0,0)),
+                radial-gradient(1.5px 1.5px at 70% 50%, #ffe, rgba(0,0,0,0));
+            background-repeat: repeat;
+            background-size:
+                200px 200px, 220px 220px, 180px 180px, 240px 240px, 190px 190px,
+                250px 250px, 170px 170px, 210px 210px, 185px 185px, 230px 230px,
+                300px 300px, 280px 280px, 310px 310px, 270px 270px, 290px 290px,
+                260px 260px, 320px 320px, 240px 240px, 300px 300px, 280px 280px,
+                310px 310px, 270px 270px, 290px 290px, 260px 260px, 300px 300px,
+                180px 180px, 200px 200px, 190px 190px, 210px 210px, 185px 185px,
+                220px 220px, 200px 200px, 210px 210px;
+            opacity: 0.7;
         }
 
         .container {
             max-width: 900px;
             margin: 0 auto;
+            position: relative;
+            z-index: 1;
         }
 
         .back-link {
@@ -30,7 +92,7 @@
             margin-bottom: 2rem;
             color: #b8a310;
             text-decoration: none;
-            border-bottom: 1px solid #e0e0e0;
+            border-bottom: 1px solid #2a2a2a;
         }
 
         .back-link:hover {
@@ -44,7 +106,7 @@
         }
 
         .subhead {
-            color: #555;
+            color: #aaa;
             margin-bottom: 2rem;
             border-left: 3px solid #b8a310;
             padding-left: 1rem;
@@ -54,8 +116,8 @@
             font-size: 1.5rem;
             margin: 2rem 0 1rem;
             padding-bottom: 0.3rem;
-            border-bottom: 1px solid #eaeaea;
-            color: #2c3e50;
+            border-bottom: 1px solid #2a2a2a;
+            color: #d4c24a;
         }
 
         h3 {
@@ -66,13 +128,25 @@
 
         p {
             margin-bottom: 1em;
+            color: #d0d0d0;
         }
 
         .symbol-block {
-            background: #fafafa;
+            background: rgba(255,255,255,0.04);
             padding: 1rem 1.5rem;
             border-radius: 16px;
             margin: 1.5rem 0;
+            border: 1px solid rgba(184,163,16,0.15);
+        }
+
+        .symbol-block ul {
+            color: #d0d0d0;
+            padding-left: 1.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .symbol-block ul li {
+            margin-bottom: 0.3rem;
         }
 
         footer {
@@ -80,7 +154,7 @@
             text-align: center;
             font-size: 0.85rem;
             color: #777;
-            border-top: 1px solid #ececec;
+            border-top: 1px solid #2a2a2a;
             padding-top: 2rem;
         }
 
@@ -91,20 +165,25 @@
 
         .lang-btn {
             background: none;
-            border: 1px solid #ccc;
+            border: 1px solid #444;
             padding: 0.3rem 0.8rem;
             font-size: 0.8rem;
             cursor: pointer;
             border-radius: 30px;
-            background: #fff;
+            background: #1a1a1a;
+            color: #ddd;
             transition: all 0.2s;
             margin-left: 0.5rem;
         }
 
         .lang-btn.active {
-            background: #1a1a1a;
-            color: white;
-            border-color: #1a1a1a;
+            background: #b8a310;
+            color: #0f0f0f;
+            border-color: #b8a310;
+        }
+
+        .lang-btn:hover {
+            border-color: #b8a310;
         }
     </style>
 </head>
@@ -123,23 +202,23 @@
         <div class="subhead">圆币 · 螺旋 · 太极图 · 财富哲学</div>
 
         <h2>币形基础</h2>
-        <div class="symbol-block"><h3>圆币</h3><p>外圆内方。外圆象征天道循环、财富流转不息；内方代表规矩准则、底线边界。整体寓意“财富取之有道、用之有度”。</p></div>
+        <div class="symbol-block"><h3>圆币</h3><p>外圆内方。外圆象征天道循环、财富流转不息；内方代表规矩准则、底线边界。整体寓意"财富取之有道、用之有度"。</p></div>
         <div class="symbol-block"><h3>方孔（币孔）</h3><p>方孔也是窗口。任何承载连线穿越的开口均为币孔。它既是虚空，也是门户。光线通过孔洞，线索穿过灵魂。</p></div>
-        <div class="symbol-block"><h3>白色圆币</h3><p>象征阳性的、显性的、流动的财富。即现金、活跃投资、用于消费和再生产的资金。高流动性、高风险、高活力——好比手头能随时动用的“活钱”，是创造新价值的“前锋”。</p></div>
-        <div class="symbol-block"><h3>黑色圆币</h3><p>象征阴性的、隐性的、储存的资本。即固定资产、储备金、保本型资产、知识产权等底层价值。低流动性、高安全性、高稳定性——好比家里压箱底的“保本钱”，是应对变化的底气。</p></div>
+        <div class="symbol-block"><h3>白色圆币</h3><p>象征阳性的、显性的、流动的财富。即现金、活跃投资、用于消费和再生产的资金。高流动性、高风险、高活力——好比手头能随时动用的"活钱"，是创造新价值的"前锋"。</p></div>
+        <div class="symbol-block"><h3>黑色圆币</h3><p>象征阴性的、隐性的、储存的资本。即固定资产、储备金、保本型资产、知识产权等底层价值。低流动性、高安全性、高稳定性——好比家里压箱底的"保本钱"，是应对变化的底气。</p></div>
         <div class="symbol-block"><h3>灰色圆币</h3><p>象征转化媒介、信用体系、生态资本。即金融信用、社会资本、数据与注意力、待分配的剩余价值/共享资本。作为中间枢纽，驱动并调节黑白资本之间的转化规模和效率。</p></div>
         <div class="symbol-block"><h3>齿边圆币</h3><p>象征精密与规则、规矩、法律边界、硬通货、财富积累、精密衡量、防伪与价值保证。齿边像尺子的刻度，强调财富的积累要讲规矩、守边界，遵循当代商业伦理，不能为所欲为。</p></div>
-        <div class="symbol-block"><h3>光滑圆币（无齿边）</h3><p>象征价值内核、完美循环、抽象财富、纯粹规则。更接近“圆”的哲学概念——财富最本质的那个数字和规则。</p></div>
-        <div class="symbol-block"><h3>螺旋线</h3><p>象征财富、能量、机遇的流动、增长与周期性变化。表达财富和增长的漩涡一样，须遵循自然与社会的平衡法则。钱不是静止的，而是在“流通”与“储藏”之间不停打转、循环增长。</p></div>
+        <div class="symbol-block"><h3>光滑圆币（无齿边）</h3><p>象征价值内核、完美循环、抽象财富、纯粹规则。更接近"圆"的哲学概念——财富最本质的那个数字和规则。</p></div>
+        <div class="symbol-block"><h3>螺旋线</h3><p>象征财富、能量、机遇的流动、增长与周期性变化。表达财富和增长的漩涡一样，须遵循自然与社会的平衡法则。钱不是静止的，而是在"流通"与"储藏"之间不停打转、循环增长。</p></div>
 
         <h2>太极圆币系列</h2>
-        <div class="symbol-block"><h3>圆币版单鱼眼太极图（中心圆币漩涡太极图）</h3><p>财富就像这个漩涡一样，在不断变化和流动中，始终围绕着一个稳固的核心规则在运行。其中扫把符号象征“漩涡动态、天道循环”的寓意。</p></div>
-        <div class="symbol-block"><h3>圆币版双鱼眼太极图</h3><p>将太极图的“圆”与钱币的“外圆内方+齿边”巧妙结合。保留了太极“圆融流转”的核心精神；增添了“规矩边界”的现代解读；融合了“财富有道”的商业伦理。不是对传统的背叛，而是创造性转化，让古老的太极图在当代焕发新的生命力。</p></div>
+        <div class="symbol-block"><h3>圆币版单鱼眼太极图（中心圆币漩涡太极图）</h3><p>财富就像这个漩涡一样，在不断变化和流动中，始终围绕着一个稳固的核心规则在运行。其中扫把符号象征"漩涡动态、天道循环"的寓意。</p></div>
+        <div class="symbol-block"><h3>圆币版双鱼眼太极图</h3><p>将太极图的"圆"与钱币的"外圆内方+齿边"巧妙结合。保留了太极"圆融流转"的核心精神；增添了"规矩边界"的现代解读；融合了"财富有道"的商业伦理。不是对传统的背叛，而是创造性转化，让古老的太极图在当代焕发新的生命力。</p></div>
         <div class="symbol-block"><h3>圆币版三鱼眼太极图</h3><p>黑白灰圆币分别象征显性流动资本（白）、隐性基础资本（黑）、转化信用资本（灰）。在二元系统中黑白对立，而三元系统中灰色作为中间枢纽和催化剂，驱动黑白资本之间的转化。健康的信用、活跃的数据能让白色资本更有效增值，让黑色资本更安全保值，并促进两者良性循环。灰色部分的萎缩或崩塌会导致系统僵化，黑白资本无法有效互动。</p></div>
         <div class="symbol-block"><h3>圆币版四鱼眼（四极四象）太极图</h3><p>象征资本在萌生、扩张、成熟、沉淀四个阶段的完整循环，每一阶段内部都包含对立的价值内核：</p><ul><li><strong>白色圆币</strong>：初生流动资本、种子资本</li><li><strong>浅灰圆币</strong>：扩张风险资本、运营资本</li><li><strong>深灰圆币</strong>：成熟稳定资本、制度资本</li><li><strong>黑色圆币</strong>：沉淀基础资本、战略储备</li></ul></div>
 
         <h2>方孔币形（绳串币）</h2>
-        <div class="symbol-block"><h3>方孔花币</h3><p>有一些设计师曾用花卉替代星座星象连接线的节点，他们画的是“鲜花星座”。而我画的是“鲜花币星座”——差一个方框，差一个世界。方孔赋予花币以规矩、边界以及穿绳的可能，使自然之美与财富秩序融为一体。</p></div>
+        <div class="symbol-block"><h3>方孔花币</h3><p>有一些设计师曾用花卉替代星座星象连接线的节点，他们画的是"鲜花星座"。而我画的是"鲜花币星座"——差一个方框，差一个世界。方孔赋予花币以规矩、边界以及穿绳的可能，使自然之美与财富秩序融为一体。</p></div>
         <div class="symbol-block"><h3>方孔毛茸币</h3><p>毛茸星币（猫币、狗币、兽币等）的中心，以方形口袋作为视觉记号。毛茸象征温暖、陪伴与生命力，方形口袋代表珍藏的善意与祝福。尾巴化作绳线，从身体后方自然延展，轻巧地串联起这份温暖与财富的流转，使星空顶图案既治愈又蕴含深意。</p></div>
         <div class="symbol-block"><h3>方孔水果币</h3><p>以各类水果为币形（草莓币、橙子币、樱桃币等），中心开方孔。水果象征丰收、甜美与自然馈赠，方孔代表财富的度量与交换。绳串水果币，寓意劳动果实与财富流通的有机结合。</p></div>
 
@@ -153,23 +232,23 @@
         <div class="subhead">圓幣 · 螺旋 · 太極圖 · 財富哲學</div>
 
         <h2>幣形基礎</h2>
-        <div class="symbol-block"><h3>圓幣</h3><p>外圓內方。外圓象徵天道循環、財富流轉不息；內方代表規矩準則、底線邊界。整體寓意“財富取之有道、用之有度”。</p></div>
+        <div class="symbol-block"><h3>圓幣</h3><p>外圓內方。外圓象徵天道循環、財富流轉不息；內方代表規矩準則、底線邊界。整體寓意"財富取之有道、用之有度"。</p></div>
         <div class="symbol-block"><h3>方孔（幣孔）</h3><p>方孔也是窗口。任何承載連線穿越的開口均為幣孔。它既是虛空，也是門戶。光線通過孔洞，線索穿過靈魂。</p></div>
-        <div class="symbol-block"><h3>白色圓幣</h3><p>象徵陽性的、顯性的、流動的財富。即現金、活躍投資、用於消費和再生產的資金。高流動性、高風險、高活力——好比手頭能隨時動用的“活錢”，是創造新價值的“前鋒”。</p></div>
-        <div class="symbol-block"><h3>黑色圓幣</h3><p>象徵陰性的、隱性的、儲存的資本。即固定資產、儲備金、保本型資產、知識產權等底層價值。低流動性、高安全性、高穩定性——好比家裡壓箱底的“保本錢”，是應對變化的底氣。</p></div>
+        <div class="symbol-block"><h3>白色圓幣</h3><p>象徵陽性的、顯性的、流動的財富。即現金、活躍投資、用於消費和再生產的資金。高流動性、高風險、高活力——好比手頭能隨時動用的"活錢"，是創造新價值的"前鋒"。</p></div>
+        <div class="symbol-block"><h3>黑色圓幣</h3><p>象徵陰性的、隱性的、儲存的資本。即固定資產、儲備金、保本型資產、知識產權等底層價值。低流動性、高安全性、高穩定性——好比家裡壓箱底的"保本錢"，是應對變化的底氣。</p></div>
         <div class="symbol-block"><h3>灰色圓幣</h3><p>象徵轉化媒介、信用體系、生態資本。即金融信用、社會資本、數據與注意力、待分配的剩餘價值/共享資本。作為中間樞紐，驅動並調節黑白資本之間的轉化規模和效率。</p></div>
         <div class="symbol-block"><h3>齒邊圓幣</h3><p>象徵精密與規則、規矩、法律邊界、硬通貨、財富積累、精密衡量、防偽與價值保證。齒邊像尺子的刻度，強調財富的積累要講規矩、守邊界，遵循當代商業倫理，不能為所欲為。</p></div>
-        <div class="symbol-block"><h3>光滑圓幣（無齒邊）</h3><p>象徵價值內核、完美循環、抽象財富、純粹規則。更接近“圓”的哲學概念——財富最本質的那個數字和規則。</p></div>
-        <div class="symbol-block"><h3>螺旋線</h3><p>象徵財富、能量、機遇的流動、增長與週期性變化。表達財富和增長的漩渦一樣，須遵循自然與社會的平衡法則。錢不是靜止的，而是在“流通”與“儲藏”之間不停打轉、循環增長。</p></div>
+        <div class="symbol-block"><h3>光滑圓幣（無齒邊）</h3><p>象徵價值內核、完美循環、抽象財富、純粹規則。更接近"圓"的哲學概念——財富最本質的那個數字和規則。</p></div>
+        <div class="symbol-block"><h3>螺旋線</h3><p>象徵財富、能量、機遇的流動、增長與週期性變化。表達財富和增長的漩渦一樣，須遵循自然與社會的平衡法則。錢不是靜止的，而是在"流通"與"儲藏"之間不停打轉、循環增長。</p></div>
 
         <h2>太極圓幣系列</h2>
-        <div class="symbol-block"><h3>圓幣版單魚眼太極圖（中心圓幣漩渦太極圖）</h3><p>財富就像這個漩渦一樣，在不斷變化和流動中，始終圍繞著一個穩固的核心規則在運行。其中掃把符號象徵“漩渦動態、天道循環”的寓意。</p></div>
-        <div class="symbol-block"><h3>圓幣版雙魚眼太極圖</h3><p>將太極圖的“圓”與錢幣的“外圓內方+齒邊”巧妙結合。保留了太極“圓融流轉”的核心精神；增添了“規矩邊界”的現代解讀；融合了“財富有道”的商業倫理。不是對傳統的背叛，而是創造性轉化，讓古老的太極圖在當代煥發新的生命力。</p></div>
+        <div class="symbol-block"><h3>圓幣版單魚眼太極圖（中心圓幣漩渦太極圖）</h3><p>財富就像這個漩渦一樣，在不斷變化和流動中，始終圍繞著一個穩固的核心規則在運行。其中掃把符號象徵"漩渦動態、天道循環"的寓意。</p></div>
+        <div class="symbol-block"><h3>圓幣版雙魚眼太極圖</h3><p>將太極圖的"圓"與錢幣的"外圓內方+齒邊"巧妙結合。保留了太極"圓融流轉"的核心精神；增添了"規矩邊界"的現代解讀；融合了"財富有道"的商業倫理。不是對傳統的背叛，而是創造性轉化，讓古老的太極圖在當代煥發新的生命力。</p></div>
         <div class="symbol-block"><h3>圓幣版三魚眼太極圖</h3><p>黑白灰圓幣分別象徵顯性流動資本（白）、隱性基礎資本（黑）、轉化信用資本（灰）。在二元系統中黑白對立，而三元系統中灰色作為中間樞紐和催化劑，驅動黑白資本之間的轉化。健康的信用、活躍的數據能讓白色資本更有效增值，讓黑色資本更安全保值，並促進兩者良性循環。灰色部分的萎縮或崩塌會導致系統僵化，黑白資本無法有效互動。</p></div>
         <div class="symbol-block"><h3>圓幣版四魚眼（四極四象）太極圖</h3><p>象徵資本在萌生、擴張、成熟、沉澱四個階段的完整循環，每一階段內部都包含對立的價值內核：</p><ul><li><strong>白色圓幣</strong>：初生流動資本、種子資本</li><li><strong>淺灰圓幣</strong>：擴張風險資本、運營資本</li><li><strong>深灰圓幣</strong>：成熟穩定資本、制度資本</li><li><strong>黑色圓幣</strong>：沉澱基礎資本、戰略儲備</li></ul></div>
 
         <h2>方孔幣形（繩串幣）</h2>
-        <div class="symbol-block"><h3>方孔花幣</h3><p>有一些設計師曾用花卉替代星座星象連接線的節點，他們畫的是“鮮花星座”。而我畫的是“鮮花幣星座”——差一個方框，差一個世界。方孔賦予花幣以規矩、邊界以及穿繩的可能，使自然之美與財富秩序融為一體。</p></div>
+        <div class="symbol-block"><h3>方孔花幣</h3><p>有一些設計師曾用花卉替代星座星象連接線的節點，他們畫的是"鮮花星座"。而我畫的是"鮮花幣星座"——差一個方框，差一個世界。方孔賦予花幣以規矩、邊界以及穿繩的可能，使自然之美與財富秩序融為一體。</p></div>
         <div class="symbol-block"><h3>方孔毛茸幣</h3><p>毛茸星幣（貓幣、狗幣、獸幣等）的中心，以方形口袋作為視覺記號。毛茸象徵溫暖、陪伴與生命力，方形口袋代表珍藏的善意與祝福。尾巴化作繩線，從身體後方自然延展，輕巧地串聯起這份溫暖與財富的流轉，使星空頂圖案既治癒又蘊含深意。</p></div>
         <div class="symbol-block"><h3>方孔水果幣</h3><p>以各類水果為幣形（草莓幣、橙子幣、櫻桃幣等），中心開方孔。水果象徵豐收、甜美與自然饋贈，方孔代表財富的度量與交換。繩串水果幣，寓意勞動果實與財富流通的有機結合。</p></div>
 
@@ -193,15 +272,15 @@
         <div class="symbol-block"><h3>Spiral Line</h3><p>Symbolizes the flow, growth, and cyclical change of wealth, energy, and opportunity. It expresses that wealth moves like a vortex, following the balanced laws of nature and society. Money is not static – it circulates endlessly between "liquidity" and "store of value".</p></div>
 
         <h2>Taiji with Coin Variations</h2>
-        <div class="symbol-block"><h3>Round‑Coin Single Fish Taiji (One eye / central vortex)</h3><p>Wealth, like this vortex, is always moving and flowing around a stable core rule. The whisk‑like pattern symbolizes “vortex dynamics” and “the cyclical flow of heaven”.</p></div>
-        <div class="symbol-block"><h3>Round‑Coin Double Fish Taiji (Two eyes)</h3><p>Ingeniously combines the circle of Taiji with the round coin’s “outer circle, inner square, and milled edge”. It retains Taiji’s core idea of “harmonious circulation”, adds a modern interpretation of “rules and boundaries”, and integrates the business ethics of “wealth gained by proper means”. This is not a betrayal of tradition but a creative transformation of cultural symbols.</p></div>
+        <div class="symbol-block"><h3>Round‑Coin Single Fish Taiji (One eye / central vortex)</h3><p>Wealth, like this vortex, is always moving and flowing around a stable core rule. The whisk‑like pattern symbolizes "vortex dynamics" and "the cyclical flow of heaven".</p></div>
+        <div class="symbol-block"><h3>Round‑Coin Double Fish Taiji (Two eyes)</h3><p>Ingeniously combines the circle of Taiji with the round coin's "outer circle, inner square, and milled edge". It retains Taiji's core idea of "harmonious circulation", adds a modern interpretation of "rules and boundaries", and integrates the business ethics of "wealth gained by proper means". This is not a betrayal of tradition but a creative transformation of cultural symbols.</p></div>
         <div class="symbol-block"><h3>Round‑Coin Three Fish Taiji (Three eyes)</h3><p>The white, black, and grey round coins respectively symbolize active liquid capital (white), passive base capital (black), and transformative credit capital (grey). In a binary system, black and white oppose each other; but in a ternary system, the grey serves as a catalyst, driving the conversion between white and black capital. A healthy credit system and active data ecosystem make white capital more efficient at creating value and black capital safer at preserving value, promoting virtuous cycles.</p></div>
         <div class="symbol-block"><h3>Round‑Coin Four Fish Taiji (Four poles / Four phases)</h3><p>Represents the complete circulation of capital through four stages: emergence, expansion, maturation, and sedimentation. Each stage contains its own distinctive value core:</p><ul><li><strong>White round coin</strong>: nascent liquid capital, seed capital</li><li><strong>Light grey round coin</strong>: expansion risk capital, operating capital</li><li><strong>Dark grey round coin</strong>: mature stable capital, institutional capital</li><li><strong>Black round coin</strong>: sedimented base capital, strategic reserve</li></ul></div>
 
         <h2>Square‑hole Coin Motifs (Cord‑through‑coin)</h2>
-        <div class="symbol-block"><h3>Square‑hole Flower Coin</h3><p>Some designers have used flowers to replace the nodes of constellation connection lines – they drew “flower constellations”. What I draw is “flower‑coin constellations” – one square hole changes everything. The square hole gives the flower coin order, boundaries, and the possibility of being threaded by a cord, merging natural beauty with the discipline of wealth.</p></div>
+        <div class="symbol-block"><h3>Square‑hole Flower Coin</h3><p>Some designers have used flowers to replace the nodes of constellation connection lines – they drew "flower constellations". What I draw is "flower‑coin constellations" – one square hole changes everything. The square hole gives the flower coin order, boundaries, and the possibility of being threaded by a cord, merging natural beauty with the discipline of wealth.</p></div>
         <div class="symbol-block"><h3>Square‑hole Furry Coin</h3><p>Furry star coins (cat coins, dog coins, beast coins, etc.) feature a square pocket as a visual emblem at their center. The fur symbolizes warmth, companionship, and vitality; the square pocket represents treasured kindness and blessings. The tail transforms into a cord, extending naturally from the body, gently linking this warmth with the flow of wealth — making the starlight headliner design both comforting and meaningful.</p></div>
-        <div class="symbol-block"><h3>Square‑hole Fruit Coin</h3><p>Various fruits (strawberry, orange, cherry, etc.) shaped as coins, with a square hole in the center. Fruit symbolizes harvest, sweetness, and nature’s gift; the square hole represents measurement and exchange. Threading fruit coins together implies the organic combination of labor’s fruit and the flow of wealth.</p></div>
+        <div class="symbol-block"><h3>Square‑hole Fruit Coin</h3><p>Various fruits (strawberry, orange, cherry, etc.) shaped as coins, with a square hole in the center. Fruit symbolizes harvest, sweetness, and nature's gift; the square hole represents measurement and exchange. Threading fruit coins together implies the organic combination of labor's fruit and the flow of wealth.</p></div>
 
         <footer><p>© 2026 FortuneCord | This symbolic interpretation is for cultural and artistic reference.</p></footer>
     </div>
