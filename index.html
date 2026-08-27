@@ -38,88 +38,87 @@
             width: 100%;
             height: 100%;
             pointer-events: none;
-            z-index: 0; /* 确保在背景层之上、内容之下 */
+            z-index: 0;
             background-image:
-              /* ---- 亮白大星点（大幅错开周期，打破对齐） ---- */
-              radial-gradient(4px 4px at 14% 11%, #fff, rgba(0,0,0,0)),
-              radial-gradient(3.5px 3.5px at 82% 19%, #fff, rgba(0,0,0,0)),
-              radial-gradient(5px 5px at 41% 29%, #fff, rgba(0,0,0,0)),
-              radial-gradient(3px 3px at 94% 43%, #fff, rgba(0,0,0,0)),
-              radial-gradient(4.5px 4.5px at 23% 58%, #fff, rgba(0,0,0,0)),
-              radial-gradient(3px 3px at 71% 73%, #fff, rgba(0,0,0,0)),
-              radial-gradient(5.5px 5.5px at 52% 83%, #fff, rgba(0,0,0,0)),
-              radial-gradient(3.5px 3.5px at 89% 91%, #fff, rgba(0,0,0,0)),
-              radial-gradient(4px 4px at 6% 87%, #fff, rgba(0,0,0,0)),
-              radial-gradient(3px 3px at 63% 97%, #fff, rgba(0,0,0,0)),
+              /* ---- 亮白小星点 ---- */
+              radial-gradient(1.2px 1.2px at 14% 11%, #fff, rgba(0,0,0,0)),
+              radial-gradient(1px 1px at 82% 19%, #fff, rgba(0,0,0,0)),
+              radial-gradient(1.8px 1.8px at 41% 29%, #fff, rgba(0,0,0,0)),
+              radial-gradient(0.8px 0.8px at 94% 43%, #fff, rgba(0,0,0,0)),
+              radial-gradient(1.5px 1.5px at 23% 58%, #fff, rgba(0,0,0,0)),
+              radial-gradient(0.8px 0.8px at 71% 73%, #fff, rgba(0,0,0,0)),
+              radial-gradient(2px 2px at 52% 83%, #fff, rgba(0,0,0,0)),
+              radial-gradient(1px 1px at 89% 91%, #fff, rgba(0,0,0,0)),
+              radial-gradient(1.2px 1.2px at 6% 87%, #fff, rgba(0,0,0,0)),
+              radial-gradient(0.8px 0.8px at 63% 97%, #fff, rgba(0,0,0,0)),
 
-              /* ---- 暖黄中星点（非对称交错） ---- */
-              radial-gradient(2.5px 2.5px at 27% 16%, #ffd, rgba(0,0,0,0)),
-              radial-gradient(2px 2px at 61% 8%, #ffd, rgba(0,0,0,0)),
-              radial-gradient(3px 3px at 74% 34%, #ffd, rgba(0,0,0,0)),
-              radial-gradient(2.5px 2.5px at 39% 48%, #ffd, rgba(0,0,0,0)),
-              radial-gradient(2px 2px at 64% 57%, #ffd, rgba(0,0,0,0)),
-              radial-gradient(3px 3px at 11% 76%, #ffd, rgba(0,0,0,0)),
-              radial-gradient(2.5px 2.5px at 47% 84%, #ffd, rgba(0,0,0,0)),
-              radial-gradient(2px 2px at 86% 96%, #ffd, rgba(0,0,0,0)),
-              radial-gradient(3px 3px at 37% 93%, #ffd, rgba(0,0,0,0)),
-              radial-gradient(2px 2px at 91% 51%, #ffd, rgba(0,0,0,0)),
+              /* ---- 暖黄小星点 ---- */
+              radial-gradient(0.8px 0.8px at 27% 16%, #ffd, rgba(0,0,0,0)),
+              radial-gradient(0.6px 0.6px at 61% 8%, #ffd, rgba(0,0,0,0)),
+              radial-gradient(1px 1px at 74% 34%, #ffd, rgba(0,0,0,0)),
+              radial-gradient(0.8px 0.8px at 39% 48%, #ffd, rgba(0,0,0,0)),
+              radial-gradient(0.6px 0.6px at 64% 57%, #ffd, rgba(0,0,0,0)),
+              radial-gradient(1px 1px at 11% 76%, #ffd, rgba(0,0,0,0)),
+              radial-gradient(0.8px 0.8px at 47% 84%, #ffd, rgba(0,0,0,0)),
+              radial-gradient(0.6px 0.6px at 86% 96%, #ffd, rgba(0,0,0,0)),
+              radial-gradient(1px 1px at 37% 93%, #ffd, rgba(0,0,0,0)),
+              radial-gradient(0.6px 0.6px at 91% 51%, #ffd, rgba(0,0,0,0)),
 
-              /* ---- 淡蓝冷星点（自由点缀） ---- */
-              radial-gradient(2.5px 2.5px at 8% 39%, #d4e4ff, rgba(0,0,0,0)),
-              radial-gradient(2px 2px at 77% 82%, #d4e4ff, rgba(0,0,0,0)),
-              radial-gradient(3px 3px at 33% 66%, #d4e4ff, rgba(0,0,0,0)),
-              radial-gradient(2px 2px at 88% 24%, #d4e4ff, rgba(0,0,0,0)),
-              radial-gradient(2.5px 2.5px at 24% 81%, #d4e4ff, rgba(0,0,0,0)),
+              /* ---- 淡蓝冷星点（少量点缀） ---- */
+              radial-gradient(0.8px 0.8px at 8% 39%, #d4e4ff, rgba(0,0,0,0)),
+              radial-gradient(0.6px 0.6px at 77% 82%, #d4e4ff, rgba(0,0,0,0)),
+              radial-gradient(1px 1px at 33% 66%, #d4e4ff, rgba(0,0,0,0)),
+              radial-gradient(0.6px 0.6px at 88% 24%, #d4e4ff, rgba(0,0,0,0)),
+              radial-gradient(0.8px 0.8px at 24% 81%, #d4e4ff, rgba(0,0,0,0)),
 
-              /* ---- 小星点群（采用奇数/质数网格尺寸，彻底消除直排感） ---- */
-              radial-gradient(1px 1px at 19% 31%, #fff, rgba(0,0,0,0)),
-              radial-gradient(0.8px 0.8px at 36% 39%, #fff, rgba(0,0,0,0)),
-              radial-gradient(1.2px 1.2px at 53% 18%, #fff, rgba(0,0,0,0)),
-              radial-gradient(0.6px 0.6px at 67% 46%, #fff, rgba(0,0,0,0)),
-              radial-gradient(1px 1px at 83% 13%, #fff, rgba(0,0,0,0)),
-              radial-gradient(0.8px 0.8px at 51% 64%, #fff, rgba(0,0,0,0)),
-              radial-gradient(1.5px 1.5px at 21% 71%, #fff, rgba(0,0,0,0)),
-              radial-gradient(0.6px 0.6px at 73% 91%, #fff, rgba(0,0,0,0)),
-              radial-gradient(1px 1px at 14% 53%, #fff, rgba(0,0,0,0)),
-              radial-gradient(1.2px 1.2px at 81% 49%, #fff, rgba(0,0,0,0)),
-              radial-gradient(0.8px 0.8px at 43% 54%, #fff, rgba(0,0,0,0)),
-              radial-gradient(1px 1px at 93% 74%, #fff, rgba(0,0,0,0)),
-              radial-gradient(0.6px 0.6px at 25% 91%, #fff, rgba(0,0,0,0)),
-              radial-gradient(1.2px 1.2px at 69% 39%, #fff, rgba(0,0,0,0)),
-              radial-gradient(0.8px 0.8px at 31% 17%, #fff, rgba(0,0,0,0)),
-              radial-gradient(1px 1px at 63% 76%, #fff, rgba(0,0,0,0)),
-              radial-gradient(0.6px 0.6px at 84% 67%, #fff, rgba(0,0,0,0)),
-              radial-gradient(1.5px 1.5px at 17% 63%, #fff, rgba(0,0,0,0)),
-              radial-gradient(0.8px 0.8px at 46% 34%, #fff, rgba(0,0,0,0)),
-              radial-gradient(1px 1px at 79% 54%, #fff, rgba(0,0,0,0)),
+              /* ---- 微小星点（密集填充） ---- */
+              radial-gradient(0.5px 0.5px at 19% 31%, #fff, rgba(0,0,0,0)),
+              radial-gradient(0.4px 0.4px at 36% 39%, #fff, rgba(0,0,0,0)),
+              radial-gradient(0.6px 0.6px at 53% 18%, #fff, rgba(0,0,0,0)),
+              radial-gradient(0.3px 0.3px at 67% 46%, #fff, rgba(0,0,0,0)),
+              radial-gradient(0.5px 0.5px at 83% 13%, #fff, rgba(0,0,0,0)),
+              radial-gradient(0.4px 0.4px at 51% 64%, #fff, rgba(0,0,0,0)),
+              radial-gradient(0.8px 0.8px at 21% 71%, #fff, rgba(0,0,0,0)),
+              radial-gradient(0.3px 0.3px at 73% 91%, #fff, rgba(0,0,0,0)),
+              radial-gradient(0.5px 0.5px at 14% 53%, #fff, rgba(0,0,0,0)),
+              radial-gradient(0.6px 0.6px at 81% 49%, #fff, rgba(0,0,0,0)),
+              radial-gradient(0.4px 0.4px at 43% 54%, #fff, rgba(0,0,0,0)),
+              radial-gradient(0.5px 0.5px at 93% 74%, #fff, rgba(0,0,0,0)),
+              radial-gradient(0.3px 0.3px at 25% 91%, #fff, rgba(0,0,0,0)),
+              radial-gradient(0.6px 0.6px at 69% 39%, #fff, rgba(0,0,0,0)),
+              radial-gradient(0.4px 0.4px at 31% 17%, #fff, rgba(0,0,0,0)),
+              radial-gradient(0.5px 0.5px at 63% 76%, #fff, rgba(0,0,0,0)),
+              radial-gradient(0.3px 0.3px at 84% 67%, #fff, rgba(0,0,0,0)),
+              radial-gradient(0.8px 0.8px at 17% 63%, #fff, rgba(0,0,0,0)),
+              radial-gradient(0.4px 0.4px at 46% 34%, #fff, rgba(0,0,0,0)),
+              radial-gradient(0.5px 0.5px at 79% 54%, #fff, rgba(0,0,0,0)),
 
-              /* ---- 极细微星点（无规则弥散噪点） ---- */
-              radial-gradient(0.4px 0.4px at 24% 26%, #ffd, rgba(0,0,0,0)),
-              radial-gradient(0.5px 0.5px at 57% 38%, #ffd, rgba(0,0,0,0)),
-              radial-gradient(0.3px 0.3px at 64% 19%, #ffd, rgba(0,0,0,0)),
-              radial-gradient(0.6px 0.6px at 38% 82%, #ffd, rgba(0,0,0,0)),
-              radial-gradient(0.4px 0.4px at 87% 36%, #ffd, rgba(0,0,0,0)),
-              radial-gradient(0.5px 0.5px at 22% 44%, #ffd, rgba(0,0,0,0)),
-              radial-gradient(0.3px 0.3px at 96% 14%, #ffd, rgba(0,0,0,0)),
-              radial-gradient(0.6px 0.6px at 31% 92%, #ffd, rgba(0,0,0,0)),
-              radial-gradient(0.4px 0.4px at 74% 77%, #ffd, rgba(0,0,0,0)),
-              radial-gradient(0.5px 0.5px at 59% 94%, #ffd, rgba(0,0,0,0));
+              /* ---- 极细微弥散星点 ---- */
+              radial-gradient(0.3px 0.3px at 24% 26%, #ffd, rgba(0,0,0,0)),
+              radial-gradient(0.4px 0.4px at 57% 38%, #ffd, rgba(0,0,0,0)),
+              radial-gradient(0.2px 0.2px at 64% 19%, #ffd, rgba(0,0,0,0)),
+              radial-gradient(0.4px 0.4px at 38% 82%, #ffd, rgba(0,0,0,0)),
+              radial-gradient(0.3px 0.3px at 87% 36%, #ffd, rgba(0,0,0,0)),
+              radial-gradient(0.4px 0.4px at 22% 44%, #ffd, rgba(0,0,0,0)),
+              radial-gradient(0.2px 0.2px at 96% 14%, #ffd, rgba(0,0,0,0)),
+              radial-gradient(0.4px 0.4px at 31% 92%, #ffd, rgba(0,0,0,0)),
+              radial-gradient(0.3px 0.3px at 74% 77%, #ffd, rgba(0,0,0,0)),
+              radial-gradient(0.4px 0.4px at 59% 94%, #ffd, rgba(0,0,0,0));
 
-            background-repeat: repeat;
-            /* 使用一组错位、互不整除的质数/非对称尺寸，彻底打破规律性重复和“直排线”感 */
-            background-size:
-                337px 419px, 503px 389px, 277px 461px, 571px 331px, 397px 499px,
-                433px 317px, 313px 523px, 521px 379px, 373px 443px, 457px 293px,
-                293px 479px, 541px 359px, 353px 431px, 479px 307px, 401px 509px,
-                317px 383px, 509px 439px, 389px 311px, 449px 487px, 283px 353px,
-                547px 421px, 367px 467px, 487px 337px, 409px 527px, 347px 373px,
-                523px 401px, 307px 491px, 563px 349px, 379px 433px, 463px 389px,
-                391px 457px, 311px 337px, 503px 479px, 353px 409px, 439px 533px,
-                577px 313px, 289px 449px, 467px 367px, 397px 421px, 323px 503px,
-                511px 293px, 271px 463px, 443px 379px, 361px 541px, 533px 419px,
-                419px 323px, 307px 481px, 473px 359px, 569px 401px, 349px 491px;
-            opacity: 0.7;
-        } 
+          background-repeat: repeat;
+          background-size:
+              337px 419px, 503px 389px, 277px 461px, 571px 331px, 397px 499px,
+              433px 317px, 313px 523px, 521px 379px, 373px 443px, 457px 293px,
+              293px 479px, 541px 359px, 353px 431px, 479px 307px, 401px 509px,
+              317px 383px, 509px 439px, 389px 311px, 449px 487px, 283px 353px,
+              547px 421px, 367px 467px, 487px 337px, 409px 527px, 347px 373px,
+              523px 401px, 307px 491px, 563px 349px, 379px 433px, 463px 389px,
+              391px 457px, 311px 337px, 503px 479px, 353px 409px, 439px 533px,
+              577px 313px, 289px 449px, 467px 367px, 397px 421px, 323px 503px,
+              511px 293px, 271px 463px, 443px 379px, 361px 541px, 533px 419px,
+              419px 323px, 307px 481px, 473px 359px, 569px 401px, 349px 491px;
+          opacity: 0.7;
+        }
         .container {
             max-width: 1100px;
             margin: 0 auto;
