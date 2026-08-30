@@ -1,10 +1,19 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>符号释义 – 圆币哲学与太极财富观 | FortuneCord</title>
-    <meta name="description" content="解读FortuneCord视觉系统中的圆币、螺旋线、太极图等符号的财富哲学与文化内涵。">
+    <link rel="icon" href="/assets/favicon.ico">
+
+    <!-- Open Graph 标签 -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Symbolism – Coin Philosophy & Taiji Wealth Concept | FortuneCord" />
+    <meta property="og:description" content="Explore the symbolic meanings of round coins, spiral lines, and Taiji diagrams in the FortuneCord visual system — a philosophy of wealth and order." />
+    <meta property="og:image" content="https://fortunecord.github.io/assets/fortune-cord-post-heaven-taiji-single-strand-outer-ring-yin-yang-s-curve1200x630.jpg" />
+    <meta property="og:url" content="https://fortunecord.com/symbols.html" />
+    
+    <title>Symbolism – Coin Philosophy & Taiji Wealth Concept | FortuneCord</title>
+    <meta name="description" content="Explore the symbolic meanings of round coins, spiral lines, and Taiji diagrams in the FortuneCord visual system — a philosophy of wealth and order.">
     <style>
         * {
             margin: 0;
@@ -201,6 +210,16 @@
     </style>
 </head>
 <body>
+    <nav style="max-width: 900px; margin: 0 auto 2rem auto; text-align: center;">
+    <a href="/" style="color: #b8a310; text-decoration: none; margin: 0 15px;">Home</a>
+    <a href="https://fortunecord.github.io/fortunecord-artworks/" style="color: #b8a310; text-decoration: none; margin: 0 15px;">Gallery</a>
+    <a href="/symbols.html?lang=en" style="color: #b8a310; text-decoration: none; margin: 0 15px;">Symbolism</a>
+    <a href="/legal.html" style="color: #b8a310; text-decoration: none; margin: 0 15px;">Legal</a>
+</nav>  
+
+<div class="tagline" style="text-align:center; margin-top:0.5rem;">
+    Star Coin System — Weave your guardian stars into a thread of fortune.
+</div>
 <div class="container">
     <div class="lang-switch">
         <button class="lang-btn" data-lang="zh">简体</button>
@@ -210,7 +229,6 @@
 
     <!-- 简体中文内容 -->
     <div id="content-zh" class="lang-content" style="display: none;">
-        <a href="/" class="back-link">← 返回首页</a>
         <h1>符号释义</h1>
         <div class="subhead">圆币 · 螺旋 · 太极图 · 财富哲学</div>
 
@@ -240,7 +258,6 @@
 
     <!-- 繁体中文内容 -->
     <div id="content-zh-tw" class="lang-content" style="display: none;">
-        <a href="/" class="back-link">← 返回首頁</a>
         <h1>符號釋義</h1>
         <div class="subhead">圓幣 · 螺旋 · 太極圖 · 財富哲學</div>
 
@@ -270,7 +287,6 @@
 
     <!-- 英文内容 -->
     <div id="content-en" class="lang-content">
-        <a href="/" class="back-link">← Back to home</a>
         <h1>Symbolism</h1>
         <div class="subhead">Round Coin · Spiral · Taiji · Wealth Philosophy</div>
 
@@ -306,6 +322,7 @@
     const btns = document.querySelectorAll('.lang-btn');
 
     function setLang(lang) {
+        // 1. 切换内容显示
         zhDiv.style.display = 'none';
         zhTwDiv.style.display = 'none';
         enDiv.style.display = 'none';
@@ -316,9 +333,20 @@
         } else {
             enDiv.style.display = 'block';
         }
+
+        // 2. 切换按钮高亮状态
         btns.forEach(btn => {
             btn.classList.toggle('active', btn.dataset.lang === lang);
         });
+
+        // 3. 【核心新增】动态切换浏览器标签页标题（让SEO和用户体验都完美）
+        if (lang === 'zh') {
+            document.title = '符号释义 – 圆币哲学与太极财富观 | FortuneCord';
+        } else if (lang === 'zh-tw') {
+            document.title = '符號釋義 – 圓幣哲學與太極財富觀 | FortuneCord';
+        } else {
+            document.title = 'Symbolism – Coin Philosophy & Taiji Wealth Concept | FortuneCord';
+        }
     }
 
     btns.forEach(btn => {
