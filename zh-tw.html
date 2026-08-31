@@ -107,14 +107,12 @@
             z-index: 1;
         }
         .lang-switch {
-            position: absolute;
-            top: 0;
-            right: 0;
             display: flex;
-            flex-direction: column;
+            justify-content: flex-end;
             gap: 0.8rem;
-            margin: 0;
-            z-index: 10;
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 0;
         }
         .lang-btn {
             position: relative;
@@ -150,13 +148,18 @@
             background: rgba(184, 163, 16, 0.2);
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%) rotate(15deg);
             z-index: -1;
+        }
+        .lang-btn:nth-child(2)::after {
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+        .lang-btn:nth-child(3)::after {
+            transform: translate(-50%, -50%) rotate(-30deg);
         }
         .hero {
             text-align: center;
             margin-bottom: 3rem;
-            padding-right: 50px;
         }
         .hero-content {
             display: flex;
