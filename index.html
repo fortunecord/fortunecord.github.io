@@ -119,12 +119,12 @@
             content: '';
             position: absolute;
             top: 50%;
-            left: 0;
-            right: 0;
-            height: 2px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 130px;
+            height: 1px;
             background-color: #b8a310;
             z-index: -1;
-            transform: translateY(-50%);
         }
         .lang-btn {
             position: relative;
@@ -132,7 +132,7 @@
             height: 44px;
             border: 1px solid #b8a310;
             border-radius: 50%;
-            background-color: #0a1128;
+            background: transparent;
             color: #ddd;
             font-size: 0.75rem;
             cursor: pointer;
@@ -141,12 +141,12 @@
             z-index: 1;
             display: flex;
             justify-content: center;
-            align-items: flex-start;
-            padding-top: 10px;
+            align-items: flex-end;
+            padding-bottom: 6px;
             line-height: 1;
         }
         .lang-btn.active {
-            background-color: #2b1a5e;
+            background: rgba(43, 26, 94, 0.3);
             color: #b8a310;
             border-color: #d4c24a;
         }
@@ -157,10 +157,11 @@
             height: 8px;
             border: 1px solid #b8a310;
             border-radius: 1px;
-            background: rgba(184, 163, 16, 0.2);
+            background: transparent;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+            z-index: 2;
         }
         .hero {
             text-align: center;
