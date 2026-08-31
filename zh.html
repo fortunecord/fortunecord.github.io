@@ -106,6 +106,7 @@
             position: relative;
             z-index: 1;
         }
+        }
         .lang-switch {
             display: flex;
             justify-content: flex-end;
@@ -148,8 +149,14 @@
             background: rgba(184, 163, 16, 0.2);
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%) rotate(15deg);
             z-index: -1;
+        }
+        .lang-btn:nth-child(2)::after {
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+        .lang-btn:nth-child(3)::after {
+            transform: translate(-50%, -50%) rotate(-30deg);
         }
         .hero {
             text-align: center;
