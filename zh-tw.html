@@ -205,19 +205,25 @@
         }
         .btn-primary {
             display: inline-block;
-            padding: 0.35rem 0.6rem;
-            background: #2b1a5e;
+            padding: 0.5rem 1.2rem;
+            background: linear-gradient(145deg, #2b1a5e 0%, #4a3b82 100%);
             color: #b8a310;
             text-decoration: none;
-            border-radius: 0;
+            border-radius: 30px;
+            border: 1px solid #b8a310;
             font-weight: 500;
-            font-size: 0.85rem;
-            border: none;
-            transition: background 0.25s ease, color 0.25s ease;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 5px rgba(184, 163, 16, 0.3), inset 0 1px 2px rgba(255, 255, 255, 0.2);
+            text-shadow: 0 0 4px rgba(184, 163, 16, 0.8);
         }
         .btn-primary:hover {
-            background: #b8a310;
-            color: #0f0f0f;
+            background: linear-gradient(145deg, #b8a310 0%, #d4c24a 100%);
+            color: #2b1a5e;
+            border-color: #fff5c2;
+            box-shadow: 0 0 12px rgba(255, 215, 0, 0.6);
+            text-shadow: none;
+            transform: translateY(-2px);
         }
         .author {
             text-align: center;
