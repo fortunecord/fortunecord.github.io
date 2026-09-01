@@ -192,12 +192,13 @@
         }
         .tagline {
             font-size: 1rem;
-            color: #aaa;
+            color: #4AF6F4;
             border-top: 1px solid #333;
             border-bottom: 1px solid #333;
             display: inline-block;
             padding: 0.5rem 0;
             margin: 0;
+            text-shadow: 0 0 8px rgba(74, 246, 244, 0.6);
         }
         .hero-buttons {
             display: flex;
@@ -332,6 +333,36 @@
             border-top: 1px solid #2a2a2a;
             font-size: 0.85rem;
             color: #888;
+        }
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        .footer-link {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 0.4rem 1.2rem;
+            background: #211843;
+            color: #b8a310;
+            border: 1px solid #FFD700;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 8px rgba(184, 163, 16, 0.2), inset 0 1px 2px rgba(255, 255, 255, 0.1), inset 0 -2px 3px rgba(0, 0, 0, 0.4);
+            text-shadow: 0 0 4px rgba(184, 163, 16, 0.5);
+        }
+        .footer-link:hover {
+            background: linear-gradient(145deg, #b8a310 0%, #d4c24a 100%);
+            color: #211843;
+            border-color: #fff5c2;
+            text-shadow: none;
+            box-shadow: 0 0 12px rgba(255, 215, 0, 0.6);
         }
         footer a {
             color: #b8a310;
@@ -588,17 +619,18 @@
     <div class="contact">
         <p>对“财绳”视觉系统感兴趣，希望将其应用于您自己的太极、星座或星象符号再创作？欢迎联系合作或授权。</p>
         <p>📧 咨询：fortunecord [at] qq [dot] com <span style="font-size:0.85rem;">（请将 [at] 替换为 @，[dot] 替换为 .）</span></p>
-        <p style="margin-top: 0.5rem;">小红书｜微博｜B站：<strong>@FortuneCord</strong></p>
     </div>
 
     <footer>
         <div class="footer-logo" style="margin-bottom: 10px;">
             <img src="assets/coin-cord-star-coin-logo-secondary.svg" alt="Coin Cord Logo" style="height: 80px;">
         </div>
+        <div class="footer-links">
+            <a href="https://fortunecord.wordpress.com" target="_blank" rel="noopener noreferrer" class="btn-primary">✦ Blog</a>
+            <a href="https://github.com/fortunecord/fortunecord.github.io" target="_blank" rel="noopener noreferrer" class="btn-primary">✦ GitHub</a>
+            <a href="/legal.html" class="btn-primary">✦ Legal</a>
+        </div>
         <p>© 2026 FortuneCord | 版权所有。</p>
-        <p><a href="https://fortunecord.wordpress.com" target="_blank" rel="noopener noreferrer">fortunecord.wordpress.com</a></p>
-        <p><a href="https://github.com/fortunecord/fortunecord.github.io" target="_blank" rel="noopener noreferrer">https://github.com/fortunecord/fortunecord.github.io</a></p>
-        <p style="font-size:0.75rem;"><a href="/legal.html">Legal Notice</a></p>
     </footer>
 </div>
 
