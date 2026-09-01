@@ -358,6 +358,36 @@
             font-size: 0.85rem;
             color: #888;
         }
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        .footer-link {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 0.4rem 1.2rem;
+            background: #211843;
+            color: #b8a310;
+            border: 1px solid #FFD700;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 8px rgba(184, 163, 16, 0.2), inset 0 1px 2px rgba(255, 255, 255, 0.1), inset 0 -2px 3px rgba(0, 0, 0, 0.4);
+            text-shadow: 0 0 4px rgba(184, 163, 16, 0.5);
+        }
+        .footer-link:hover {
+            background: linear-gradient(145deg, #b8a310 0%, #d4c24a 100%);
+            color: #211843;
+            border-color: #fff5c2;
+            text-shadow: none;
+            box-shadow: 0 0 12px rgba(255, 215, 0, 0.6);
+        }
         footer a {
             color: #b8a310;
             text-decoration: none;
@@ -623,13 +653,15 @@
         <div class="footer-logo" style="margin-bottom: 10px;">
             <img src="assets/coin-cord-star-coin-logo-secondary.svg" alt="Coin Cord Logo" style="height: 80px;">
         </div>
+        <div class="footer-links">
+        <a href="https://fortunecord.wordpress.com" target="_blank" rel="noopener noreferrer" class="footer-link">✦ Blog</a>
+        <a href="https://github.com/fortunecord/fortunecord.github.io" target="_blank" rel="noopener noreferrer" class="footer-link">✦ GitHub</a>
+        <a href="/legal.html" class="footer-link">✦ Legal</a>
+        </div>
         <p>© 2026 FortuneCord | All rights reserved.</p>
-        <p><a href="https://fortunecord.wordpress.com" target="_blank" rel="noopener noreferrer">fortunecord.wordpress.com</a></p>
-        <p><a href="https://github.com/fortunecord/fortunecord.github.io" target="_blank" rel="noopener noreferrer">https://github.com/fortunecord/fortunecord.github.io</a></p>
-        <p style="font-size:0.75rem;"><a href="/legal.html">Legal Notice</a></p>
     </footer>
 </div>
-
+    
 <div class="modal" id="imageModal">
     <button class="close-btn" onclick="closeModal()">&times;</button>
     <img id="modalImage" src="" alt="Preview">
