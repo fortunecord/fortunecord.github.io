@@ -204,20 +204,35 @@
             gap: 0.8rem;
         }
         .btn-primary {
-            display: inline-block;
-            padding: 0.35rem 0.6rem;
-            background: #2b1a5e;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 0.5rem 1.2rem;
+            background: rgba(43, 26, 94, 0.4);
             color: #b8a310;
+            border: 1px solid #b8a310;
+            border-radius: 4px;
             text-decoration: none;
-            border-radius: 0;
             font-weight: 500;
-            font-size: 0.85rem;
-            border: none;
-            transition: background 0.25s ease, color 0.25s ease;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+        .btn-primary::before {
+            content: '';
+            width: 10px;
+            height: 10px;
+            background: #40E0D0;
+            border: 1px solid #b8a310;
+            border-radius: 2px;
+            transform: rotate(45deg);
         }
         .btn-primary:hover {
             background: #b8a310;
             color: #0f0f0f;
+        }
+        .btn-primary:hover::before {
+            background: #0a1128;
+            border-color: #0a1128;
         }
         .author {
             text-align: center;
