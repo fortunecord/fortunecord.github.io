@@ -182,7 +182,12 @@
             font-weight: 600;
             letter-spacing: -0.5px;
             margin-bottom: 0.2rem;
-            color: #b8a310;
+            background: linear-gradient(90deg, #b8a310 0%, #e8d060 50%, #b8a310 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: transparent;
+            filter: drop-shadow(0 0 8px rgba(184, 163, 16, 0.5));
         }
         .subtitle-row {
             display: flex;
@@ -266,6 +271,10 @@
             display: inline-block;
             padding: 0.5rem 0;
             margin-top: 0.5rem;
+            text-shadow: 0 0 8px rgba(74, 246, 244, 0.6);
+        }
+        .tagline-cyan {
+            color: #4AF6F4;
             text-shadow: 0 0 8px rgba(74, 246, 244, 0.6);
         }
         .author {
@@ -521,8 +530,7 @@
             </div>
           </div>
         </div>
-        <div class="tagline" style="text-align:center; margin-top:0.5rem;">
-          Star Coin System — Weave your guardian stars into a thread of fortune.
+        <div class="tagline"><span class="tagline-cyan">Star Coin System</span> — Weave your guardian stars into a thread of fortune.</div>
         </div>
 
     <div class="system-intro">
