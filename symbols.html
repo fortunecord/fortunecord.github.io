@@ -154,8 +154,6 @@
             justify-content: center;
             flex-wrap: wrap;
             gap: 1.5rem;
-            position: relative;
-            padding-right: 160px;
         }
         .logo-img {
             max-width: 100%;
@@ -185,10 +183,6 @@
             color: #aaa;
         }
         .hero-buttons {
-            position: absolute;
-            right: 0;
-            top: 50%;
-            transform: translateY(-50%);
             display: flex;
             gap: 15px;
             padding: 0;
@@ -229,6 +223,7 @@
             left: 12px;
             transform: translateY(-50%) rotate(45deg);
             z-index: -1;
+            box-shadow: 0 0 6px rgba(74, 246, 244, 0.8), 0 0 12px rgba(74, 246, 244, 0.4);
         }
         .btn-primary:hover {
             background: linear-gradient(145deg, #b8a310 0%, #d4c24a 100%);
@@ -317,12 +312,13 @@
                 <div class="hero-text">
                     <h1 class="logo">FortuneCord<span style="font-size:0.5em;">™</span></h1>
                     <div class="subtitle-row">
-                        <span class="subtitle-en">An Alchemist's Line Art World</span>
                         <div class="hero-buttons">
                             <a href="https://fortunecord.github.io/fortunecord-artworks/" class="btn-primary">Gallery</a>
+                            <a href="/" class="btn-primary">Home</a>
                             <a href="/symbols.html?lang=en" class="btn-primary">Symbolism</a>
                             <a href="/legal.html" class="btn-primary">Legal</a>
                         </div>
+                        <span class="subtitle-en">An Alchemist's Line Art World</span>
                     </div>
                 </div>
             </div>
