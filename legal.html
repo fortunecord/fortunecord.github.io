@@ -47,8 +47,8 @@
         footer { margin-top: 3rem; font-size: 0.85rem; color: #777; text-align: center; }
         .footer-logo img { filter: brightness(0.75) saturate(0.8) drop-shadow(0 0 3px rgba(255, 255, 255, 0.5)); }
         .footer-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; margin-bottom: 15px; }
-        .footer-link { position: relative; display: inline-flex; align-items: center; gap: 8px; padding: 0.4rem 1.2rem; background: #211843; color: #b8a310; border: 1px solid #FFD700; border-radius: 30px; font-size: 0.85rem; text-decoration: none; transition: all 0.3s ease; box-shadow: 0 0 8px rgba(184, 163, 16, 0.2), inset 0 1px 2px rgba(255, 255, 255, 0.1), inset 0 -2px 3px rgba(0, 0, 0, 0.4); text-shadow: 0 0 4px rgba(184, 163, 16, 0.5); }
-        .footer-link:hover { background: linear-gradient(145deg, #b8a310 0%, #d4c24a 100%); color: #211843; border-color: #fff5c2; text-shadow: none; box-shadow: 0 0 12px rgba(255, 215, 0, 0.6); }
+        .footer-link { position: relative; display: inline-block; padding: 0.5rem 1.2rem; background: #0a1128; color: #b8a310; border: 1px solid #40E0D0; border-radius: 6px; font-weight: 500; font-size: 0.9rem; text-decoration: none; clip-path: polygon(10% 0, 90% 0, 100% 50%, 90% 100%, 10% 100%, 0 50%); transition: all 0.3s; text-shadow: 0 0 6px rgba(64, 224, 208, 0.5); }
+        .footer-link:hover { background: #b8a310; color: #0f0f0f; border-color: #b8a310; text-shadow: none; box-shadow: 0 0 20px rgba(184, 163, 16, 0.8); transform: translateY(-2px); }
         .container a:not(.back-link) { color: #b8a310; }
     </style>
 </head>
@@ -160,9 +160,9 @@
                 <img src="assets/coin-cord-star-coin-logo-secondary.svg" alt="Coin Cord Logo" style="height: 80px;">
             </div>
             <div class="footer-links">
-                <a href="https://fortunecord.wordpress.com" target="_blank" rel="noopener noreferrer" class="btn-primary footer-link">✦ Blog</a>
-                <a href="https://github.com/fortunecord/fortunecord.github.io" target="_blank" rel="noopener noreferrer" class="btn-primary footer-link">✦ GitHub</a>
-                <a href="/legal.html" class="btn-primary footer-link">✦ Legal</a>
+                <a href="https://fortunecord.wordpress.com" target="_blank" rel="noopener noreferrer" class="footer-link">✦ Blog</a>
+                <a href="https://github.com/fortunecord/fortunecord.github.io" target="_blank" rel="noopener noreferrer" class="footer-link">✦ GitHub</a>
+                <a href="/legal.html" class="footer-link">✦ Legal</a>
             </div>
             <p>© 2026 FortuneCord | All rights reserved.</p>
         </footer>
@@ -175,15 +175,12 @@
         const btns = document.querySelectorAll('.lang-btn');
 
         function setLang(lang) {
-            enDiv.style.display = 'none';
-            zhDiv.style.display = 'none';
-            zhTwDiv.style.display = 'none';
+            enDiv.style.display = 'none'; zhDiv.style.display = 'none'; zhTwDiv.style.display = 'none';
             if (lang === 'zh') { zhDiv.style.display = 'block'; }
             else if (lang === 'zh-tw') { zhTwDiv.style.display = 'block'; }
             else { enDiv.style.display = 'block'; }
             btns.forEach(btn => { btn.classList.toggle('active', btn.dataset.lang === lang); });
         }
-
         btns.forEach(btn => {
             btn.addEventListener('click', (e) => {
                 e.preventDefault();
@@ -192,7 +189,6 @@
                 history.replaceState(null, '', '?lang=' + lang);
             });
         });
-
         const urlParams = new URLSearchParams(window.location.search);
         const langParam = urlParams.get('lang');
         if (langParam === 'zh') setLang('zh');
