@@ -41,7 +41,6 @@
             pointer-events: none;
             z-index: 0;
             background-image:
-              /* ---- 大星点（稀疏，保持震撼感） ---- */
               radial-gradient(2.5px 2.5px at 13% 24%, #fff, rgba(0,0,0,0)),
               radial-gradient(3px 3px at 81% 17%, #ffe, rgba(0,0,0,0)),
               radial-gradient(2px 2px at 39% 83%, #ffd, rgba(0,0,0,0)),
@@ -51,8 +50,6 @@
               radial-gradient(2.2px 2.2px at 54% 9%, #ffe, rgba(0,0,0,0)),
               radial-gradient(1.6px 1.6px at 28% 47%, #ffd, rgba(0,0,0,0)),
               radial-gradient(2.2px 2.2px at 74% 92%, #fff, rgba(0,0,0,0)),
-
-              /* ---- 中星点（中等密度，主要填充） ---- */
               radial-gradient(1.2px 1.2px at 18% 11%, #fff, rgba(0,0,0,0)),
               radial-gradient(1px 1px at 48% 38%, #ffd, rgba(0,0,0,0)),
               radial-gradient(1.3px 1.3px at 85% 67%, #fff, rgba(0,0,0,0)),
@@ -64,8 +61,6 @@
               radial-gradient(1px 1px at 71% 49%, #ffe, rgba(0,0,0,0)),
               radial-gradient(1.2px 1.2px at 43% 22%, #fff, rgba(0,0,0,0)),
               radial-gradient(0.8px 0.8px at 6% 49%, #ffd, rgba(0,0,0,0)),
-
-              /* ---- 小星点（密集填充，防止稀疏） ---- */
               radial-gradient(0.6px 0.6px at 15% 35%, #fff, rgba(0,0,0,0)),
               radial-gradient(0.8px 0.8px at 47% 55%, #ffd, rgba(0,0,0,0)),
               radial-gradient(0.5px 0.5px at 79% 77%, #fff, rgba(0,0,0,0)),
@@ -86,9 +81,7 @@
               radial-gradient(0.7px 0.7px at 4% 20%, #fff, rgba(0,0,0,0)),
               radial-gradient(0.5px 0.5px at 94% 66%, #ffe, rgba(0,0,0,0)),
               radial-gradient(0.6px 0.6px at 45% 74%, #fff, rgba(0,0,0,0));
-
             background-repeat: repeat;
-            /* 关键：使用互质数尺寸，彻底打破网格规律，解决“三点一线”问题 */
             background-size:
                 317px 283px, 431px 359px, 251px 331px, 389px 271px, 467px 293px,
                 337px 421px, 241px 347px, 409px 293px, 431px 379px,
@@ -242,8 +235,8 @@
             top: 50%;
             left: 12px;
             transform: translateY(-50%) rotate(45deg);
-            z-index: 1;                 /* 关键改动：让宝石浮在背景上方 */
-            opacity: 0.35;              /* 关键改动：平时透出一点，若隐若现 */
+            z-index: 1;
+            opacity: 0.35;
             box-shadow: 0 0 6px rgba(74, 246, 244, 0.8), 0 0 12px rgba(74, 246, 244, 0.4);
         }
         .btn-primary:hover {
@@ -257,7 +250,7 @@
             background: #211843;
             border-color: #211843;
             box-shadow: 0 0 5px ;
-            opacity: 1;                /* 悬停时完全显现 */
+            opacity: 1;
         }
         .tagline {
             font-size: 1rem;
@@ -539,7 +532,9 @@
 
     <div class="hero">
         <div class="hero-content">
-          <img src="assets/fortunecord-logo2.png" alt="FortuneCord Logo" style="max-width: 160px; height: auto; filter: invert(1) sepia(1) saturate(6) hue-rotate(140deg) brightness(1.3) drop-shadow(0 0 15px rgba(74, 246, 244, 0.9));">
+          <!-- 主太极图：黑线已通过滤镜变成明亮的宝石蓝青色，并带外发光 -->
+          <img src="assets/fortunecord-logo2.png" alt="FortuneCord Main Logo" class="logo-img" style="max-width: 160px; height: auto; filter: invert(1) sepia(1) saturate(6) hue-rotate(140deg) brightness(1.3) drop-shadow(0 0 15px rgba(74, 246, 244, 0.9));">
+          <div class="hero-text">
             <h1 class="logo">FortuneCord<span style="font-size:0.5em;">™</span></h1>
             <div class="subtitle-row">
               <span class="subtitle-en">An Alchemist's Line Art World</span>
@@ -554,6 +549,7 @@
         </div>
 
     <div class="system-intro">
+        <!-- 旧Logo：已加回银色光晕 -->
         <div style="display: flex; align-items: center; justify-content: center; gap: 20px;"><img src="assets/fortunecord-coin-cord-logo-main.svg" style="width: 80px; flex-shrink: 0; filter: brightness(0.75) saturate(0.8) drop-shadow(0 0 3px rgba(255,255,255,0.5)) drop-shadow(0 0 8px rgba(255,255,255,0.3));"><h2 style="margin: 0;">"Fortune Cord" Visual System</h2></div>
         <p>Weaving coins with cords — a timeless symbol of gathering wealth and bringing fortune.<br>
         Using "a cord threading a coin" as the core language to reinterpret:<br>
