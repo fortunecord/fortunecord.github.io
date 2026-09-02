@@ -170,8 +170,10 @@
         .logo-img {
             max-width: 100%;
             height: auto;
-            max-height: 100px;
-            filter: brightness(0.75) saturate(0.8) drop-shadow(0 0 3px rgba(255, 255, 255, 0.5)) drop-shadow(0 0 8px rgba(255, 255, 255, 0.3));
+            max-height: 120px;
+            filter: drop-shadow(0 0 8px rgba(74, 246, 244, 0.8)) 
+                    drop-shadow(0 0 15px rgba(0, 100, 255, 0.4));
+            transition: filter 0.3s ease;
         }
         .hero-text {
             text-align: left;
@@ -498,7 +500,7 @@
 
     <div class="hero">
         <div class="hero-content">
-            <img src="assets/fortunecord-logo2.png" alt="FortuneCord Logo" style="max-width: 160px; height: auto; filter: drop-shadow(0 0 15px rgba(74, 246, 244, 0.9));">
+            <img src="assets/fortunecord-logo2.png" class="logo-img" alt="FortuneCord Taiji Logo">
             <div class="hero-text">
                 <h1 class="logo">FortuneCord<span style="font-size:0.5em;">™</span> | 煉金術士的線稿世界</h1>
                 <div class="subtitle-row">
