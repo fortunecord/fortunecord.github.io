@@ -519,6 +519,38 @@
             width: 100%;
             border-radius: 16px;
         }
+
+        /* ========== 新增下拉菜单样式 ========== */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background: #211843;
+            min-width: 160px;
+            border: 1px solid #FFD700;
+            border-radius: 8px;
+            z-index: 1000;
+            box-shadow: 0 0 15px rgba(74, 246, 244, 0.4);
+        }
+        .dropdown-content a {
+            display: block;
+            padding: 10px 15px;
+            color: #b8a310;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.85rem;
+            transition: all 0.3s ease;
+        }
+        .dropdown-content a:hover {
+            background: #b8a310;
+            color: #211843;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
     </style>
 
     <script type="application/ld+json">
@@ -552,8 +584,14 @@
                 <div class="subtitle-row">
                     <span class="tagline"><span class="highlight">Star Coin System</span> — Weave your guardian stars into a thread of fortune.</span>
                     <div class="hero-buttons">
-                        <a href="https://fortunecord.github.io/fortunecord-artworks/" class="btn-primary">Gallery</a>
-                        <a href="/symbols.html?lang=en" class="btn-primary">Symbolism</a>
+                      <div class="dropdown">
+                        <a href="https://fortunecord.github.io/fortunecord-artworks/" class="btn-primary">Gallery ▾</a>
+                        <div class="dropdown-content">
+                          <a href="https://fortunecord.github.io/fortunecord-artworks/" class="dropdown-item">Main Gallery</a>
+                          <a href="https://fortunecord.com/light-hall.html" target="_blank" class="dropdown-item">Light Hall</a>
+                        </div>
+                      </div>
+                      <a href="/symbols.html?lang=en" class="btn-primary">Symbolism</a>
                     </div>
                 </div>
             </div>
