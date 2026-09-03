@@ -73,38 +73,47 @@
     </div>
 
     <script>
-        // 以下链接均指向您的第2个仓库（图库仓库），您可以从图库里复制更多精美图片链接粘贴进来
-        const images = [
-            "https://fortunecord.github.io/fortunecord-artworks/1-taiji-collection/1-fortune-cord-taiji-v1.0/fortune-cord-post-heaven-taiji-single-strand-outer-ring-yin-yang-s-curve.jpg",
-            "https://fortunecord.github.io/fortunecord-artworks/6-big-dipper-collection/3-fortune-cord-big-dipper-seven-pets-v1.0-1.8/v1.1-two-eared-beast-front-back/coin-cord-big-dipper-coins-fluffy-tail.jpg",
-            "https://fortunecord.github.io/fortunecord-artworks/12-fortune-craft/money-tree-multi-variant-coins.jpg",
-            "https://fortunecord.github.io/fortunecord-artworks/10-stellar-radiance/star-coin-pulse-floral-perforation-round-coin-water-ripple-ray.jpg"
-        ];
-
         const layout = document.getElementById('layout');
         const colors = [
             "hue-rotate(140deg) saturate(3)",
             "hue-rotate(240deg) saturate(3)",
             "hue-rotate(20deg) saturate(3)",
             "hue-rotate(320deg) saturate(3)",
-            "hue-rotate(60deg) saturate(3)",
+            "hue-rotate(60deg) saturate(3)"
         ];
+        let allImages = [];
+
+        async function getAllImages() {
+            try {
+                let response = await fetch('https://api.github.com/repos/fortunecord/fortunecord-artworks/git/trees/main?recursive=1');
+                if (!response.ok) {
+                    response = await fetch('https://api.github.com/repos/fortunecord/fortunecord-artworks/git/trees/master?recursive=1');
+                }
+                let data = await response.json();
+                let paths = data.tree.map(item => item.path);
+                allImages = paths.filter(path => /\.(jpg|jpeg|png)$/i.test(path));
+            } catch (error) {
+                allImages = [
+                    "https://fortunecord.github.io/fortunecord-artworks/1-taiji-collection/1-fortune-cord-taiji-v1.0/fortune-cord-post-heaven-taiji-single-strand-outer-ring-yin-yang-s-curve.jpg"
+                ];
+            }
+        }
 
         function render() {
             layout.innerHTML = '';
-            let imgCount = 20;
+            if (allImages.length === 0) return;
+            let imgCount = Math.min(20, allImages.length);
             for (let i = 0; i < imgCount; i++) {
-                const img = document.createElement('img');
-                img.src = images[Math.floor(Math.random() * images.length)];
+                let img = document.createElement('img');
+                let randomPath = allImages[Math.floor(Math.random() * allImages.length)];
+                img.src = 'https://fortunecord.github.io/fortunecord-artworks/' + randomPath;
                 img.className = 'item';
-                const size = Math.floor(Math.random() * 300) + 100;
-                img.style.width = size + 'px';
+                img.style.width = (Math.floor(Math.random() * 300) + 100) + 'px';
                 img.style.maxWidth = '20vw';
                 img.style.left = Math.random() * 90 + 'vw';
                 img.style.top = Math.random() * 90 + 'vh';
                 img.style.transform = 'rotate(' + (Math.random() * 60 - 30) + 'deg)';
-                const color = colors[Math.floor(Math.random() * colors.length)];
-                img.style.filter = "invert(1) sepia(1) " + color;
+                img.style.filter = "invert(1) sepia(1) " + colors[Math.floor(Math.random() * colors.length)];
                 layout.appendChild(img);
             }
         }
@@ -112,7 +121,7 @@
         function prevPage() { render(); }
         function nextPage() { render(); }
 
-        render();
+        getAllImages().then(render);
     </script>
 </body>
 </html>
