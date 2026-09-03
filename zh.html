@@ -171,11 +171,18 @@
             max-width: 100%;
             height: auto;
             max-height: 120px;
-            filter: brightness(1.2) saturate(1.5) 
-                    drop-shadow(0 0 5px rgba(255, 255, 255, 0.4)) 
-                    drop-shadow(0 0 15px rgba(255, 215, 120, 0.3)); 
+            filter: brightness(1.2) saturate(1.5) drop-shadow(0 0 5px rgba(255, 193, 7, 0.4)) drop-shadow(0 0 15px rgba(255, 193, 7, 0.3));
             transition: filter 0.3s ease;
+            animation: logo-breathe 4s ease-in-out infinite;
         }
+        @keyframes logo-breathe {
+            0%, 100% {
+                filter: brightness(1.1) saturate(1.4) drop-shadow(0 0 4px rgba(255, 193, 7, 0.3)) drop-shadow(0 0 10px rgba(255, 193, 7, 0.2));
+            }
+            50% {
+                filter: brightness(1.35) saturate(1.7) drop-shadow(0 0 8px rgba(255, 193, 7, 0.6)) drop-shadow(0 0 25px rgba(255, 193, 7, 0.5));
+            }
+        }     
         .hero-text {
             text-align: left;
         }
