@@ -27,8 +27,9 @@
         .lang-btn.active { background: linear-gradient(145deg, #b8a310 0%, #d4c24a 100%); color: #211843; border-color: #fff5c2; box-shadow: 0 0 8px rgba(255, 215, 0, 0.6), inset 0 1px 2px rgba(255, 255, 255, 0.4), inset 0 -2px 3px rgba(0, 0, 0, 0.2); text-shadow: none; }
         .lang-btn::after { content: ''; position: absolute; width: 16px; height: 16px; border: 1px solid rgba(255, 255, 255, 0.4); background: #746aa8; border-radius: 2px; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(45deg); z-index: -1; box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3); }
         .hero { text-align: center; margin-bottom: 3rem; position: relative; }
-        .hero-content { display: flex; align-items: flex-start; justify-content: center; flex-wrap: wrap; gap: 1.5rem; position: relative; z-index: 1; }
-        .logo-img { max-width: 100%; height: auto; max-height: 200px; filter: brightness(1.2) saturate(1.5) drop-shadow(0 0 5px rgba(255, 255, 255, 0.4)) drop-shadow(0 0 15px rgba(255, 215, 120, 0.3)); transition: filter 0.3s ease; }
+        .hero-content { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 1.5rem; position: relative; z-index: 1; }
+        .logo-img { max-width: 100%; height: auto; max-height: 120px; filter: brightness(1.2) saturate(1.5) drop-shadow(0 0 5px rgba(255, 255, 255, 0.4)) drop-shadow(0 0 15px rgba(255, 215, 120, 0.3)); transition: filter 0.3s ease; animation: taiji-rotate 30s linear infinite; }
+@keyframes taiji-rotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
         .hero-text { text-align: left; }
         .logo { font-size: 2.8rem; font-weight: 600; letter-spacing: -0.5px; margin-bottom: 0.2rem; color: #C5B98A; text-shadow: 0 0 6px rgba(197, 185, 138, 0.4); }
         .subtitle-row { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; margin: 0.2rem 0 0.5rem; }
@@ -39,7 +40,7 @@
         .btn-primary::after { content: ''; position: absolute; width: 8px; height: 8px; background: #4AF6F4; border: 1px solid #FFD700; border-radius: 1px; top: 50%; left: 12px; transform: translateY(-50%) rotate(45deg); z-index: 1; opacity: 0.35; box-shadow: 0 0 6px rgba(74, 246, 244, 0.8), 0 0 12px rgba(74, 246, 244, 0.4); }
         .btn-primary:hover { background: linear-gradient(145deg, #b8a310 0%, #d4c24a 100%); color: #211843; border-color: #fff5c2; text-shadow: none; box-shadow: 0 0 15px rgba(255, 215, 0, 0.6), inset 0 1px 2px rgba(255, 255, 255, 0.4); }
         .btn-primary:hover::after { background: #211843; border-color: #211843; box-shadow: 0 0 5px ; opacity: 1; }
-        .tagline { font-size: 1rem; color: #aaa; border-top: 1px solid #333; border-bottom: 1px solid #333; display: inline-block; padding: 0.5rem 0; margin-top: -150px; position: relative; z-index: 2; }
+        .tagline { font-size: 1rem; color: #aaa; border-top: 1px solid #333; border-bottom: 1px solid #333; display: inline-block; padding: 0.5rem 0; margin-top: -150px ; position: relative; z-index: 2; }
         .highlight { color: #e0e0e0; text-shadow: 0 0 2px #fff, 0 0 6px #00ffff, 0 0 10px rgba(0, 255, 255, 0.8); }
         .highlight::before { content: '✦'; color: #40E0D0; -webkit-text-stroke: 0.5px #b8a310; text-shadow: 0 0 2px rgba(64, 224, 208, 0.8); margin-right: 4px; }
         .highlight::after { content: '✦'; color: #40E0D0; -webkit-text-stroke: 0.5px #b8a310; text-shadow: 0 0 2px rgba(64, 224, 208, 0.8); margin-left: 4px; }
@@ -97,21 +98,21 @@
         <a href="zh-tw.html" class="lang-btn">繁</a>
     </div>
 
-    <div class="hero">
-        <div class="hero-content">
-          <img src="assets/fortunecord-logo2.png" class="logo-img" alt="FortuneCord Taiji Logo">
-          <div class="hero-text">
-            <h1 class="logo">FortuneCord<span style="font-size:0.5em;">™</span></h1>
-            <div class="subtitle-row">
-              <span class="subtitle-en">An Alchemist's Line Art World</span>
-              <div class="hero-buttons">
-                <a href="https://fortunecord.github.io/fortunecord-artworks/" class="btn-primary">Gallery</a>
-                <a href="/symbols.html?lang=en" class="btn-primary">Symbolism</a>
-              </div>
+        <div class="hero">
+            <div class="hero-content">
+                <img src="assets/fortunecord-logo2.png" class="logo-img" alt="FortuneCord Taiji Logo">
+                <div class="hero-text">
+                    <h1 class="logo">FortuneCord<span style="font-size:0.5em;">™</span></h1>
+                    <div class="subtitle-row">
+                        <span class="subtitle-en">An Alchemist's Line Art World</span>
+                        <div class="hero-buttons">
+                            <a href="https://fortunecord.github.io/fortunecord-artworks/" class="btn-primary">Gallery</a>
+                            <a href="/symbols.html?lang=en" class="btn-primary">Symbolism</a>
+                        </div>
+                    </div>
+                    <span class="tagline"><span class="highlight">Star Coin System</span> — Weave your guardian stars into a thread of fortune.</span>
+                </div>
             </div>
-          </div>
-        </div>
-        <span class="tagline"><span class="highlight">Star Coin System</span> — Weave your guardian stars into a thread of fortune.</span>
         </div>
 
     <div class="system-intro">
