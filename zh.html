@@ -563,9 +563,9 @@
         币形：从传统方孔圆币，到花卉、水果、宝石与毛茸星币的万物演化。</p>
     </div>
 
-        <div style="text-align: center; margin-top: 20px; margin-bottom: 20px;">
-            <img id="taijiAnimation" src="assets/animations/anim-01.png" alt="FortuneCord Animation" style="max-width: 400px; width: 100%;">
-        </div>
+    <div class="animation-wrapper">
+        <img id="ceilingAnimation" src="assets/animations/anim-01.png" alt="Star Coin Ceiling Animation">
+    </div>
 
     <div class="author">丹 · 星币炼金术士 · 星象炼金术士</div>
 
@@ -717,22 +717,22 @@
     modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
     document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
 
-       const ceilingImg = document.getElementById('ceilingAnimation');
-       let imgIndex = 1;
+const ceilingImg = document.getElementById('ceilingAnimation');
+let imgIndex = 1;
 
-       function switchImage() {
-           ceilingImg.style.opacity = '0';
-           setTimeout(() => {
-               imgIndex++;
-               if (imgIndex > 50) {
-                   imgIndex = 1;
-               }
-               ceilingImg.src = 'assets/animations/anim-' + String(imgIndex).padStart(2, '0') + '.png';
-               ceilingImg.style.opacity = '1';
-           }, 1000);
-       }
+function switchImage() {
+    ceilingImg.style.opacity = '0';
+    setTimeout(() => {
+        imgIndex++;
+        if (imgIndex > 50) {
+            imgIndex = 1;
+        }
+        ceilingImg.src = 'assets/animations/anim-' + String(imgIndex).padStart(2, '0') + '.png';
+        ceilingImg.style.opacity = '1';
+    }, 1000);
+}
 
-       setInterval(switchImage, 5000);
+setInterval(switchImage, 5000);
 </script>
 </body>
 </html>
