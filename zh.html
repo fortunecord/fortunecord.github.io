@@ -496,12 +496,23 @@
             width: 100%;
             border-radius: 16px;
         }
-        #taijiAnimation {
-            max-width: 400px;
+        .animation-wrapper {
+            text-align: center;
+            margin-bottom: 2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .animation-wrapper img {
             width: 100%;
             height: auto;
-            transition: none;
-            filter: drop-shadow(0 0 1px #fff) drop-shadow(0 0 3px rgba(0, 255, 255, 1)) drop-shadow(0 0 6px rgba(0, 255, 255, 0.8));
+            display: block;
+            border-radius: 16px;
+            filter: brightness(1.7) saturate(0.7) hue-rotate(5deg)
+                    drop-shadow(0 0 12px rgba(64, 224, 208, 0.7))
+                    drop-shadow(0 0 30px rgba(64, 224, 208, 0.4));
+            transition: opacity 1s ease-in-out;
         }
     </style>
 
@@ -706,18 +717,22 @@
     modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
     document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
 
-        const animImg = document.getElementById('taijiAnimation');
-        let animIndex = 1;
+       const ceilingImg = document.getElementById('ceilingAnimation');
+       let imgIndex = 1;
 
-        function startAnimation() {
-            animIndex++;
-            if (animIndex > 50) {
-                animIndex = 1;
-            }
-            animImg.src = 'assets/animations/anim-' + String(animIndex).padStart(2, '0') + '.png';
-        }
+       function switchImage() {
+           ceilingImg.style.opacity = '0';
+           setTimeout(() => {
+               imgIndex++;
+               if (imgIndex > 50) {
+                   imgIndex = 1;
+               }
+               ceilingImg.src = 'assets/animations/anim-' + String(imgIndex).padStart(2, '0') + '.png';
+               ceilingImg.style.opacity = '1';
+           }, 1000);
+       }
 
-        setInterval(startAnimation, 5000); // 每5秒换一张
+       setInterval(switchImage, 5000);
 </script>
 </body>
 </html>
