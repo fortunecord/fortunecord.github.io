@@ -578,11 +578,8 @@
         <p>Coin Shapes: From traditional square-hole round coins to floral, fruit, gem, and furry star coins — an evolution of all forms.</p>
     </div>
 
-    <div class="video-wrapper">
-        <video width="60%" controls preload="metadata" muted playsinline>
-            <source src="assets/fortune-cord-star-coin-ceiling-video-clip-20260522.mp4" type="video/mp4">
-            Star Coin Ceiling highlights.
-        </video>
+    <div style="text-align: center; margin-top: 20px;">
+        <img id="taijiAnimation" src="assets/animations/anim-01.png" alt="FortuneCord Animation" style="max-width: 400px; width: 100%; filter: invert(1) brightness(1.5) drop-shadow(0 0 15px rgba(168, 85, 247, 0.8)) drop-shadow(0 0 30px rgba(255, 193, 7, 0.5));">
     </div>
 
     <div class="author">Dan, the Star Coin Alchemist and Astrological Alchemist</div>
@@ -734,6 +731,18 @@
     }
     modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
     document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+
+// 极简快速切换动画（0.8秒换一张）
+const animImg = document.getElementById('taijiAnimation');
+let animIndex = 1;
+
+function startAnimation() {
+    animIndex++;
+    if (animIndex > 50) { animIndex = 1; }
+    animImg.src = 'assets/animations/anim-' + String(animIndex).padStart(2, '0') + '.png';
+}
+
+setInterval(startAnimation, 800); // 800毫秒（0.8秒）换一张    
 </script>
 </body>
 </html>
