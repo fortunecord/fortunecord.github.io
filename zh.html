@@ -504,16 +504,32 @@
             margin-right: auto;
         }
 
-        .animation-wrapper img {
-            width: 100%;
-            height: auto;
-            display: block;
-            border-radius: 16px;
-            filter: brightness(1.7) saturate(0.7) hue-rotate(5deg)
-                    drop-shadow(0 0 12px rgba(64, 224, 208, 0.7))
-                    drop-shadow(0 0 30px rgba(64, 224, 208, 0.4));
-            transition: opacity 1s ease-in-out;
-        }
+.animation-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 16px;
+    animation: glow-breathe 8s ease-in-out infinite;
+    transition: opacity 1s ease-in-out;
+}
+
+@keyframes glow-breathe {
+    0%, 100% {
+        filter: brightness(1.7) saturate(0.7) hue-rotate(0deg)
+                drop-shadow(0 0 12px rgba(64, 224, 208, 0.7))
+                drop-shadow(0 0 30px rgba(64, 224, 208, 0.4));
+    }
+    33% {
+        filter: brightness(1.7) saturate(0.7) hue-rotate(20deg)
+                drop-shadow(0 0 12px rgba(74, 246, 244, 0.8))
+                drop-shadow(0 0 30px rgba(74, 246, 244, 0.5));
+    }
+    66% {
+        filter: brightness(1.7) saturate(0.7) hue-rotate(-15deg)
+                drop-shadow(0 0 12px rgba(168, 85, 247, 0.7))
+                drop-shadow(0 0 30px rgba(168, 85, 247, 0.4));
+    }
+}
     </style>
 
     <script type="application/ld+json">
