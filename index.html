@@ -210,10 +210,8 @@
             color: #aaa;
         }
         .hero-buttons {
-            position: relative;
             display: flex;
-            gap: 15px;
-            padding: 0 10px;
+            gap: 0.8rem;
         }
         .hero-buttons::before {
             content: '';
@@ -523,9 +521,9 @@
             max-width: 800px;  
             width: 100%;
             height: auto;
-            filter: invert(1) sepia(1) saturate(6) hue-rotate(140deg) brightness(1.2);
-            animation: taiji-breathe 6s ease-in-out infinite;
-            transition: opacity 1s ease-in-out;
+            filter: sepia(1) saturate(10) hue-rotate(140deg) brightness(0.8) contrast(1.2);
+            animation: taiji-breathe 8s ease-in-out infinite;
+            transition: opacity 2s ease-in-out;
         }
         @keyframes taiji-breathe {
             0%, 100% {
@@ -752,10 +750,10 @@
                 if (animIndex > 50) { animIndex = 1; }
                 animImg.src = 'assets/animations/anim-' + String(animIndex).padStart(2, '0') + '.png';
                 animImg.style.opacity = '1';
-            }, 800); // 0.8秒淡出淡入切换
+            }, 3000); // 3秒淡出淡入
         }
 
-        setInterval(startAnimation, 1500); // 1.5秒换一张图（快速切换，但留1秒展示时间）
+        setInterval(startAnimation, 5000); // 5秒换一张图（快速切换，但留1秒展示时间）
         animImg.style.opacity = '1'; // 初始显示
 </script>
 </body>
