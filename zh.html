@@ -514,13 +514,13 @@
     border-radius: 50px;
     background: radial-gradient(
         ellipse at center,
-        rgba(255, 215, 0, 0.35) 0%,
-        rgba(255, 120, 0, 0.2) 30%,
-        rgba(255, 255, 255, 0.1) 55%,
-        transparent 75%
+        rgba(64, 224, 208, 0.4) 0%,
+        rgba(168, 85, 247, 0.25) 35%,
+        rgba(255, 215, 0, 0.2) 60%,
+        transparent 80%
     );
     animation: furnace-smoke 5s ease-in-out infinite;
-    filter: blur(6px);
+    filter: blur(8px);
     pointer-events: none;
     z-index: 0;
 }
@@ -531,7 +531,7 @@
         opacity: 0.7;
     }
     50% {
-        transform: scale(1.2);
+        transform: scale(1.25);
         opacity: 1;
     }
 }
@@ -544,21 +544,21 @@
     display: block;
     border-radius: 16px;
     animation: furnace-img 5s ease-in-out infinite;
-    transition: opacity 1s ease-in-out;
+    /* 去掉了 transition 淡入淡出 */
 }
 
 @keyframes furnace-img {
     0%, 100% {
         filter: brightness(1.7) saturate(0.7) hue-rotate(0deg)
-                drop-shadow(0 0 8px rgba(255, 255, 255, 0.9))
-                drop-shadow(0 0 15px rgba(255, 215, 0, 0.7))
-                drop-shadow(0 0 30px rgba(255, 120, 0, 0.5));
+                drop-shadow(0 0 10px rgba(64, 224, 208, 0.9))
+                drop-shadow(0 0 20px rgba(168, 85, 247, 0.7))
+                drop-shadow(0 0 40px rgba(255, 215, 0, 0.5));
     }
     50% {
-        filter: brightness(1.9) saturate(0.6) hue-rotate(5deg)
-                drop-shadow(0 0 12px rgba(255, 255, 255, 1))
-                drop-shadow(0 0 25px rgba(255, 215, 0, 0.9))
-                drop-shadow(0 0 50px rgba(255, 120, 0, 0.7));
+        filter: brightness(1.9) saturate(0.6) hue-rotate(10deg)
+                drop-shadow(0 0 14px rgba(74, 246, 244, 1))
+                drop-shadow(0 0 30px rgba(138, 43, 226, 0.9))
+                drop-shadow(0 0 60px rgba(255, 215, 0, 0.7));
     }
 }
     </style>
@@ -768,18 +768,12 @@ const ceilingImg = document.getElementById('ceilingAnimation');
 let imgIndex = 1;
 
 function switchImage() {
-    ceilingImg.style.opacity = '0';
-    setTimeout(() => {
-        imgIndex++;
-        if (imgIndex > 50) {
-            imgIndex = 1;
-        }
-        ceilingImg.src = 'assets/animations/anim-' + String(imgIndex).padStart(2, '0') + '.png';
-        ceilingImg.style.opacity = '1';
-    }, 1000);
+    imgIndex++;
+    if (imgIndex > 50) {
+        imgIndex = 1;
+    }
+    ceilingImg.src = 'assets/animations/anim-' + String(imgIndex).padStart(2, '0') + '.png';
 }
-
-setInterval(switchImage, 5000);
 </script>
 </body>
 </html>
