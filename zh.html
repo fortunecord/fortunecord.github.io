@@ -496,59 +496,95 @@
             width: 100%;
             border-radius: 16px;
         }
-.animation-wrapper {
-    position: relative;
-    text-align: center;
-    margin-bottom: 2rem;
-    max-width: 400px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.animation-wrapper img {
-    width: 100%;
-    height: auto;
-    display: block;
-    animation: ceiling-glow 8s ease-in-out infinite;
-}
-
-@keyframes ceiling-glow {
-        0% {
-                filter: drop-shadow(0 0 6px rgba(74, 246, 244, 0.8))
-                        drop-shadow(0 0 18px rgba(74, 246, 244, 0.4))
-                        drop-shadow(0 0 28px rgba(88, 28, 135, 0.3));
+        .animation-row {
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                flex-wrap: wrap;
+                gap: 1.5rem;
+                margin-bottom: 2rem;
         }
-        20% {
-                filter: drop-shadow(0 0 8px rgba(74, 246, 244, 0.9))
-                        drop-shadow(0 0 22px rgba(167, 139, 250, 0.7))
-                        drop-shadow(0 0 36px rgba(88, 28, 135, 0.5));
+        .animation-wrapper {
+                position: relative;
+                text-align: center;
+                max-width: 400px;
+                flex: 1 1 380px;
         }
-        42% {
-                filter: drop-shadow(0 0 10px rgba(74, 246, 244, 0.9))
-                        drop-shadow(0 0 26px rgba(139, 92, 246, 0.8))
-                        drop-shadow(0 0 42px rgba(88, 28, 135, 0.6));
+        .animation-wrapper img {
+                width: 100%;
+                height: auto;
+                display: block;
         }
-        45% {
-                filter: drop-shadow(0 0 12px rgba(255, 215, 0, 0.5))
-                        drop-shadow(0 0 28px rgba(139, 92, 246, 0.8))
-                        drop-shadow(0 0 44px rgba(88, 28, 135, 0.7));
+        .glow-left {
+                animation: ceiling-glow-left 8s ease-in-out infinite;
         }
-        48% {
-                filter: drop-shadow(0 0 10px rgba(74, 246, 244, 0.9))
-                        drop-shadow(0 0 26px rgba(139, 92, 246, 0.8))
-                        drop-shadow(0 0 42px rgba(88, 28, 135, 0.6));
+        .glow-right {
+                animation: ceiling-glow-right 8s ease-in-out infinite;
         }
-        65% {
-                filter: drop-shadow(0 0 8px rgba(74, 246, 244, 0.9))
-                        drop-shadow(0 0 22px rgba(167, 139, 250, 0.7))
-                        drop-shadow(0 0 36px rgba(88, 28, 135, 0.5));
+        @keyframes ceiling-glow-left {
+                0% {
+                        filter: drop-shadow(0 0 6px rgba(74, 246, 244, 0.8))
+                                drop-shadow(0 0 18px rgba(74, 246, 244, 0.4))
+                                drop-shadow(0 0 28px rgba(88, 28, 135, 0.3));
+                }
+                20% {
+                        filter: drop-shadow(0 0 8px rgba(74, 246, 244, 0.9))
+                                drop-shadow(0 0 22px rgba(167, 139, 250, 0.7))
+                                drop-shadow(0 0 36px rgba(88, 28, 135, 0.5));
+                }
+                42% {
+                        filter: drop-shadow(0 0 10px rgba(74, 246, 244, 0.9))
+                                drop-shadow(0 0 26px rgba(139, 92, 246, 0.8))
+                                drop-shadow(0 0 42px rgba(88, 28, 135, 0.6));
+                }
+                45% {
+                        filter: drop-shadow(0 0 12px rgba(255, 215, 0, 0.5))
+                                drop-shadow(0 0 28px rgba(139, 92, 246, 0.8))
+                                drop-shadow(0 0 44px rgba(88, 28, 135, 0.7));
+                }
+                48% {
+                        filter: drop-shadow(0 0 10px rgba(74, 246, 244, 0.9))
+                                drop-shadow(0 0 26px rgba(139, 92, 246, 0.8))
+                                drop-shadow(0 0 42px rgba(88, 28, 135, 0.6));
+                }
+                65% {
+                        filter: drop-shadow(0 0 8px rgba(74, 246, 244, 0.9))
+                                drop-shadow(0 0 22px rgba(167, 139, 250, 0.7))
+                                drop-shadow(0 0 36px rgba(88, 28, 135, 0.5));
+                }
+                100% {
+                        filter: drop-shadow(0 0 6px rgba(74, 246, 244, 0.8))
+                                drop-shadow(0 0 18px rgba(74, 246, 244, 0.4))
+                                drop-shadow(0 0 28px rgba(88, 28, 135, 0.3));
+                }
         }
-        100% {
-                filter: drop-shadow(0 0 6px rgba(74, 246, 244, 0.8))
-                        drop-shadow(0 0 18px rgba(74, 246, 244, 0.4))
-                        drop-shadow(0 0 28px rgba(88, 28, 135, 0.3));
+        @keyframes ceiling-glow-right {
+                0% {
+                        filter: drop-shadow(0 0 6px rgba(255, 215, 0, 0.45))
+                                drop-shadow(0 0 18px rgba(139, 92, 246, 0.4))
+                                drop-shadow(0 0 28px rgba(88, 28, 135, 0.3));
+                }
+                25% {
+                        filter: drop-shadow(0 0 8px rgba(255, 200, 100, 0.55))
+                                drop-shadow(0 0 22px rgba(255, 215, 0, 0.45))
+                                drop-shadow(0 0 36px rgba(139, 92, 246, 0.5));
+                }
+                50% {
+                        filter: drop-shadow(0 0 10px rgba(255, 255, 200, 0.65))
+                                drop-shadow(0 0 26px rgba(255, 215, 0, 0.55))
+                                drop-shadow(0 0 42px rgba(88, 28, 135, 0.6));
+                }
+                75% {
+                        filter: drop-shadow(0 0 8px rgba(255, 200, 100, 0.55))
+                                drop-shadow(0 0 22px rgba(255, 215, 0, 0.45))
+                                drop-shadow(0 0 36px rgba(139, 92, 246, 0.5));
+                }
+                100% {
+                        filter: drop-shadow(0 0 6px rgba(255, 215, 0, 0.45))
+                                drop-shadow(0 0 18px rgba(139, 92, 246, 0.4))
+                                drop-shadow(0 0 28px rgba(88, 28, 135, 0.3));
+                }
         }
-}
     </style>
 
     <script type="application/ld+json">
@@ -598,9 +634,14 @@
         币形：从传统方孔圆币，到花卉、水果、宝石与毛茸星币的万物演化。</p>
     </div>
 
-    <div class="animation-wrapper">
-        <img id="ceilingAnimation" src="assets/animations/anim-01.png" alt="Star Coin Ceiling Animation">
-    </div>
+        <div class="animation-row">
+                <div class="animation-wrapper">
+                        <img id="ceilingAnimationLeft" class="glow-left" src="assets/animations/anim-01.png" alt="Star Coin Ceiling Animation Left">
+                </div>
+                <div class="animation-wrapper">
+                        <img id="ceilingAnimationRight" class="glow-right" src="assets/animations/anim-35.png" alt="Star Coin Ceiling Animation Right">
+                </div>
+        </div>
 
     <div class="author">丹 · 星币炼金术士 · 星象炼金术士</div>
 
@@ -752,18 +793,29 @@
     modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
     document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
 
-const ceilingImg = document.getElementById('ceilingAnimation');
-let imgIndex = 1;
+        const leftImg = document.getElementById('ceilingAnimationLeft');
+        const rightImg = document.getElementById('ceilingAnimationRight');
+        let leftIndex = 1;
+        let rightIndex = 35;
 
-function switchImage() {
-    imgIndex++;
-    if (imgIndex > 35) {
-        imgIndex = 1;
-    }
-    ceilingImg.src = 'assets/animations/anim-' + String(imgIndex).padStart(2, '0') + '.png';
-}
+        function switchLeftImage() {
+                leftIndex++;
+                if (leftIndex > 35) {
+                        leftIndex = 1;
+                }
+                leftImg.src = 'assets/animations/anim-' + String(leftIndex).padStart(2, '0') + '.png';
+        }
 
-setInterval(switchImage, 5000);
+        function switchRightImage() {
+                rightIndex++;
+                if (rightIndex > 35) {
+                        rightIndex = 1;
+                }
+                rightImg.src = 'assets/animations/anim-' + String(rightIndex).padStart(2, '0') + '.png';
+        }
+
+        setInterval(switchLeftImage, 5000);
+        setInterval(switchRightImage, 5000);
 </script>
 </body>
 </html>
