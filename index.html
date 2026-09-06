@@ -737,10 +737,11 @@
 
         const animImg = document.getElementById('taijiAnimation');
         let animIndex = 1;
-
+        const totalImages = 36; // 改成36，表示只有36张图
+        
         function startAnimation() {
             animIndex++;
-            if (animIndex > 50) {
+            if (animIndex > totalImages) {
                 animIndex = 1;
             }
             animImg.src = 'assets/animations/anim-' + String(animIndex).padStart(2, '0') + '.png';
