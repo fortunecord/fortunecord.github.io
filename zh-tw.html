@@ -515,7 +515,7 @@
 }
 
 #ceilingAnimationRight {
-    animation: glow-blue-purple 5s ease-in-out infinite;
+    animation: glow-blue-purple 7s ease-in-out infinite;
 }
 @keyframes glow-blue-white {
     0%, 100% {
@@ -755,21 +755,20 @@ const rightImg = document.getElementById('ceilingAnimationRight');
 let leftIndex = 1;
 let rightIndex = 35;
 
-function switchImages() {
+function switchLeft() {
     leftIndex++;
-    if (leftIndex > 35) {
-        leftIndex = 1;
-    }
+    if (leftIndex > 35) { leftIndex = 1; }
     leftImg.src = 'assets/animations/anim-' + String(leftIndex).padStart(2, '0') + '.png';
+}
 
+function switchRight() {
     rightIndex--;
-    if (rightIndex < 1) {
-        rightIndex = 35;
-    }
+    if (rightIndex < 1) { rightIndex = 35; }
     rightImg.src = 'assets/animations/anim-' + String(rightIndex).padStart(2, '0') + '.png';
 }
 
-setInterval(switchImages, 5000);
+setInterval(switchLeft, 5000);
+setInterval(switchRight, 7000);
 </script>
 </body>
 </html>
