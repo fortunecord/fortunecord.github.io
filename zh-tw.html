@@ -750,25 +750,818 @@
     modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
     document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
 
-const leftImg = document.getElementById('ceilingAnimationLeft');
-const rightImg = document.getElementById('ceilingAnimationRight');
-let leftIndex = 1;
-let rightIndex = 35;
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <link rel="icon" href="/assets/favicon.ico">
+    <title>FortuneCord – 星币星空顶艺术 | 炼金术士的线稿世界</title>
+    <meta name="description" content="星币星空顶艺术 – 原创黑白线稿，适用于汽车星空顶、建筑吊顶、奢华内饰。北斗七币、七猫、七狗系列。">
+    <link rel="canonical" href="https://fortunecord.com/zh.html">
+    <link rel="alternate" hreflang="en" href="https://fortunecord.com/">
+    <link rel="alternate" hreflang="zh-CN" href="https://fortunecord.com/zh.html">
+    <link rel="alternate" hreflang="zh-TW" href="https://fortunecord.com/zh-tw.html">
+    <meta property="og:title" content="FortuneCord | 星币系统">
+    <meta property="og:description" content="探索 FortuneCord 视觉系统，绳串币重构古老符号与星图。亮点包括北斗七币、北斗七狗、北斗七猫。原创线稿 by 丹，星币炼金术士。">
+    <meta property="og:image" content="https://fortunecord.com/assets/fortune-cord-post-heaven-taiji-single-strand-outer-ring-yin-yang-s-curve1200x630.jpg">
+    <meta property="og:url" content="https://fortunecord.com/zh.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="robots" content="index, follow">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', 'Roboto', '思源黑体', 'Noto Sans', sans-serif;
+            background: #0a1128;
+            color: #e0e0e0;
+            line-height: 1.5;
+            padding: 2rem max(1rem, env(safe-area-inset-right)) 2rem max(1rem, env(safe-area-inset-left));
+            position: relative;
+        }
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            background-image:
+              /* ---- 大星点（稀疏，保持震撼感） ---- */
+              radial-gradient(2.5px 2.5px at 13% 24%, #fff, rgba(0,0,0,0)),
+              radial-gradient(3px 3px at 81% 17%, #ffe, rgba(0,0,0,0)),
+              radial-gradient(2px 2px at 39% 83%, #ffd, rgba(0,0,0,0)),
+              radial-gradient(2.5px 2.5px at 66% 61%, #fff, rgba(0,0,0,0)),
+              radial-gradient(1.8px 1.8px at 91% 43%, #d4e4ff, rgba(0,0,0,0)),
+              radial-gradient(2.8px 2.8px at 7% 68%, #fff, rgba(0,0,0,0)),
+              radial-gradient(2.2px 2.2px at 54% 9%, #ffe, rgba(0,0,0,0)),
+              radial-gradient(1.6px 1.6px at 28% 47%, #ffd, rgba(0,0,0,0)),
+              radial-gradient(2.2px 2.2px at 74% 92%, #fff, rgba(0,0,0,0)),
 
-function switchLeft() {
-    leftIndex++;
-    if (leftIndex > 35) { leftIndex = 1; }
-    leftImg.src = 'assets/animations/anim-' + String(leftIndex).padStart(2, '0') + '.png';
-}
+              /* ---- 中星点（中等密度，主要填充） ---- */
+              radial-gradient(1.2px 1.2px at 18% 11%, #fff, rgba(0,0,0,0)),
+              radial-gradient(1px 1px at 48% 38%, #ffd, rgba(0,0,0,0)),
+              radial-gradient(1.3px 1.3px at 85% 67%, #fff, rgba(0,0,0,0)),
+              radial-gradient(1.1px 1.1px at 62% 28%, #ffe, rgba(0,0,0,0)),
+              radial-gradient(0.9px 0.9px at 33% 58%, #d4e4ff, rgba(0,0,0,0)),
+              radial-gradient(1.2px 1.2px at 59% 80%, #fff, rgba(0,0,0,0)),
+              radial-gradient(1px 1px at 96% 15%, #ffd, rgba(0,0,0,0)),
+              radial-gradient(1.4px 1.4px at 24% 73%, #fff, rgba(0,0,0,0)),
+              radial-gradient(1px 1px at 71% 49%, #ffe, rgba(0,0,0,0)),
+              radial-gradient(1.2px 1.2px at 43% 22%, #fff, rgba(0,0,0,0)),
+              radial-gradient(0.8px 0.8px at 6% 49%, #ffd, rgba(0,0,0,0)),
 
-function switchRight() {
-    rightIndex--;
-    if (rightIndex < 1) { rightIndex = 35; }
-    rightImg.src = 'assets/animations/anim-' + String(rightIndex).padStart(2, '0') + '.png';
-}
+              /* ---- 小星点（密集填充，防止稀疏） ---- */
+              radial-gradient(0.6px 0.6px at 15% 35%, #fff, rgba(0,0,0,0)),
+              radial-gradient(0.8px 0.8px at 47% 55%, #ffd, rgba(0,0,0,0)),
+              radial-gradient(0.5px 0.5px at 79% 77%, #fff, rgba(0,0,0,0)),
+              radial-gradient(0.7px 0.7px at 52% 16%, #ffe, rgba(0,0,0,0)),
+              radial-gradient(0.5px 0.5px at 29% 88%, #fff, rgba(0,0,0,0)),
+              radial-gradient(0.8px 0.8px at 88% 34%, #d4e4ff, rgba(0,0,0,0)),
+              radial-gradient(0.6px 0.6px at 37% 64%, #fff, rgba(0,0,0,0)),
+              radial-gradient(0.7px 0.7px at 63% 91%, #ffd, rgba(0,0,0,0)),
+              radial-gradient(0.5px 0.5px at 11% 87%, #ffe, rgba(0,0,0,0)),
+              radial-gradient(0.8px 0.8px at 91% 8%, #fff, rgba(0,0,0,0)),
+              radial-gradient(0.5px 0.5px at 41% 42%, #ffd, rgba(0,0,0,0)),
+              radial-gradient(0.7px 0.7px at 68% 7%, #fff, rgba(0,0,0,0)),
+              radial-gradient(0.6px 0.6px at 23% 28%, #ffe, rgba(0,0,0,0)),
+              radial-gradient(0.5px 0.5px at 86% 95%, #fff, rgba(0,0,0,0)),
+              radial-gradient(0.8px 0.8px at 55% 36%, #d4e4ff, rgba(0,0,0,0)),
+              radial-gradient(0.6px 0.6px at 34% 4%, #fff, rgba(0,0,0,0)),
+              radial-gradient(0.5px 0.5px at 77% 58%, #ffd, rgba(0,0,0,0)),
+              radial-gradient(0.7px 0.7px at 4% 20%, #fff, rgba(0,0,0,0)),
+              radial-gradient(0.5px 0.5px at 94% 66%, #ffe, rgba(0,0,0,0)),
+              radial-gradient(0.6px 0.6px at 45% 74%, #fff, rgba(0,0,0,0));
 
-setInterval(switchLeft, 5000);
-setInterval(switchRight, 7000);
+          background-repeat: repeat;
+          /* 关键：使用互质数尺寸（质数），打破网格规律，彻底解决“三点一线”问题 */
+          background-size:
+              317px 283px, 431px 359px, 251px 331px, 389px 271px, 467px 293px,
+              337px 421px, 241px 347px, 409px 293px, 431px 379px,
+              157px 173px, 137px 149px, 181px 193px, 127px 139px, 167px 191px,
+              211px 223px, 149px 163px, 179px 197px, 193px 181px, 229px 241px,
+              151px 139px, 137px 127px,
+              103px 97px, 89px 83px, 107px 101px, 97px 109px, 79px 73px,
+              113px 103px, 83px 97px, 127px 109px, 91px 89px, 131px 127px,
+              101px 97px, 89px 83px, 107px 97px, 113px 79px, 83px 107px,
+              109px 89px, 97px 113px, 79px 97px, 101px 83px, 89px 109px;
+          opacity: 0.75;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+        .lang-switch {
+            display: flex;
+            justify-content: flex-end;
+            gap: 0.8rem;
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 0;
+        }
+        .lang-btn {
+            position: relative;
+            width: 35px;
+            height: 35px;
+            border: 1px solid #b8a310;
+            border-radius: 50%;
+            background: linear-gradient(145deg, #2b1a5e 0%, #4a3b82 100%);
+            color: #b2ebf2;
+            font-size: 0.75rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-decoration: none;
+            z-index: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            line-height: 1;
+            padding: 0;
+            box-shadow: 0 0 5px rgba(184, 163, 16, 0.4), inset 0 1px 2px rgba(255, 255, 255, 0.3), inset 0 -2px 3px rgba(0, 0, 0, 0.5);
+            text-shadow: 0 0 4px #40E0D0;
+        }
+        .lang-btn.active {
+            background: linear-gradient(145deg, #b8a310 0%, #d4c24a 100%);
+            color: #211843;
+            border-color: #fff5c2;
+            box-shadow: 0 0 8px rgba(255, 215, 0, 0.6), inset 0 1px 2px rgba(255, 255, 255, 0.4), inset 0 -2px 3px rgba(0, 0, 0, 0.2);
+            text-shadow: none;
+        }
+        .lang-btn::after {
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            background: #746aa8;
+            border-radius: 2px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(45deg);
+            z-index: -1;
+            box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
+        }
+        .hero {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        .hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+        .logo-img {
+            max-width: 100%;
+            height: auto;
+            max-height: 120px;    
+            filter: brightness(1.2) saturate(1.5) drop-shadow(0 0 6px rgba(168, 85, 247, 0.9)) drop-shadow(0 0 22px rgba(168, 85, 247, 0.6));
+            transition: filter 0.3s ease;
+            animation: logo-breathe 12s ease-in-out infinite;
+        }
+
+        @keyframes logo-breathe {
+            0%, 100% {
+                filter: brightness(1.45) saturate(1.8) drop-shadow(0 0 12px rgba(168, 85, 247, 1)) drop-shadow(0 0 38px rgba(168, 85, 247, 0.8));
+            }
+            25% {
+                filter: brightness(1.45) saturate(1.8) drop-shadow(0 0 12px rgba(255, 193, 7, 1)) drop-shadow(0 0 38px rgba(255, 193, 7, 0.8));
+            }
+            50% {
+                filter: brightness(1.45) saturate(1.8) drop-shadow(0 0 12px rgba(255, 64, 192, 1)) drop-shadow(0 0 38px rgba(255, 64, 192, 0.8));
+            }
+            75% {
+                filter: brightness(1.2) saturate(1.5) drop-shadow(0 0 0px rgba(0, 0, 0, 0));
+            }
+        }  
+        .hero-text {
+            text-align: left;
+        }
+        .logo {
+            font-size: 2.8rem;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+            margin-bottom: 0.2rem;
+            color: #C5B98A;
+            text-shadow: 0 0 6px rgba(197, 185, 138, 0.4);
+        }
+        .subtitle-row {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            margin: 0.2rem 0 0.5rem;
+        }
+        .tagline {
+            font-size: 1rem;
+            color: #aaa;
+            border-top: 1px solid #333;
+            border-bottom: 1px solid #333;
+            display: inline-block;
+            padding: 0.5rem 0;
+            margin-top: 0.5rem;
+        }  
+        .highlight {
+            color: #e0e0e0;
+            text-shadow:
+                0 0 2px #fff,
+                0 0 6px #00ffff,
+                0 0 10px rgba(0, 255, 255, 0.8);
+        }
+        .highlight::before {
+            content: '✦';
+            color: #40E0D0;
+            -webkit-text-stroke: 0.5px #b8a310;
+            text-shadow: 0 0 2px rgba(64, 224, 208, 0.8);
+            margin-right: 4px;
+        }
+        .highlight::after {
+            content: '✦';
+            color: #40E0D0;
+            -webkit-text-stroke: 0.5px #b8a310;
+            text-shadow: 0 0 2px rgba(64, 224, 208, 0.8);
+            margin-left: 4px;
+        }
+        .tagline-cyan {
+            color: #4AF6F4;
+            text-shadow: 0 0 8px rgba(74, 246, 244, 0.6);
+        }        
+        .hero-buttons {
+            display: flex;
+            gap: 0.8rem;
+        }
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 0.5rem 1.2rem;
+            background: rgba(43, 26, 94, 0.4);
+            color: #b8a310;
+            border: 1px solid #b8a310;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+        .btn-primary::before {
+            content: '';
+            width: 10px;
+            height: 10px;
+            background: #40E0D0;
+            border: 1px solid #b8a310;
+            border-radius: 2px;
+            transform: rotate(45deg);
+        }
+        .btn-primary:hover {
+            background: #b8a310;
+            color: #0f0f0f;
+        }
+        .btn-primary:hover::before {
+            background: #0a1128;
+            border-color: #0a1128;
+        }
+        .author {
+            text-align: center;
+            margin: 2rem 0;
+            font-size: 1rem;
+            color: #ccc;
+        }
+        .system-intro {
+            text-align: center;
+            margin: 2rem 0;
+            padding: 1.5rem;
+            background: rgba(3, 8, 20, 0.85);
+            border-radius: 32px;
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(184,163,16,0.3);
+            box-shadow: 0 0 15px rgba(0,0,0,0.5);
+        }
+        .system-intro h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(180deg, #6E8299 0%, #3A4A5A 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: transparent;
+            filter: drop-shadow(0 2px 2px rgba(0,0,0,0.4));
+        }
+        .system-intro p {
+            margin-bottom: 0.5rem;
+            color: #ccc;
+        }
+        .gallery {
+            margin: 3rem 0;
+        }
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            color: #979cbf;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+        .grid-item {
+            text-align: center;
+            background: rgba(184,163,16,0.12);
+            border-radius: 16px;
+            padding: 0.5rem;
+        }
+        .grid-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            transition: transform 0.2s ease;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            display: block;
+            object-fit: contain;
+            mix-blend-mode: multiply;
+            background: transparent;
+        }
+        .grid-item img:hover {
+            transform: scale(1.02);
+        }
+        .image-caption {
+            margin-top: 0.6rem;
+            font-size: 0.85rem;
+            color: #aaa;
+            line-height: 1.4;
+            min-height: 2.4em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .intro-text {
+            margin: 2rem 0;
+            line-height: 1.6;
+        }
+        p {
+            margin-bottom: 1em;
+        }
+        .contact {
+            text-align: center;
+            margin: 3rem 0;
+            padding: 2rem 1rem;
+            background: rgba(26,26,26,0.8);
+            border-radius: 32px;
+            backdrop-filter: blur(4px);
+        }
+        .contact a {
+            color: #b8a310;
+            text-decoration: none;
+            border-bottom: 1px dotted #555;
+        }
+        footer {
+            text-align: center;
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid #2a2a2a;
+            font-size: 0.85rem;
+            color: #888;
+        }
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        .footer-link {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 0.4rem 1.2rem;
+            background: #211843;
+            color: #b8a310;
+            border: 1px solid #FFD700;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 8px rgba(184, 163, 16, 0.2), inset 0 1px 2px rgba(255, 255, 255, 0.1), inset 0 -2px 3px rgba(0, 0, 0, 0.4);
+            text-shadow: 0 0 4px rgba(184, 163, 16, 0.5);
+        }
+        .footer-link:hover {
+            background: linear-gradient(145deg, #b8a310 0%, #d4c24a 100%);
+            color: #211843;
+            border-color: #fff5c2;
+            text-shadow: none;
+            box-shadow: 0 0 12px rgba(255, 215, 0, 0.6);
+        }
+        footer a {
+            color: #b8a310;
+            text-decoration: none;
+        }
+        .footer-logo img {
+            filter: brightness(0.75) saturate(0.8) drop-shadow(0 0 3px rgba(255, 255, 255, 0.5));
+        }
+        @media (max-width: 900px) {
+            .grid {
+                grid-template-columns: 1fr;
+                gap: 1.8rem;
+            }
+            .subtitle-row {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.8rem;
+            }
+        }
+        @media (max-width: 640px) {
+            body {
+                padding: 1rem;
+            }
+            .logo {
+                font-size: 2rem;
+            }
+            .tagline {
+                font-size: 0.9rem;
+            }
+            .section-title {
+                font-size: 1.5rem;
+            }
+            .hero-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            .hero-text {
+                text-align: center;
+            }
+            .subtitle-row {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.9);
+            z-index: 9999;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            backdrop-filter: blur(8px);
+            transition: opacity 0.3s ease;
+        }
+        .modal img {
+            max-width: 95%;
+            max-height: 95%;
+            border-radius: 12px;
+            object-fit: contain;
+        }
+        .close-btn {
+            position: absolute;
+            top: 1rem;
+            right: 2rem;
+            color: white;
+            font-size: 2.2rem;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+        .video-wrapper {
+            text-align: center;
+            margin-bottom: 2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        video {
+            width: 100%;
+            border-radius: 16px;
+        }
+        @media (max-width: 900px) {
+            .grid {
+                grid-template-columns: 1fr;
+                gap: 1.8rem;
+            }
+            .subtitle-row {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.8rem;
+            }
+        }
+        @media (max-width: 640px) {
+            body {
+                padding: 1rem;
+            }
+            .logo {
+                font-size: 2rem;
+            }
+            .tagline {
+                font-size: 0.9rem;
+            }
+            .section-title {
+                font-size: 1.5rem;
+            }
+            .hero-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            .hero-text {
+                text-align: center;
+            }
+            .subtitle-row {
+                flex-direction: column;
+                align-items: center;
+            }
+        }        
+        .animation-row {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                gap: 40px;
+                margin: 20px 0;
+        }
+        .animation-item {
+                flex: 0 1 auto;
+                max-width: 400px;
+                width: 100%;
+        }
+        .animation-item img {
+                width: 100%;
+                height: auto;
+                display: block;
+        }
+        .anim-left {
+                animation: logo-breathe 12s ease-in-out infinite;
+        }
+        .anim-right {
+                animation: star-pulse 4s ease-in-out infinite;
+        }
+        @keyframes star-pulse {
+                0%, 100% {
+                        filter: brightness(1.3) saturate(1.8) drop-shadow(0 0 12px rgba(64, 224, 208, 1)) drop-shadow(0 0 38px rgba(64, 224, 208, 0.8));
+                        transform: scale(1);
+                }
+                25% {
+                        filter: brightness(1.3) saturate(1.8) drop-shadow(0 0 12px rgba(168, 85, 247, 1)) drop-shadow(0 0 38px rgba(168, 85, 247, 0.8));
+                        transform: scale(1.02);
+                }
+                50% {
+                        filter: brightness(1.3) saturate(1.8) drop-shadow(0 0 12px rgba(255, 215, 0, 1)) drop-shadow(0 0 38px rgba(255, 215, 0, 0.8));
+                        transform: scale(1);
+                }
+                75% {
+                        filter: brightness(1.3) saturate(1.8) drop-shadow(0 0 12px rgba(64, 224, 208, 1)) drop-shadow(0 0 38px rgba(64, 224, 208, 0.8));
+                        transform: scale(1.01);
+                }
+        }
+        @media (max-width: 640px) {
+                .animation-row {
+                        gap: 20px;
+                }
+                .animation-item {
+                        max-width: 80%;
+                        margin-left: auto;
+                        margin-right: auto;
+                }
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CreativeWork",
+      "name": "FortuneCord",
+      "description": "An alchemist's line art world where a cord threads a coin to reinterpret ancient symbols and star charts.",
+      "creator": {
+        "@type": "Person",
+        "name": "Dan Chen"
+      },
+      "image": "https://fortunecord.com/assets/fortune-cord-post-heaven-taiji-single-strand-outer-ring-yin-yang-s-curve1200x630.jpg"
+    }
+    </script>
+    
+</head>
+<body>
+<div class="container">
+    <div class="lang-switch">
+        <a href="/" class="lang-btn">EN</a>
+        <a href="zh.html" class="lang-btn active">简</a>
+        <a href="zh-tw.html" class="lang-btn">繁</a>
+    </div>
+
+    <div class="hero">
+        <div class="hero-content">
+            <img src="assets/fortunecord-logo2.png" class="logo-img" alt="FortuneCord Taiji Logo">
+            <div class="hero-text">
+                <h1 class="logo">FortuneCord<span style="font-size:0.5em;">™</span> | 炼金术士的线稿世界</h1>
+                <div class="subtitle-row">
+                    <span class="tagline"><span class="highlight">星币系統</span>——将您的守护之星，织入命运之绳。</span>
+                    <div class="hero-buttons">
+                        <a href="https://fortunecord.github.io/fortunecord-artworks/" class="btn-primary">炼金图录</a>
+                        <a href="/symbols.html?lang=zh" class="btn-primary">意象解读</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="system-intro">
+        <div style="display: flex; justify-content: center; align-items: center; gap: 20px;"><h2 style="margin: 0;">“财绳”视觉系统</h2><img src="assets/fortunecord-coin-cord-logo-main.svg" style="width: 80px; flex-shrink: 0; filter: brightness(0.75) saturate(0.8) drop-shadow(0 0 3px rgba(255, 255, 255, 0.5)) drop-shadow(0 0 8px rgba(255, 255, 255, 0.3));"></div>
+        <p>绳串铜钱 = 聚财纳福<br>
+        以“绳串币”为核心语言，转译：太极 · 八卦 · 河图 · 洛书 · 星宿 · 星官 · 星座 · 其他星象<br>
+        公式：○ + □ + ─ = FORTUNE CORD （○=币形；□=币孔；─=连线）<br>
+        币形：从传统方孔圆币，到花卉、水果、宝石与毛茸星币的万物演化。</p>
+    </div>
+
+        <div class="animation-row">
+            <div class="animation-item">
+                <img id="animLeft" class="anim-left" src="assets/animations/anim-01.png" alt="FortuneCord Animation Left">
+            </div>
+            <div class="animation-item">
+                <img id="animRight" class="anim-right" src="assets/animations/anim-35.png" alt="FortuneCord Animation Right">
+            </div>
+        </div>
+
+    <div class="author">丹 · 星币炼金术士 · 星象炼金术士</div>
+
+    <div class="gallery">
+        <div class="section-title">图谱集萃</div>
+        <div class="grid">
+              <div class="grid-item">
+                <img loading="lazy" src="assets/coin-cord-big-dipper-seven-coins-chart.jpg" alt="钱绳版北斗七币图" onclick="openModal(this)">
+                <div class="image-caption">钱绳版北斗七币图</div>
+              </div>
+              <div class="grid-item">
+                    <img loading="lazy" src="https://fortunecord.github.io/fortunecord-artworks/1-taiji-collection/7-fortune-cord-taiji-v1.2/cord-chain-taiji-furry-coin/heart-chain-outer-ring-minimalist-two-eared-beast-taiji.jpg" alt="心链-二耳兽币-太极" onclick="openModal(this)">
+                    <div class="image-caption">心链 · 二耳兽币 · 太极</div>
+              </div>
+              <div class="grid-item">
+                <img loading="lazy" src="assets/mulberry-fruit-star-coin-big-dipper-seven-coins-chart.jpg" alt="桑葚水果星币_北斗七币图" onclick="openModal(this)">
+                <div class="image-caption">桑葚水果星币 · 北斗七币图</div>
+              </div>
+              <div class="grid-item">
+                <img loading="lazy" src="assets/peony-flower-star-coin-big-dipper-seven-coins-chart.jpg" alt="牡丹花卉星币_北斗七币图" onclick="openModal(this)">
+                <div class="image-caption">牡丹花卉星币 · 北斗七币图</div>
+              </div>
+              <div class="grid-item">
+                <img loading="lazy" src="assets/watermelon-fruit-star-coin-big-dipper-seven-coins-chart.jpg" alt="西瓜水果星币_北斗七币图" onclick="openModal(this)">
+                <div class="image-caption">西瓜水果星币 · 北斗七币图</div>
+              </div>
+              <div class="grid-item">
+                <img loading="lazy" src="assets/big-dipper-seven-cats-chart.jpg" alt="北斗七宠_北斗七币图" onclick="openModal(this)">
+                <div class="image-caption">北斗七宠 · 北斗七币图</div>
+              </div>
+              <div class="grid-item">
+                <img loading="lazy" src="assets/big-dipper-beast-back-earless-furry-straight-line-tail.jpg" alt="无耳毛茸_蜷缩兽背_直线尾" onclick="openModal(this)">
+                <div class="image-caption">无耳毛茸 · 蜷缩兽背 · 直线尾</div>
+              </div>
+              <div class="grid-item">
+                <img loading="lazy" src="https://fortunecord.github.io/fortunecord-artworks/6-big-dipper-collection/3-fortune-cord-big-dipper-seven-pets-v1.0-1.8/v1.1-two-eared-beast-front-back/coin-cord-big-dipper-coins-fluffy-tail.jpg" alt="北斗二耳兽币" onclick="openModal(this)">
+                <div class="image-caption">北斗二耳兽币</div>
+              </div>
+              <div class="grid-item">
+                <img loading="lazy" src="https://fortunecord.github.io/fortunecord-artworks/6-big-dipper-collection/3-fortune-cord-big-dipper-seven-pets-v1.0-1.8/v1.4-earless-single-ear-beast-back/fortune-cord-big-dipper-7-coins-back-single-ear-furry-straight-thin-tail.jpg" alt="单耳毛茸-北斗七币-方形口袋" onclick="openModal(this)">
+                <div class="image-caption">单耳毛茸 · 北斗七币 · 方形口袋</div>
+              </div>
+              <div class="grid-item">
+                <img loading="lazy" src="https://fortunecord.github.io/fortunecord-artworks/6-big-dipper-collection/3-fortune-cord-big-dipper-seven-pets-v1.0-1.8/v1.5-pomeranian-samoyed-prick-ear/fortune-cord-big-dipper-7-samoyed-star-coins-furry-coiled-cord-tail.jpg" alt="北斗七萨摩耶卷尾币" onclick="openModal(this)">
+                <div class="image-caption">北斗七萨摩耶币 · 卷尾</div>
+              </div>
+              <div class="grid-item">
+                <img loading="lazy" src="https://fortunecord.github.io/fortunecord-artworks/6-big-dipper-collection/3-fortune-cord-big-dipper-seven-pets-v1.0-1.8/v1.5-pomeranian-samoyed-prick-ear/fortune-cord-big-dipper-7-pomeranian-star-coins-furry-straight-thin-tail.jpg" alt="北斗七博美犬币" onclick="openModal(this)">
+                <div class="image-caption">北斗七博美犬币</div>
+              </div>
+              <div class="grid-item">
+                <img loading="lazy" src="https://fortunecord.github.io/fortunecord-artworks/7-little-dipper-collection/5-gemstone-star-coin-ursa-minor/fortune-cord-little-dipper-7-gem-4-star-coin-2.jpg" alt="小熊座小北斗七宝石星币" onclick="openModal(this)">
+                <div class="image-caption">小熊座 · 小北斗七宝石星币</div>
+              </div>
+              <div class="grid-item">
+                <img loading="lazy" src="assets/carnation-star-coin-2-orion.jpg" alt="康乃馨星币_猎户座" onclick="openModal(this)">
+                <div class="image-caption">康乃馨星币 · 猎户座</div>
+              </div>
+              <div class="grid-item">
+                <img loading="lazy" src="assets/plush-star-coin-cancer-star-chart-connection-line-10.jpg" alt="毛球星币_巨蟹星象连接线" onclick="openModal(this)">
+                <div class="image-caption">毛球星币 · 巨蟹星象连接线</div>
+              </div>
+              <div class="grid-item">
+                <img loading="lazy" src="assets/yuanbao-pisces-zodiac-connection-diagram.jpg" alt="元宝双鱼星座连线图" onclick="openModal(this)">
+                <div class="image-caption">元宝 · 双鱼星座连线图</div>
+              </div>
+              <div class="grid-item">
+                <img loading="lazy" src="https://fortunecord.com/fortunecord-artworks/1-taiji-collection/6-fortune-cord-taiji-v1.1/fortune-cord-pre-heaven-blockchain-taiji-furry-round-coin.jpg" alt="区块链太极 · 毛茸圆币" onclick="openModal(this)">
+                <div class="image-caption">区块链太极 · 毛茸圆币</div>
+              </div>
+              <div class="grid-item">
+                <img loading="lazy" src="https://fortunecord.com/fortunecord-artworks/1-taiji-collection/1-fortune-cord-taiji-v1.0/fortune-cord-post-heaven-taiji-single-strand-outer-ring-yin-yang-s-curve.jpg" alt="后天绳币太极" onclick="openModal(this)">
+                <div class="image-caption">后天绳币太极</div>
+              </div>
+              <div class="grid-item">
+                <img loading="lazy" src="https://fortunecord.com/fortunecord-artworks/1-taiji-collection/6-fortune-cord-taiji-v1.1/fortune-cord-pre-heaven-taiji-cross-chain-outer-ring-2.jpg" alt="先天跨链太极" onclick="openModal(this)">
+                <div class="image-caption">先天链式太极</div>                  
+              </div>
+              <div class="grid-item">
+                <img loading="lazy" src="https://fortunecord.com/fortunecord-artworks/10-stellar-radiance/star-coin-pulse-dense-milled-edge-square-hole-round-coin-straight-line-ray.jpg" alt="star coin pulse dense milled edge coin straight line ray" onclick="openModal(this)">
+                <div class="image-caption">恒星闪耀 · 密齿边方孔圆币 · 直线光芒</div>
+              </div>    
+              <div class="grid-item">
+                <img loading="lazy" src="https://fortunecord.com/fortunecord-artworks/10-stellar-radiance/star-coin-pulse-earlier-heaven-bagua-square-hole-round-coin-straight-chain-ray.jpg" alt="星币脉冲 · 先天八卦方孔圆币 · 直链光芒" onclick="openModal(this)">
+                <div class="image-caption">恒星闪耀 · 先天八卦方孔圆币 · 直链光芒</div>
+              </div>
+              <div class="grid-item">
+                <img loading="lazy" src="https://fortunecord.com/fortunecord-artworks/10-stellar-radiance/star-coin-pulse-floral-perforation-round-coin-figure-eight-cord-ray.jpg" alt="星币脉冲 · 花穿孔圆币 · 8字形绳光芒" onclick="openModal(this)">
+                <div class="image-caption">恒星闪耀 · 花穿孔圆币 · 8字形绳光芒</div>
+              </div>    
+              <div class="grid-item">
+                <img loading="lazy" src="https://fortunecord.com/fortunecord-artworks/10-stellar-radiance/star-coin-pulse-floral-perforation-round-coin-water-ripple-ray.jpg" alt="星币脉冲 · 花穿孔圆币 · 水波纹光芒" onclick="openModal(this)">
+                <div class="image-caption">星币脉冲 · 花穿孔圆币 · 水波纹光芒</div>
+              </div>  
+              <div class="grid-item">
+                    <img loading="lazy" src="https://fortunecord.com/fortunecord-artworks/3-hetu-luoshu-collection/2-fortune-cord-yuanbao-hetu-luoshu-v1.0/fortune-cord-taiji-hetu-1.jpg" alt="钱绳 · 太极河图" onclick="openModal(this)">
+                    <div class="image-caption">钱绳 · 太极河图</div>
+              </div>    
+              <div class="grid-item">
+                <img loading="lazy" src="https://fortunecord.github.io/fortunecord-artworks/12-fortune-craft/money-tree-multi-variant-coins.jpg" alt="摇钱术 · 异形币 · 摇钱树" onclick="openModal(this)">
+                <div class="image-caption">摇钱术 · 异形币 · 摇钱树</div>
+              </div>   
+        </div>
+    </div>
+
+    <div class="intro-text">
+        <p>我是一名炼金术士。我的工作，是看清炼金的本相，把圆、方、绳这些本相，一笔一笔画出来。</p>
+        <p>圆是天道循环，财富流转不息；方是规矩边界，赚多少留多少，心里有数；绳是连接——把散落的财富串起来，把断了的流转接起来。</p>
+        <p>白币为显，流动生长；黑币为藏，根基稳当。一显一藏，一进一守，方是完整的财富观。</p>
+        <p>静候同频者，以此绳共织万物：印刷品、纺织品、珠宝、星空顶、食品包装、NFT。</p>
+    </div>
+
+    <div class="contact">
+        <p>对“财绳”视觉系统感兴趣，希望将其应用于您自己的太极、星座或星象符号再创作？欢迎联系合作或授权。</p>
+        <p>📧 咨询：fortunecord [at] qq [dot] com <span style="font-size:0.85rem;">（请将 [at] 替换为 @，[dot] 替换为 .）</span></p>
+    </div>
+
+    <footer>
+        <div class="footer-logo" style="margin-bottom: 10px;">
+            <img src="assets/coin-cord-star-coin-logo-secondary.svg" alt="Coin Cord Logo" style="height: 80px;">
+        </div>
+        <div class="footer-links">
+            <a href="https://fortunecord.wordpress.com" target="_blank" rel="noopener noreferrer" class="btn-primary">✦ Blog</a>
+            <a href="https://github.com/fortunecord/fortunecord.github.io" target="_blank" rel="noopener noreferrer" class="btn-primary">✦ GitHub</a>
+            <a href="/legal.html" class="btn-primary">✦ Legal</a>
+        </div>
+        <p>© 2026 FortuneCord | 版权所有。</p>
+    </footer>
+</div>
+
+<div class="modal" id="imageModal">
+    <button class="close-btn" onclick="closeModal()">&times;</button>
+    <img id="modalImage" src="" alt="Preview">
+</div>
+
+<script>
+    const modal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage');
+    function openModal(img) {
+        modalImage.src = img.src;
+        modalImage.alt = img.alt;
+        modal.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+    }
+    function closeModal() {
+        modal.style.display = 'none';
+        document.body.style.overflow = '';
+    }
+    modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+
+        const animLeft = document.getElementById('animLeft');
+        const animRight = document.getElementById('animRight');
+        let leftIndex = 1;
+        let rightIndex = 35;
+        const totalImages = 35;
+
+        function updateLeft() {
+                leftIndex = leftIndex >= totalImages ? 1 : leftIndex + 1;
+                animLeft.src = 'assets/animations/anim-' + String(leftIndex).padStart(2, '0') + '.png';
+        }
+
+        function updateRight() {
+                rightIndex = rightIndex <= 1 ? totalImages : rightIndex - 1;
+                animRight.src = 'assets/animations/anim-' + String(rightIndex).padStart(2, '0') + '.png';
+        }
+
+        setInterval(updateLeft, 5000);
+        setInterval(updateRight, 4000);
 </script>
 </body>
 </html>
