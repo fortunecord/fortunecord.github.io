@@ -360,35 +360,8 @@
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
             display: block;
             object-fit: contain;
-            mix-blend-mode: multiply;
-            background: transparent;
-        }
-                .grid-item:nth-child(8n+1) {
-                background: rgba(64, 224, 208, 0.18);
-        }
-        .grid-item:nth-child(8n+2) {
-                background: rgba(168, 85, 247, 0.18);
-        }
-        .grid-item:nth-child(8n+3) {
-                background: rgba(255, 215, 0, 0.15);
-        }
-        .grid-item:nth-child(8n+4) {
-                background: rgba(255, 105, 180, 0.15);
-        }
-        .grid-item:nth-child(8n+5) {
-                background: rgba(74, 246, 244, 0.18);
-        }
-        .grid-item:nth-child(8n+6) {
-                background: rgba(138, 43, 226, 0.18);
-        }
-        .grid-item:nth-child(8n+7) {
-                background: rgba(197, 185, 138, 0.18);
-        }
-        .grid-item:nth-child(8n+8) {
-                background: rgba(0, 255, 127, 0.12);
-        }    
-        .grid-item img[src$=".png"] {
-                mix-blend-mode: normal;
+            filter: invert(1);
+            mix-blend-mode: screen;
         }
         .grid-item img:hover {
             transform: scale(1.02);
