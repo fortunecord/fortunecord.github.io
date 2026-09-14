@@ -375,11 +375,11 @@
             drop-shadow(0 0 6px rgba(210, 185, 130, 0.5));
         }
         .grid-item img:not(.cyber-png) {
-            mix-blend-mode: color-burn;
-            filter: invert(1) grayscale(1) brightness(1.2) contrast(1.3);
-            background-color: rgba(242, 235, 218, 0.12);        
+            mix-blend-mode: multiply;
+            background-color: rgba(244, 238, 222, 0.15); 
+            filter: contrast(1.2);
             border-radius: 12px;
-            padding: 4px;
+            overflow: hidden;
         }   
         .image-caption {
             margin-top: 0.6rem;
