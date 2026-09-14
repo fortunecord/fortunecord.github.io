@@ -375,11 +375,10 @@
             drop-shadow(0 0 6px rgba(210, 185, 130, 0.5));
         }
         .grid-item img:not(.cyber-png) {
-            mix-blend-mode: multiply;
-            background-color: rgba(244, 238, 222, 0.15); 
-            filter: contrast(1.2);
-            border-radius: 12px;
-            overflow: hidden;
+            mix-blend-mode: screen;  
+            background: transparent;  
+            filter: invert(1) drop-shadow(0 0 3px rgba(244, 238, 222, 0.4)) drop-shadow(0 0 8px rgba(244, 238, 222, 0.3));
+            border-radius: 12px;
         }   
         .image-caption {
             margin-top: 0.6rem;
