@@ -5,7 +5,7 @@
 
 FortuneCord: Star Coin Ceiling Art. Black & white line art for starlight headliners, interiors, and licensing.
 
-Dan, the Star Coin Alchemist and Astrological Alchemist.
+Dan, a star coin visual art practitioner.
 
 
 ---
