@@ -12,7 +12,7 @@
     <link rel="alternate" hreflang="zh-CN" href="https://fortunecord.com/zh.html">
     <link rel="alternate" hreflang="zh-TW" href="https://fortunecord.com/zh-tw.html">
     <meta property="og:title" content="FortuneCord | Star Coin System" />
-    <meta property="og:description" content="Explore the FortuneCord visual system, where a cord threads a coin to reinterpret ancient symbols and star charts. Highlights include Big Dipper 7 Coins, Big Dipper 7 Dogs and Big Dipper 7 Cats. Original line art by Dan, the Star Coin Visual Artist.">
+    <meta property="og:description" content="Explore the FortuneCord visual system, where a cord threads a coin to reinterpret ancient symbols and star charts. Highlights include Big Dipper 7 Coins, Big Dipper 7 Dogs and Big Dipper 7 Cats. Original line art by Dan, the Star Coin Visual Creator.">
     <meta property="og:image" content="https://fortunecord.com/assets/fortune-cord-post-heaven-taiji-single-strand-outer-ring-yin-yang-s-curve1200x630.jpg">
     <meta property="og:url" content="https://fortunecord.com/">
     <meta name="twitter:card" content="summary_large_image">
@@ -94,6 +94,26 @@
                 109px 89px, 97px 113px, 79px 97px, 101px 83px, 89px 109px;
             opacity: 0.75;
         }
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1; 
+            background: 
+                radial-gradient(circle at 50% 45%, rgba(255, 255, 255, 0.22) 0%, rgba(120, 80, 255, 0.18) 15%, transparent 45%),
+                radial-gradient(ellipse at 55% 40%, rgba(40, 20, 120, 0.45) 0%, transparent 60%),
+                radial-gradient(ellipse at 48% 42%, rgba(200, 60, 150, 0.25) 0%, transparent 40%);
+            filter: blur(8px); 
+            animation: nebula-breathe 12s ease-in-out infinite;
+        }
+        @keyframes nebula-breathe {
+            0%, 100% { opacity: 0.8; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.02); }
+        } 
         .container {
             max-width: 1100px;
             margin: 0 auto;
