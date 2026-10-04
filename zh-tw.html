@@ -2,13 +2,13 @@
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FortuneCord – 星幣 · 鏈金 · 光影</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>財繩 FortuneCord – 光感美學 · 數字光影藝術</title>
     <link rel="icon" href="/assets/favicon.ico">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: system-ui, -apple-system, 'Segoe UI', '思源黑體', 'Noto Sans', sans-serif;
+            font-family: system-ui, -apple-system, 'Segoe UI', 'Noto Sans TC', '思源黑體', sans-serif;
             background: #0a1128;
             color: #e0e0e0;
             height: 100vh;
@@ -18,12 +18,17 @@
             position: relative;
             overflow: hidden;
         }
+
         body::before {
             content: '';
             position: fixed;
             inset: 0;
             z-index: 0;
             background-image:
+                radial-gradient(ellipse 80% 60% at 40% 35%, rgba(60, 45, 140, 0.30) 0%, transparent 70%),
+                radial-gradient(ellipse 60% 50% at 75% 70%, rgba(30, 60, 120, 0.20) 0%, transparent 70%),
+                radial-gradient(ellipse 50% 40% at 20% 80%, rgba(80, 40, 120, 0.15) 0%, transparent 70%),
+                radial-gradient(ellipse 40% 30% at 60% 20%, rgba(120, 60, 160, 0.12) 0%, transparent 70%),
                 radial-gradient(2.5px 2.5px at 13% 24%, #fff, transparent),
                 radial-gradient(3px 3px at 81% 17%, #ffe, transparent),
                 radial-gradient(2px 2px at 39% 83%, #ffd, transparent),
@@ -76,80 +81,152 @@
                 radial-gradient(0.9px 0.9px at 82% 76%, #ffd, transparent);
             background-repeat: repeat;
             background-size:
-                317px 283px, 431px 359px, 251px 331px, 389px 271px, 467px 293px,
-                337px 421px, 241px 347px, 409px 293px, 431px 379px,
-                157px 173px, 137px 149px, 181px 193px, 127px 139px, 167px 191px,
-                211px 223px, 149px 163px, 179px 197px, 193px 181px, 229px 241px,
-                151px 139px, 137px 127px,
-                103px 97px, 89px 83px, 107px 101px, 97px 109px, 79px 73px,
-                113px 103px, 83px 97px, 127px 109px, 91px 89px, 131px 127px,
-                101px 97px, 89px 83px, 107px 97px, 113px 79px, 83px 107px,
-                109px 89px, 97px 113px, 79px 97px, 101px 83px, 89px 109px,
-                149px 137px, 173px 181px, 139px 151px, 191px 163px, 127px 141px,
-                179px 129px, 133px 187px, 121px 143px, 157px 179px, 143px 121px;
+                auto, auto, auto, auto,
+                951px 849px, 1293px 1077px, 753px 993px, 1167px 813px, 1401px 879px,
+                1011px 1263px, 723px 1041px, 1227px 879px, 1293px 1137px,
+                471px 519px, 411px 447px, 543px 579px, 381px 417px, 501px 573px,
+                633px 669px, 447px 489px, 537px 591px, 579px 543px, 687px 723px,
+                453px 417px, 411px 381px,
+                309px 291px, 267px 249px, 321px 303px, 291px 327px, 237px 219px,
+                339px 309px, 249px 291px, 381px 327px, 273px 267px, 393px 381px,
+                303px 291px, 267px 249px, 321px 291px, 339px 237px, 249px 321px,
+                327px 267px, 291px 339px, 237px 291px, 303px 249px, 267px 327px,
+                447px 411px, 519px 543px, 417px 453px, 573px 489px, 381px 423px,
+                537px 387px, 399px 561px, 363px 429px, 471px 537px, 429px 363px;
             opacity: 0.85;
+            animation: starDrift 120s linear infinite;
         }
-        .meteor {
-            position: fixed;
-            width: 120px;
-            height: 1.5px;
-            background: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,0.9));
-            border-radius: 50%;
-            transform: rotate(-45deg);
-            opacity: 0;
-            z-index: 1;
-            box-shadow: 0 0 8px rgba(255,255,255,0.6);
+
+        @keyframes starDrift {
+            0% { background-position: 0 0, 0 0, 0 0, 0 0, 0 0; }
+            100% { background-position: 0 0, 0 0, 0 0, 0 0, 0 0; }
         }
-        .meteor-1 { top: 8%; right: -150px; animation: shoot 8s linear infinite; animation-delay: 2s; }
-        .meteor-2 { top: 35%; right: -150px; animation: shoot 10s linear infinite; animation-delay: 7s; }
-        @keyframes shoot {
-            0% { transform: translate(0, 0) rotate(-45deg); opacity: 0; }
-            10% { opacity: 1; }
-            70% { opacity: 1; }
-            85% { transform: translate(-130vw, 130vh) rotate(-45deg); opacity: 0; }
-            100% { transform: translate(-130vw, 130vh) rotate(-45deg); opacity: 0; }
+
+        .center {
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            padding: 2rem;
+            max-width: 800px;
         }
-        .center { text-align: center; position: relative; z-index: 2; padding: 2rem; }
+
+        .logo-wrap {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
+        .logo-wrap img {
+            max-height: 140px;
+            width: auto;
+            filter: brightness(1.1) saturate(1.3)
+                    drop-shadow(0 0 15px rgba(168, 85, 247, 0.7))
+                    drop-shadow(0 0 40px rgba(74, 246, 244, 0.4));
+            animation: logoGlow 8s ease-in-out infinite;
+        }
+
+        @keyframes logoGlow {
+            0%, 100% {
+                filter: brightness(1.1) saturate(1.3)
+                        drop-shadow(0 0 15px rgba(168, 85, 247, 0.7))
+                        drop-shadow(0 0 40px rgba(74, 246, 244, 0.4));
+            }
+            50% {
+                filter: brightness(1.3) saturate(1.5)
+                        drop-shadow(0 0 25px rgba(74, 246, 244, 0.9))
+                        drop-shadow(0 0 60px rgba(168, 85, 247, 0.5));
+            }
+        }
+
         h1 {
-            font-size: 3rem;
+            font-size: 3.2rem;
             font-weight: 600;
             color: #C5B98A;
-            letter-spacing: -0.5px;
-            margin-bottom: 0.5rem;
-            text-shadow: 0 0 15px rgba(197, 185, 138, 0.3);
+            letter-spacing: 2px;
+            margin-bottom: 0.6rem;
+            text-shadow:
+                0 0 15px rgba(197, 185, 138, 0.4),
+                0 0 40px rgba(184, 163, 16, 0.2);
         }
-        .sub {
-            font-size: 0.9rem;
+
+        h1 span {
+            font-size: 0.4em;
+            vertical-align: super;
             color: #888;
-            letter-spacing: 3px;
-            margin-bottom: 3.5rem;
         }
+
+        .sub {
+            font-size: 1rem;
+            color: #9a9ab0;
+            letter-spacing: 4px;
+            margin-bottom: 2rem;
+            text-shadow: 0 0 10px rgba(74, 246, 244, 0.2);
+        }
+
+        .keywords {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1.2rem;
+            margin-bottom: 3.5rem;
+            font-size: 0.82rem;
+            color: #7a8aaa;
+            letter-spacing: 2px;
+        }
+
+        .keywords span {
+            position: relative;
+            padding: 0 0.5rem;
+        }
+
+        .keywords span::before,
+        .keywords span::after {
+            content: '✦';
+            color: #40E0D0;
+            font-size: 0.6em;
+            opacity: 0.6;
+            margin: 0 0.5rem;
+            -webkit-text-stroke: 0.3px #b8a310;
+        }
+
+        .keywords span:first-child::before { display: none; }
+        .keywords span:last-child::after { display: none; }
+
         .enter {
             display: inline-block;
-            padding: 0.6rem 2.4rem;
+            padding: 0.7rem 2.8rem;
             background: rgba(184, 163, 16, 0.06);
             border: 1px solid rgba(184, 163, 16, 0.45);
             color: #d4c24a;
             text-decoration: none;
-            font-size: 0.8rem;
-            letter-spacing: 5px;
+            font-size: 0.85rem;
+            letter-spacing: 6px;
+            text-transform: uppercase;
             border-radius: 30px;
             backdrop-filter: blur(6px);
             -webkit-backdrop-filter: blur(6px);
             transition: all 0.5s ease;
             animation: float 5s ease-in-out infinite;
-            box-shadow: 0 0 20px rgba(184, 163, 16, 0.15), inset 0 0 12px rgba(184, 163, 16, 0.08);
+            box-shadow:
+                0 0 20px rgba(184, 163, 16, 0.15),
+                inset 0 0 12px rgba(184, 163, 16, 0.08);
         }
+
         .enter:hover {
             background: rgba(184, 163, 16, 0.18);
             border-color: rgba(184, 163, 16, 0.85);
             color: #fff5c2;
-            box-shadow: 0 0 30px rgba(184, 163, 16, 0.4), inset 0 0 20px rgba(184, 163, 16, 0.2);
+            box-shadow:
+                0 0 35px rgba(184, 163, 16, 0.45),
+                inset 0 0 20px rgba(184, 163, 16, 0.2);
+            letter-spacing: 8px;
         }
+
         @keyframes float {
             0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-5px); }
+            50% { transform: translateY(-6px); }
         }
+
         .lang {
             position: fixed;
             top: 2rem;
@@ -158,6 +235,7 @@
             gap: 0.5rem;
             z-index: 3;
         }
+
         .lang a {
             color: #555;
             text-decoration: none;
@@ -167,24 +245,53 @@
             border-radius: 4px;
             transition: all 0.3s;
         }
+
         .lang a:hover { color: #b8a310; border-color: #b8a310; }
         .lang a.active { color: #b8a310; border-color: #b8a310; }
+
+        .footer-note {
+            position: fixed;
+            bottom: 1.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.7rem;
+            color: #444;
+            letter-spacing: 2px;
+            z-index: 2;
+        }
+
+        @media (max-width: 640px) {
+            h1 { font-size: 2.2rem; }
+            .sub { font-size: 0.85rem; letter-spacing: 3px; }
+            .keywords { font-size: 0.72rem; gap: 0.8rem; }
+            .enter { padding: 0.6rem 2rem; font-size: 0.78rem; letter-spacing: 4px; }
+            .logo-wrap img { max-height: 100px; }
+        }
     </style>
 </head>
 <body>
-    <div class="meteor meteor-1"></div>
-    <div class="meteor meteor-2"></div>
-
     <div class="lang">
         <a href="/">EN</a>
-        <a href="/zh.html">简</a>
+        <a href="/zh.html">簡</a>
         <a href="/zh-tw.html" class="active">繁</a>
     </div>
 
     <div class="center">
-        <h1>FortuneCord™</h1>
-        <div class="sub">星幣 · 鏈金 · 光影</div>
-        <a href="/world-tw.html" class="enter">進入</a>
+        <div class="logo-wrap">
+            <img src="assets/fortunecord-logo2.png" alt="FortuneCord 太極 Logo">
+        </div>
+        <h1>財繩<span>™</span></h1>
+        <div class="sub">光感美學 · 數字光影藝術</div>
+        <div class="keywords">
+            <span>星空頂</span>
+            <span>夜遊光影</span>
+            <span>文旅燈光</span>
+            <span>沉浸式藝術</span>
+            <span>星圖重構</span>
+        </div>
+        <a href="/world.html" class="enter">進入</a>
     </div>
+
+    <div class="footer-note">© 2026 FortuneCord · All rights reserved.</div>
 </body>
 </html>
