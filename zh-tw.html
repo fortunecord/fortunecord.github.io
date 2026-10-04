@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FortuneCord – 星幣 · 鏈金 · 光影</title>
-    <meta name="description" content="FortuneCord — 以繩串幣重構古老符號與星圖的原創視覺系統。">
     <link rel="icon" href="/assets/favicon.ico">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -25,54 +24,131 @@
             inset: 0;
             z-index: 0;
             background-image:
-                radial-gradient(2px 2px at 13% 24%, #fff, transparent),
-                radial-gradient(2.5px 2.5px at 81% 17%, #ffe, transparent),
-                radial-gradient(1.5px 1.5px at 39% 83%, #ffd, transparent),
-                radial-gradient(2px 2px at 66% 61%, #fff, transparent),
-                radial-gradient(1.5px 1.5px at 91% 43%, #d4e4ff, transparent),
-                radial-gradient(2.2px 2.2px at 7% 68%, #fff, transparent),
-                radial-gradient(1.8px 1.8px at 54% 9%, #ffe, transparent),
-                radial-gradient(1.2px 1.2px at 28% 47%, #ffd, transparent),
-                radial-gradient(1.8px 1.8px at 74% 92%, #fff, transparent),
-                radial-gradient(1px 1px at 18% 11%, #fff, transparent),
-                radial-gradient(0.8px 0.8px at 48% 38%, #ffd, transparent),
-                radial-gradient(1.1px 1.1px at 85% 67%, #fff, transparent);
+                radial-gradient(2.5px 2.5px at 13% 24%, #fff, transparent),
+                radial-gradient(3px 3px at 81% 17%, #ffe, transparent),
+                radial-gradient(2px 2px at 39% 83%, #ffd, transparent),
+                radial-gradient(2.5px 2.5px at 66% 61%, #fff, transparent),
+                radial-gradient(1.8px 1.8px at 91% 43%, #d4e4ff, transparent),
+                radial-gradient(2.8px 2.8px at 7% 68%, #fff, transparent),
+                radial-gradient(2.2px 2.2px at 54% 9%, #ffe, transparent),
+                radial-gradient(1.6px 1.6px at 28% 47%, #ffd, transparent),
+                radial-gradient(2.2px 2.2px at 74% 92%, #fff, transparent),
+                radial-gradient(1.2px 1.2px at 18% 11%, #fff, transparent),
+                radial-gradient(1px 1px at 48% 38%, #ffd, transparent),
+                radial-gradient(1.3px 1.3px at 85% 67%, #fff, transparent),
+                radial-gradient(1.1px 1.1px at 62% 28%, #ffe, transparent),
+                radial-gradient(0.9px 0.9px at 33% 58%, #d4e4ff, transparent),
+                radial-gradient(1.2px 1.2px at 59% 80%, #fff, transparent),
+                radial-gradient(1px 1px at 96% 15%, #ffd, transparent),
+                radial-gradient(1.4px 1.4px at 24% 73%, #fff, transparent),
+                radial-gradient(1px 1px at 71% 49%, #ffe, transparent),
+                radial-gradient(1.2px 1.2px at 43% 22%, #fff, transparent),
+                radial-gradient(0.8px 0.8px at 6% 49%, #ffd, transparent),
+                radial-gradient(0.6px 0.6px at 15% 35%, #fff, transparent),
+                radial-gradient(0.8px 0.8px at 47% 55%, #ffd, transparent),
+                radial-gradient(0.5px 0.5px at 79% 77%, #fff, transparent),
+                radial-gradient(0.7px 0.7px at 52% 16%, #ffe, transparent),
+                radial-gradient(0.5px 0.5px at 29% 88%, #fff, transparent),
+                radial-gradient(0.8px 0.8px at 88% 34%, #d4e4ff, transparent),
+                radial-gradient(0.6px 0.6px at 37% 64%, #fff, transparent),
+                radial-gradient(0.7px 0.7px at 63% 91%, #ffd, transparent),
+                radial-gradient(0.5px 0.5px at 11% 87%, #ffe, transparent),
+                radial-gradient(0.8px 0.8px at 91% 8%, #fff, transparent),
+                radial-gradient(0.5px 0.5px at 41% 42%, #ffd, transparent),
+                radial-gradient(0.7px 0.7px at 68% 7%, #fff, transparent),
+                radial-gradient(0.6px 0.6px at 23% 28%, #ffe, transparent),
+                radial-gradient(0.5px 0.5px at 86% 95%, #fff, transparent),
+                radial-gradient(0.8px 0.8px at 55% 36%, #d4e4ff, transparent),
+                radial-gradient(0.6px 0.6px at 34% 4%, #fff, transparent),
+                radial-gradient(0.5px 0.5px at 77% 58%, #ffd, transparent),
+                radial-gradient(0.7px 0.7px at 4% 20%, #fff, transparent),
+                radial-gradient(0.5px 0.5px at 94% 66%, #ffe, transparent),
+                radial-gradient(0.6px 0.6px at 45% 74%, #fff, transparent),
+                radial-gradient(1px 1px at 5% 92%, #fff, transparent),
+                radial-gradient(1.2px 1.2px at 88% 12%, #ffe, transparent),
+                radial-gradient(0.9px 0.9px at 22% 65%, #fff, transparent),
+                radial-gradient(1.1px 1.1px at 76% 35%, #d4e4ff, transparent),
+                radial-gradient(0.7px 0.7px at 58% 52%, #fff, transparent),
+                radial-gradient(1px 1px at 12% 80%, #ffd, transparent),
+                radial-gradient(0.8px 0.8px at 68% 88%, #fff, transparent),
+                radial-gradient(1.1px 1.1px at 93% 28%, #ffe, transparent),
+                radial-gradient(0.6px 0.6px at 35% 18%, #fff, transparent),
+                radial-gradient(0.9px 0.9px at 82% 76%, #ffd, transparent);
             background-repeat: repeat;
-            opacity: 0.8;
+            background-size:
+                317px 283px, 431px 359px, 251px 331px, 389px 271px, 467px 293px,
+                337px 421px, 241px 347px, 409px 293px, 431px 379px,
+                157px 173px, 137px 149px, 181px 193px, 127px 139px, 167px 191px,
+                211px 223px, 149px 163px, 179px 197px, 193px 181px, 229px 241px,
+                151px 139px, 137px 127px,
+                103px 97px, 89px 83px, 107px 101px, 97px 109px, 79px 73px,
+                113px 103px, 83px 97px, 127px 109px, 91px 89px, 131px 127px,
+                101px 97px, 89px 83px, 107px 97px, 113px 79px, 83px 107px,
+                109px 89px, 97px 113px, 79px 97px, 101px 83px, 89px 109px,
+                149px 137px, 173px 181px, 139px 151px, 191px 163px, 127px 141px,
+                179px 129px, 133px 187px, 121px 143px, 157px 179px, 143px 121px;
+            opacity: 0.85;
         }
-        .center {
-            text-align: center;
-            position: relative;
+        .meteor {
+            position: fixed;
+            width: 120px;
+            height: 1.5px;
+            background: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,0.9));
+            border-radius: 50%;
+            transform: rotate(-45deg);
+            opacity: 0;
             z-index: 1;
-            padding: 2rem;
+            box-shadow: 0 0 8px rgba(255,255,255,0.6);
         }
+        .meteor-1 { top: 8%; right: -150px; animation: shoot 8s linear infinite; animation-delay: 2s; }
+        .meteor-2 { top: 35%; right: -150px; animation: shoot 10s linear infinite; animation-delay: 7s; }
+        @keyframes shoot {
+            0% { transform: translate(0, 0) rotate(-45deg); opacity: 0; }
+            10% { opacity: 1; }
+            70% { opacity: 1; }
+            85% { transform: translate(-130vw, 130vh) rotate(-45deg); opacity: 0; }
+            100% { transform: translate(-130vw, 130vh) rotate(-45deg); opacity: 0; }
+        }
+        .center { text-align: center; position: relative; z-index: 2; padding: 2rem; }
         h1 {
             font-size: 3rem;
             font-weight: 600;
             color: #C5B98A;
             letter-spacing: -0.5px;
             margin-bottom: 0.5rem;
+            text-shadow: 0 0 15px rgba(197, 185, 138, 0.3);
         }
         .sub {
-            font-size: 1rem;
+            font-size: 0.9rem;
             color: #888;
-            letter-spacing: 2px;
-            margin-bottom: 3rem;
+            letter-spacing: 3px;
+            margin-bottom: 3.5rem;
         }
         .enter {
             display: inline-block;
-            padding: 0.8rem 3rem;
-            border: 1px solid #b8a310;
-            color: #b8a310;
+            padding: 0.6rem 2.4rem;
+            background: rgba(184, 163, 16, 0.06);
+            border: 1px solid rgba(184, 163, 16, 0.45);
+            color: #d4c24a;
             text-decoration: none;
-            font-size: 0.9rem;
-            letter-spacing: 4px;
-            transition: all 0.4s;
+            font-size: 0.8rem;
+            letter-spacing: 5px;
             border-radius: 30px;
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+            transition: all 0.5s ease;
+            animation: float 5s ease-in-out infinite;
+            box-shadow: 0 0 20px rgba(184, 163, 16, 0.15), inset 0 0 12px rgba(184, 163, 16, 0.08);
         }
         .enter:hover {
-            background: #b8a310;
-            color: #0a1128;
+            background: rgba(184, 163, 16, 0.18);
+            border-color: rgba(184, 163, 16, 0.85);
+            color: #fff5c2;
+            box-shadow: 0 0 30px rgba(184, 163, 16, 0.4), inset 0 0 20px rgba(184, 163, 16, 0.2);
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
         }
         .lang {
             position: fixed;
@@ -80,7 +156,7 @@
             right: 2rem;
             display: flex;
             gap: 0.5rem;
-            z-index: 2;
+            z-index: 3;
         }
         .lang a {
             color: #555;
@@ -96,11 +172,15 @@
     </style>
 </head>
 <body>
+    <div class="meteor meteor-1"></div>
+    <div class="meteor meteor-2"></div>
+
     <div class="lang">
         <a href="/">EN</a>
         <a href="/zh.html">简</a>
         <a href="/zh-tw.html" class="active">繁</a>
     </div>
+
     <div class="center">
         <h1>FortuneCord™</h1>
         <div class="sub">星幣 · 鏈金 · 光影</div>
