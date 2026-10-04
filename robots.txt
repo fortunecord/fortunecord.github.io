@@ -1,2 +1,5 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://fortunecord.com/sitemap.xml
+Sitemap: https://fortunecord.github.io/fortunecord-artworks/sitemap.xml
