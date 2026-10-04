@@ -18,14 +18,15 @@
             position: relative;
             overflow: hidden;
         }
-
-        /* 星点层：更多星星 */
         body::before {
             content: '';
             position: fixed;
             inset: 0;
             z-index: 0;
             background-image:
+                radial-gradient(ellipse 80% 60% at 40% 35%, rgba(60, 45, 140, 0.25) 0%, transparent 70%),
+                radial-gradient(ellipse 60% 50% at 75% 70%, rgba(30, 60, 120, 0.15) 0%, transparent 70%),
+                radial-gradient(ellipse 50% 40% at 20% 80%, rgba(80, 40, 120, 0.12) 0%, transparent 70%),
                 radial-gradient(2.5px 2.5px at 13% 24%, #fff, transparent),
                 radial-gradient(3px 3px at 81% 17%, #ffe, transparent),
                 radial-gradient(2px 2px at 39% 83%, #ffd, transparent),
@@ -78,53 +79,20 @@
                 radial-gradient(0.9px 0.9px at 82% 76%, #ffd, transparent);
             background-repeat: repeat;
             background-size:
-                317px 283px, 431px 359px, 251px 331px, 389px 271px, 467px 293px,
-                337px 421px, 241px 347px, 409px 293px, 431px 379px,
-                157px 173px, 137px 149px, 181px 193px, 127px 139px, 167px 191px,
-                211px 223px, 149px 163px, 179px 197px, 193px 181px, 229px 241px,
-                151px 139px, 137px 127px,
-                103px 97px, 89px 83px, 107px 101px, 97px 109px, 79px 73px,
-                113px 103px, 83px 97px, 127px 109px, 91px 89px, 131px 127px,
-                101px 97px, 89px 83px, 107px 97px, 113px 79px, 83px 107px,
-                109px 89px, 97px 113px, 79px 97px, 101px 83px, 89px 109px,
-                149px 137px, 173px 181px, 139px 151px, 191px 163px, 127px 141px,
-                179px 129px, 133px 187px, 121px 143px, 157px 179px, 143px 121px;
+                auto, auto, auto,
+                951px 849px, 1293px 1077px, 753px 993px, 1167px 813px, 1401px 879px,
+                1011px 1263px, 723px 1041px, 1227px 879px, 1293px 1137px,
+                471px 519px, 411px 447px, 543px 579px, 381px 417px, 501px 573px,
+                633px 669px, 447px 489px, 537px 591px, 579px 543px, 687px 723px,
+                453px 417px, 411px 381px,
+                309px 291px, 267px 249px, 321px 303px, 291px 327px, 237px 219px,
+                339px 309px, 249px 291px, 381px 327px, 273px 267px, 393px 381px,
+                303px 291px, 267px 249px, 321px 291px, 339px 237px, 249px 321px,
+                327px 267px, 291px 339px, 237px 291px, 303px 249px, 267px 327px,
+                447px 411px, 519px 543px, 417px 453px, 573px 489px, 381px 423px,
+                537px 387px, 399px 561px, 363px 429px, 471px 537px, 429px 363px;
             opacity: 0.85;
         }
-
-        /* 流星层 */
-        .meteor {
-            position: fixed;
-            width: 120px;
-            height: 1.5px;
-            background: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,0.9));
-            border-radius: 50%;
-            transform: rotate(-45deg);
-            opacity: 0;
-            z-index: 1;
-            box-shadow: 0 0 8px rgba(255,255,255,0.6);
-        }
-        .meteor-1 {
-            top: 8%;
-            right: -150px;
-            animation: shoot 8s linear infinite;
-            animation-delay: 2s;
-        }
-        .meteor-2 {
-            top: 35%;
-            right: -150px;
-            animation: shoot 10s linear infinite;
-            animation-delay: 7s;
-        }
-        @keyframes shoot {
-            0% { transform: translate(0, 0) rotate(-45deg); opacity: 0; }
-            10% { opacity: 1; }
-            70% { opacity: 1; }
-            85% { transform: translate(-130vw, 130vh) rotate(-45deg); opacity: 0; }
-            100% { transform: translate(-130vw, 130vh) rotate(-45deg); opacity: 0; }
-        }
-
-        /* 中央内容 */
         .center {
             text-align: center;
             position: relative;
@@ -146,8 +114,6 @@
             text-transform: uppercase;
             margin-bottom: 3.5rem;
         }
-
-        /* 灵动 ENTER 按钮 */
         .enter {
             display: inline-block;
             padding: 0.6rem 2.4rem;
@@ -179,8 +145,6 @@
             0%, 100% { transform: translateY(0); }
             50% { transform: translateY(-5px); }
         }
-
-        /* 语言切换 */
         .lang {
             position: fixed;
             top: 2rem;
@@ -203,15 +167,11 @@
     </style>
 </head>
 <body>
-    <div class="meteor meteor-1"></div>
-    <div class="meteor meteor-2"></div>
-
     <div class="lang">
         <a href="/" class="active">EN</a>
         <a href="/zh.html">简</a>
         <a href="/zh-tw.html">繁</a>
     </div>
-
     <div class="center">
         <h1>FortuneCord™</h1>
         <div class="sub">Star Coin · Chain Alchemy · Light</div>
