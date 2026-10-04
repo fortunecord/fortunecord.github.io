@@ -2,780 +2,109 @@
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FortuneCord – 星幣 · 鏈金 · 光影</title>
+    <meta name="description" content="FortuneCord — 以繩串幣重構古老符號與星圖的原創視覺系統。">
     <link rel="icon" href="/assets/favicon.ico">
-    <title>FortuneCord – 星幣星空頂藝術 | 鏈金術士的線稿世界</title>
-    <meta name="description" content="星幣星空頂藝術 – 原創黑白線稿，適用於汽車星空頂、建築吊頂、奢華內飾。北斗七幣、七貓、七狗系列。">
-    <link rel="canonical" href="https://fortunecord.com/zh-tw.html">
-    <link rel="alternate" hreflang="en" href="https://fortunecord.com/">
-    <link rel="alternate" hreflang="zh-CN" href="https://fortunecord.com/zh.html">
-    <link rel="alternate" hreflang="zh-TW" href="https://fortunecord.com/zh-tw.html">
-    <meta property="og:title" content="FortuneCord | 星幣系統">
-    <meta property="og:description" content="探索 FortuneCord 視覺系統，繩串幣重構古老符號與星圖。亮點包括北斗七幣、北斗七狗、北斗七貓。原創線稿 by 丹，星幣視覺藝術家。">
-    <meta property="og:image" content="https://fortunecord.com/assets/fortune-cord-post-heaven-taiji-single-strand-outer-ring-yin-yang-s-curve1200x630.jpg">
-    <meta property="og:url" content="https://fortunecord.com/zh-tw.html">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="robots" content="index, follow">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: system-ui, -apple-system, 'Segoe UI', 'Roboto', '思源黑體', 'Noto Sans', sans-serif;
+            font-family: system-ui, -apple-system, 'Segoe UI', '思源黑體', 'Noto Sans', sans-serif;
             background: #0a1128;
             color: #e0e0e0;
-            line-height: 1.5;
-            padding: 2rem max(1rem, env(safe-area-inset-right)) 2rem max(1rem, env(safe-area-inset-left));
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             position: relative;
+            overflow: hidden;
         }
         body::before {
             content: '';
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
+            inset: 0;
             z-index: 0;
             background-image:
-              radial-gradient(2.5px 2.5px at 13% 24%, #fff, rgba(0,0,0,0)),
-              radial-gradient(3px 3px at 81% 17%, #ffe, rgba(0,0,0,0)),
-              radial-gradient(2px 2px at 39% 83%, #ffd, rgba(0,0,0,0)),
-              radial-gradient(2.5px 2.5px at 66% 61%, #fff, rgba(0,0,0,0)),
-              radial-gradient(1.8px 1.8px at 91% 43%, #d4e4ff, rgba(0,0,0,0)),
-              radial-gradient(2.8px 2.8px at 7% 68%, #fff, rgba(0,0,0,0)),
-              radial-gradient(2.2px 2.2px at 54% 9%, #ffe, rgba(0,0,0,0)),
-              radial-gradient(1.6px 1.6px at 28% 47%, #ffd, rgba(0,0,0,0)),
-              radial-gradient(2.2px 2.2px at 74% 92%, #fff, rgba(0,0,0,0)),
-
-              radial-gradient(1.2px 1.2px at 18% 11%, #fff, rgba(0,0,0,0)),
-              radial-gradient(1px 1px at 48% 38%, #ffd, rgba(0,0,0,0)),
-              radial-gradient(1.3px 1.3px at 85% 67%, #fff, rgba(0,0,0,0)),
-              radial-gradient(1.1px 1.1px at 62% 28%, #ffe, rgba(0,0,0,0)),
-              radial-gradient(0.9px 0.9px at 33% 58%, #d4e4ff, rgba(0,0,0,0)),
-              radial-gradient(1.2px 1.2px at 59% 80%, #fff, rgba(0,0,0,0)),
-              radial-gradient(1px 1px at 96% 15%, #ffd, rgba(0,0,0,0)),
-              radial-gradient(1.4px 1.4px at 24% 73%, #fff, rgba(0,0,0,0)),
-              radial-gradient(1px 1px at 71% 49%, #ffe, rgba(0,0,0,0)),
-              radial-gradient(1.2px 1.2px at 43% 22%, #fff, rgba(0,0,0,0)),
-              radial-gradient(0.8px 0.8px at 6% 49%, #ffd, rgba(0,0,0,0)),
-
-              radial-gradient(0.6px 0.6px at 15% 35%, #fff, rgba(0,0,0,0)),
-              radial-gradient(0.8px 0.8px at 47% 55%, #ffd, rgba(0,0,0,0)),
-              radial-gradient(0.5px 0.5px at 79% 77%, #fff, rgba(0,0,0,0)),
-              radial-gradient(0.7px 0.7px at 52% 16%, #ffe, rgba(0,0,0,0)),
-              radial-gradient(0.5px 0.5px at 29% 88%, #fff, rgba(0,0,0,0)),
-              radial-gradient(0.8px 0.8px at 88% 34%, #d4e4ff, rgba(0,0,0,0)),
-              radial-gradient(0.6px 0.6px at 37% 64%, #fff, rgba(0,0,0,0)),
-              radial-gradient(0.7px 0.7px at 63% 91%, #ffd, rgba(0,0,0,0)),
-              radial-gradient(0.5px 0.5px at 11% 87%, #ffe, rgba(0,0,0,0)),
-              radial-gradient(0.8px 0.8px at 91% 8%, #fff, rgba(0,0,0,0)),
-              radial-gradient(0.5px 0.5px at 41% 42%, #ffd, rgba(0,0,0,0)),
-              radial-gradient(0.7px 0.7px at 68% 7%, #fff, rgba(0,0,0,0)),
-              radial-gradient(0.6px 0.6px at 23% 28%, #ffe, rgba(0,0,0,0)),
-              radial-gradient(0.5px 0.5px at 86% 95%, #fff, rgba(0,0,0,0)),
-              radial-gradient(0.8px 0.8px at 55% 36%, #d4e4ff, rgba(0,0,0,0)),
-              radial-gradient(0.6px 0.6px at 34% 4%, #fff, rgba(0,0,0,0)),
-              radial-gradient(0.5px 0.5px at 77% 58%, #ffd, rgba(0,0,0,0)),
-              radial-gradient(0.7px 0.7px at 4% 20%, #fff, rgba(0,0,0,0)),
-              radial-gradient(0.5px 0.5px at 94% 66%, #ffe, rgba(0,0,0,0)),
-              radial-gradient(0.6px 0.6px at 45% 74%, #fff, rgba(0,0,0,0));
-
-          background-repeat: repeat;
-          background-size:
-              317px 283px, 431px 359px, 251px 331px, 389px 271px, 467px 293px,
-              337px 421px, 241px 347px, 409px 293px, 431px 379px,
-              157px 173px, 137px 149px, 181px 193px, 127px 139px, 167px 191px,
-              211px 223px, 149px 163px, 179px 197px, 193px 181px, 229px 241px,
-              151px 139px, 137px 127px,
-              103px 97px, 89px 83px, 107px 101px, 97px 109px, 79px 73px,
-              113px 103px, 83px 97px, 127px 109px, 91px 89px, 131px 127px,
-              101px 97px, 89px 83px, 107px 97px, 113px 79px, 83px 107px,
-              109px 89px, 97px 113px, 79px 97px, 101px 83px, 89px 109px;
-          opacity: 0.75;
+                radial-gradient(2px 2px at 13% 24%, #fff, transparent),
+                radial-gradient(2.5px 2.5px at 81% 17%, #ffe, transparent),
+                radial-gradient(1.5px 1.5px at 39% 83%, #ffd, transparent),
+                radial-gradient(2px 2px at 66% 61%, #fff, transparent),
+                radial-gradient(1.5px 1.5px at 91% 43%, #d4e4ff, transparent),
+                radial-gradient(2.2px 2.2px at 7% 68%, #fff, transparent),
+                radial-gradient(1.8px 1.8px at 54% 9%, #ffe, transparent),
+                radial-gradient(1.2px 1.2px at 28% 47%, #ffd, transparent),
+                radial-gradient(1.8px 1.8px at 74% 92%, #fff, transparent),
+                radial-gradient(1px 1px at 18% 11%, #fff, transparent),
+                radial-gradient(0.8px 0.8px at 48% 38%, #ffd, transparent),
+                radial-gradient(1.1px 1.1px at 85% 67%, #fff, transparent);
+            background-repeat: repeat;
+            opacity: 0.8;
         }
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 1;
-        }
-        .lang-switch {
-            display: flex;
-            justify-content: flex-end;
-            gap: 0.8rem;
-            margin-bottom: 2rem;
-            position: relative;
-            z-index: 0;
-        }
-        .lang-btn {
-            position: relative;
-            width: 35px;
-            height: 35px;
-            border: 1px solid #b8a310;
-            border-radius: 50%;
-            background: linear-gradient(145deg, #2b1a5e 0%, #4a3b82 100%);
-            color: #b2ebf2;
-            font-size: 0.75rem;
-            cursor: pointer;
-            transition: all 0.2s;
-            text-decoration: none;
-            z-index: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            line-height: 1;
-            padding: 0;
-            box-shadow: 0 0 5px rgba(184, 163, 16, 0.4), inset 0 1px 2px rgba(255, 255, 255, 0.3), inset 0 -2px 3px rgba(0, 0, 0, 0.5);
-            text-shadow: 0 0 4px #40E0D0;
-        }
-        .lang-btn.active {
-            background: linear-gradient(145deg, #b8a310 0%, #d4c24a 100%);
-            color: #211843;
-            border-color: #fff5c2;
-            box-shadow: 0 0 8px rgba(255, 215, 0, 0.6), inset 0 1px 2px rgba(255, 255, 255, 0.4), inset 0 -2px 3px rgba(0, 0, 0, 0.2);
-            text-shadow: none;
-        }
-        .lang-btn::after {
-            content: '';
-            position: absolute;
-            width: 16px;
-            height: 16px;
-            border: 1px solid rgba(255, 255, 255, 0.4);
-            background: #746aa8;
-            border-radius: 2px;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%) rotate(45deg);
-            z-index: -1;
-            box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
-        }
-        .hero {
+        .center {
             text-align: center;
+            position: relative;
+            z-index: 1;
+            padding: 2rem;
+        }
+        h1 {
+            font-size: 3rem;
+            font-weight: 600;
+            color: #C5B98A;
+            letter-spacing: -0.5px;
+            margin-bottom: 0.5rem;
+        }
+        .sub {
+            font-size: 1rem;
+            color: #888;
+            letter-spacing: 2px;
             margin-bottom: 3rem;
         }
-        .hero-content {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 1.5rem;
-        }
-        .logo-img {
-            max-width: 100%;
-            height: auto;
-            max-height: 120px;
-            filter: brightness(1.2) saturate(1.5) drop-shadow(0 0 6px rgba(168, 85, 247, 0.9)) drop-shadow(0 0 22px rgba(168, 85, 247, 0.6));
-            transition: filter 0.3s ease;
-            animation: logo-breathe 12s ease-in-out infinite;
-        }
-        @keyframes logo-breathe {
-            0%, 100% {
-                filter: brightness(1.45) saturate(1.8) drop-shadow(0 0 12px rgba(168, 85, 247, 1)) drop-shadow(0 0 38px rgba(168, 85, 247, 0.8));
-            }
-            25% {
-                filter: brightness(1.45) saturate(1.8) drop-shadow(0 0 12px rgba(255, 193, 7, 1)) drop-shadow(0 0 38px rgba(255, 193, 7, 0.8));
-            }
-            50% {
-                filter: brightness(1.45) saturate(1.8) drop-shadow(0 0 12px rgba(255, 64, 192, 1)) drop-shadow(0 0 38px rgba(255, 64, 192, 0.8));
-            }
-            75% {
-                filter: brightness(1.2) saturate(1.5) drop-shadow(0 0 0px rgba(0, 0, 0, 0));
-            }
-        }
-        .hero-text {
-            text-align: left;
-        }
-        .logo {
-            font-size: 2.8rem;
-            font-weight: 600;
-            letter-spacing: -0.5px;
-            margin-bottom: 0.2rem;
-            color: #C5B98A;
-            text-shadow: 0 0 6px rgba(197, 185, 138, 0.4);
-        }
-        .subtitle-row {
-            display: flex;
-            align-items: center;
-            gap: 1.5rem;
-            flex-wrap: wrap;
-            margin: 0.2rem 0 0.5rem;
-        }
-        .tagline {
-            font-size: 1rem;
-            color: #aaa;
-            border-top: 1px solid #333;
-            border-bottom: 1px solid #333;
+        .enter {
             display: inline-block;
-            padding: 0.5rem 0;
-            margin-top: 0.5rem;
-        }  
-        .highlight {
-            color: #e0e0e0;
-            text-shadow:
-                0 0 2px #fff,
-                0 0 6px #00ffff,
-                0 0 10px rgba(0, 255, 255, 0.8);
-        }
-        .highlight::before {
-            content: '✦';
-            color: #40E0D0;
-            -webkit-text-stroke: 0.5px #b8a310;
-            text-shadow: 0 0 2px rgba(64, 224, 208, 0.8);
-            margin-right: 4px;
-        }
-        .highlight::after {
-            content: '✦';
-            color: #40E0D0;
-            -webkit-text-stroke: 0.5px #b8a310;
-            text-shadow: 0 0 2px rgba(64, 224, 208, 0.8);
-            margin-left: 4px;
-        }
-        .tagline-cyan {
-            color: #4AF6F4;
-            text-shadow: 0 0 8px rgba(74, 246, 244, 0.6);
-        }    
-        .hero-buttons {
-            display: flex;
-            gap: 0.8rem;
-        }
-        .btn-primary {
-            display: inline-block;
-            padding: 0.5rem 1.2rem;
-            background: #0a1128;
+            padding: 0.8rem 3rem;
+            border: 1px solid #b8a310;
             color: #b8a310;
             text-decoration: none;
-            border: 1px solid #40E0D0;
-            border-radius: 6px;
-            font-weight: 500;
             font-size: 0.9rem;
-            position: relative;
-            clip-path: polygon(10% 0, 90% 0, 100% 50%, 90% 100%, 10% 100%, 0 50%);
-            transition: all 0.3s;
-            text-shadow: 0 0 6px rgba(64, 224, 208, 0.5);
-        }
-        .btn-primary:hover {
-            background: #b8a310;
-            color: #0f0f0f;
-            border-color: #b8a310;
-            text-shadow: none;
-            box-shadow: 0 0 20px rgba(184, 163, 16, 0.8);
-            transform: translateY(-2px);
-        }
-        .author {
-            text-align: center;
-            margin: 2rem 0;
-            font-size: 1rem;
-            color: #ccc;
-        }
-        .system-intro {
-            text-align: center;
-            margin: 2rem 0;
-            padding: 1.5rem;
-            background: rgba(3, 8, 20, 0.85);
-            border-radius: 32px;
-            backdrop-filter: blur(4px);
-            border: 1px solid rgba(184,163,16,0.3);
-            box-shadow: 0 0 15px rgba(0,0,0,0.5);
-        }
-        .system-intro h2 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            background: linear-gradient(180deg, #6E8299 0%, #3A4A5A 100%);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            color: transparent;
-            filter: drop-shadow(0 2px 2px rgba(0,0,0,0.4));
-        }
-        .system-intro p {
-            margin-bottom: 0.5rem;
-            color: #ccc;
-        }
-        .gallery {
-            margin: 3rem 0;
-        }
-        .section-title {
-            font-size: 1.5rem;
-            font-weight: 500;
-            margin-bottom: 1.5rem;
-            text-align: center;
-            color: #979cbf;
-        }
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
-        }
-        .grid-item {
-            position: relative;
-            text-align: center;
-            background: #0a081e;
-            border: 1px solid rgba(80, 100, 200, 0.2);
-            border-radius: 16px;
-            padding: 0.8rem;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
-        }
-        .grid-item img {
-            width: 100%;
-            height: auto;
-            border-radius: 12px;
-            transition: transform 0.2s ease;
-            cursor: pointer;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-            display: block;
-            object-fit: contain;
-            mix-blend-mode: multiply;
-            background: transparent;
-        }
-        .grid-item img:hover {
-            transform: scale(1.02);
-        }
-        .grid-item img.cyber-png {
-            mix-blend-mode: screen;
-            background: transparent;
-            filter: invert(1) drop-shadow(0 0 3px rgba(244, 238, 222, 0.4)) drop-shadow(0 0 8px rgba(244, 238, 222, 0.3));
-            border-radius: 12px;
-        }
-        .grid-item img:not(.cyber-png) {
-            mix-blend-mode: screen;  
-            background: transparent;  
-            filter: invert(1) drop-shadow(0 0 2px rgba(244, 238, 222, 0.6)) drop-shadow(0 0 8px rgba(244, 238, 222, 0.3));
-            border-radius: 12px;
-        }  
-        .image-caption {
-            margin-top: 0.6rem;
-            font-size: 0.85rem;
-            color: #aaa;
-            line-height: 1.4;
-            min-height: 2.4em;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .intro-text {
-            margin: 2rem 0;
-            line-height: 1.6;
-        }
-        p {
-            margin-bottom: 1em;
-        }
-        .contact {
-            text-align: center;
-            margin: 3rem 0;
-            padding: 2rem 1rem;
-            background: rgba(26,26,26,0.8);
-            border-radius: 32px;
-            backdrop-filter: blur(4px);
-        }
-        .contact a {
-            color: #b8a310;
-            text-decoration: none;
-            border-bottom: 1px dotted #555;
-        }
-        footer {
-            text-align: center;
-            margin-top: 4rem;
-            padding-top: 2rem;
-            border-top: 1px solid #2a2a2a;
-            font-size: 0.85rem;
-            color: #888;
-        }
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin-bottom: 15px;
-        }
-        .footer-link {
-            position: relative;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 0.4rem 1.2rem;
-            background: #211843;
-            color: #b8a310;
-            border: 1px solid #FFD700;
+            letter-spacing: 4px;
+            transition: all 0.4s;
             border-radius: 30px;
-            font-size: 0.85rem;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            box-shadow: 0 0 8px rgba(184, 163, 16, 0.2), inset 0 1px 2px rgba(255, 255, 255, 0.1), inset 0 -2px 3px rgba(0, 0, 0, 0.4);
-            text-shadow: 0 0 4px rgba(184, 163, 16, 0.5);
         }
-        .footer-link:hover {
-            background: linear-gradient(145deg, #b8a310 0%, #d4c24a 100%);
-            color: #211843;
-            border-color: #fff5c2;
-            text-shadow: none;
-            box-shadow: 0 0 12px rgba(255, 215, 0, 0.6);
+        .enter:hover {
+            background: #b8a310;
+            color: #0a1128;
         }
-        footer a {
-            color: #b8a310;
-            text-decoration: none;
-        }
-        .footer-logo img {
-            filter: brightness(0.75) saturate(0.8) drop-shadow(0 0 3px rgba(255, 255, 255, 0.5));
-        }
-        @media (max-width: 900px) {
-            .grid {
-                grid-template-columns: 1fr;
-                gap: 1.8rem;
-            }
-            .subtitle-row {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 0.8rem;
-            }
-        }
-        @media (max-width: 640px) {
-            body {
-                padding: 1rem;
-            }
-            .logo {
-                font-size: 2rem;
-            }
-            .tagline {
-                font-size: 0.9rem;
-            }
-            .section-title {
-                font-size: 1.5rem;
-            }
-            .hero-content {
-                flex-direction: column;
-                text-align: center;
-            }
-            .hero-text {
-                text-align: center;
-            }
-            .subtitle-row {
-                flex-direction: column;
-                align-items: center;
-            }
-            .animation-wrapper {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-        .modal {
-            display: none;
+        .lang {
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.9);
-            z-index: 9999;
-            align-items: center;
-            justify-content: center;
-            padding: 2rem;
-            backdrop-filter: blur(8px);
-            transition: opacity 0.3s ease;
-        }
-        .modal img {
-            max-width: 95%;
-            max-height: 95%;
-            border-radius: 12px;
-            object-fit: contain;
-        }
-        .close-btn {
-            position: absolute;
-            top: 1rem;
+            top: 2rem;
             right: 2rem;
-            color: white;
-            font-size: 2.2rem;
-            cursor: pointer;
-            background: none;
-            border: none;
-        }
-        .video-wrapper {
-            text-align: center;
-            margin-bottom: 2rem;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        video {
-            width: 100%;
-            border-radius: 16px;
-        }
-        .animation-wrapper {
             display: flex;
-            justify-content: center;
-            gap: 5rem;
-            margin-bottom: 2rem;
+            gap: 0.5rem;
+            z-index: 2;
         }
-        .animation-item {
-             max-width: 350px;
-             width: 100%;
+        .lang a {
+            color: #555;
+            text-decoration: none;
+            font-size: 0.75rem;
+            padding: 0.3rem 0.6rem;
+            border: 1px solid #333;
+            border-radius: 4px;
+            transition: all 0.3s;
         }
-        .animation-item img {
-             width: 100%;
-             height: auto;
-             display: block;
-             border-radius: 8px;
-         }
-
-#ceilingAnimationLeft {
-    animation: glow-blue-white 5s ease-in-out infinite;
-}
-
-#ceilingAnimationRight {
-    animation: glow-blue-purple 7s ease-in-out infinite;
-}
-@keyframes glow-blue-white {
-    0%, 100% {
-        filter: brightness(1.3) saturate(1.2)
-                drop-shadow(0 0 8px rgba(74, 246, 244, 0.9))
-                drop-shadow(0 0 20px rgba(74, 246, 244, 0.5));
-    }
-    50% {
-        filter: brightness(1.6) saturate(1.0)
-                drop-shadow(0 0 12px rgba(255, 255, 255, 1))
-                drop-shadow(0 0 30px rgba(255, 255, 255, 0.7));
-    }
-}
-
-@keyframes glow-blue-purple {
-    0%, 100% {
-        filter: brightness(1.3) saturate(1.2)
-                drop-shadow(0 0 8px rgba(74, 246, 244, 0.9))
-                drop-shadow(0 0 20px rgba(74, 246, 244, 0.5));
-    }
-    50% {
-        filter: brightness(1.5) saturate(1.3)
-                drop-shadow(0 0 12px rgba(168, 85, 247, 0.9))
-                drop-shadow(0 0 30px rgba(168, 85, 247, 0.6));
-    }
-}        
+        .lang a:hover { color: #b8a310; border-color: #b8a310; }
+        .lang a.active { color: #b8a310; border-color: #b8a310; }
     </style>
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "CreativeWork",
-      "name": "FortuneCord",
-      "description": "A visual artist's line art world where a cord threads a coin to reinterpret ancient symbols and star charts.",
-      "creator": {
-        "@type": "Person",
-        "name": "Dan Chen"
-      },
-      "image": "https://fortunecord.com/assets/fortune-cord-post-heaven-taiji-single-strand-outer-ring-yin-yang-s-curve1200x630.jpg"
-    }
-    </script>
-    
 </head>
 <body>
-<div class="container">
-    <div class="lang-switch">
-        <a href="/" class="lang-btn">EN</a>
-        <a href="zh.html" class="lang-btn">简</a>
-        <a href="zh-tw.html" class="lang-btn active">繁</a>
+    <div class="lang">
+        <a href="/">EN</a>
+        <a href="/zh.html">简</a>
+        <a href="/zh-tw.html" class="active">繁</a>
     </div>
-
-    <div class="hero">
-        <div class="hero-content">
-            <img src="assets/fortunecord-logo2.png" class="logo-img" alt="FortuneCord Taiji Logo">
-            <div class="hero-text">
-                <h1 class="logo">FortuneCord<span style="font-size:0.5em;">™</span> | 鏈金術士的線稿世界</h1>
-                <div class="subtitle-row">
-                    <span class="tagline"><span class="highlight">星幣系統</span>——光影美學的數字藝術。</span>
-                    <div class="hero-buttons">
-                        <a href="https://fortunecord.github.io/fortunecord-artworks/" class="btn-primary">鏈金圖錄</a>
-                        <a href="/symbols.html?lang=zh-tw" class="btn-primary">意象解讀</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="center">
+        <h1>FortuneCord™</h1>
+        <div class="sub">星幣 · 鏈金 · 光影</div>
+        <a href="/world-tw.html" class="enter">進入</a>
     </div>
-
-    <div class="system-intro">
-        <div style="display: flex; justify-content: center; align-items: center; gap: 20px;"><h2 style="margin: 0;">“財繩”視覺系統</h2><img src="assets/fortunecord-coin-cord-logo-main.svg" style="width: 80px; flex-shrink: 0; filter: brightness(0.75) saturate(0.8) drop-shadow(0 0 3px rgba(255, 255, 255, 0.5)) drop-shadow(0 0 8px rgba(255, 255, 255, 0.3));"></div>
-        <p>以“繩串幣”為核心語言，轉譯：太極 · 八卦 · 河圖 · 洛書 · 星宿 · 星官 · 星座 · 其他星象<br>
-        公式：○ + □ + ─ = FORTUNE CORD （○ = 幣形 · □ = 幣孔 · ─ = 連線） <br>
-        幣形：從傳統圓幣，到花卉、水果、寶石、毛茸、賽博幣的萬物演化。</p>
-    </div>
-
-<div class="animation-wrapper">
-    <div class="animation-item">
-        <img id="ceilingAnimationLeft" src="assets/animations/anim-01.png" alt="Star Coin Animation Left">
-    </div>
-    <div class="animation-item">
-        <img id="ceilingAnimationRight" src="assets/animations/anim-35.png" alt="Star Coin Animation Right">
-    </div>
-</div>
-    
-    <div class="gallery">
-        <div class="section-title">圖譜集萃</div>
-        <div class="grid">
-              <div class="grid-item">
-                <img loading="lazy" src="assets/coin-cord-big-dipper-seven-coins-chart.jpg" alt="錢繩版北斗七幣圖" onclick="openModal(this)">
-                <div class="image-caption">錢繩版北斗七幣圖</div>
-              </div>
-              <div class="grid-item">
-                <img loading="lazy" src="https://fortunecord.github.io\fortunecord-artworks\6-big-dipper-collection\8-heart-coin-draft\heart-cord-seal-pendant-mulberry-coin.jpg" alt="心繩串幣-桑葚幣吊墜" onclick="openModal(this)">
-                <div class="image-caption">心繩串幣 · 桑葚幣吊墜</div>
-              </div>
-              <div class="grid-item">
-                <img loading="lazy" src="https://fortunecord.github.io/fortunecord-artworks/6-big-dipper-collection/5-flower-star-coin-big-dipper/fortune-cord-carnation-flower-star-coin-2-big-dipper.jpg" alt="康乃馨花卉星幣_北斗七幣圖" onclick="openModal(this)">
-                <div class="image-caption">康乃馨花卉星幣 · 北斗七幣圖</div>
-              </div>
-              <div class="grid-item">
-                <img loading="lazy" src="assets/watermelon-fruit-star-coin-big-dipper-seven-coins-chart.jpg" alt="西瓜水果星幣_北斗七幣圖" onclick="openModal(this)">
-                <div class="image-caption">西瓜水果星幣 · 北斗七幣圖</div>
-              </div>
-              <div class="grid-item">
-                <img loading="lazy" src="assets/big-dipper-seven-cats-chart.jpg" alt="北斗七寵_北斗七幣圖" onclick="openModal(this)">
-                <div class="image-caption">北斗七寵 · 北斗七幣圖</div>
-              </div>
-              <div class="grid-item">
-                <img loading="lazy" src="assets/big-dipper-beast-back-earless-furry-straight-line-tail.jpg" alt="無耳毛茸_蜷縮獸背_直線尾" onclick="openModal(this)">
-                <div class="image-caption">無耳毛茸 · 蜷縮獸背 · 直線尾</div>
-              </div>
-              <div class="grid-item">
-                <img loading="lazy" src="https://fortunecord.github.io/fortunecord-artworks/6-big-dipper-collection/3-fortune-cord-big-dipper-seven-pets-v1.0-1.8/v1.1-two-eared-beast-front-back/coin-cord-big-dipper-coins-fluffy-tail.jpg" alt="北斗二耳獸幣" onclick="openModal(this)">
-                <div class="image-caption">北斗二耳獸幣</div>
-              </div>
-              <div class="grid-item">
-                <img loading="lazy" src="https://fortunecord.github.io/fortunecord-artworks/6-big-dipper-collection/3-fortune-cord-big-dipper-seven-pets-v1.0-1.8/v1.4-earless-single-ear-beast-back/fortune-cord-big-dipper-7-coins-back-single-ear-furry-straight-thin-tail.jpg" alt="單耳毛茸_北斗七幣_方形口袋" onclick="openModal(this)">
-                <div class="image-caption">單耳毛茸 · 北斗七幣 · 方形口袋</div>
-              </div>
-              <div class="grid-item">
-                <img loading="lazy" src="https://fortunecord.github.io/fortunecord-artworks/6-big-dipper-collection/3-fortune-cord-big-dipper-seven-pets-v1.0-1.8/v1.5-pomeranian-samoyed-prick-ear/fortune-cord-big-dipper-7-pomeranian-star-coins-furry-straight-thin-tail.jpg" alt="北斗七博美犬幣" onclick="openModal(this)">
-                <div class="image-caption">北斗七博美犬幣</div>
-              </div>
-              <div class="grid-item">
-                <img loading="lazy" src="assets/carnation-star-coin-2-orion.jpg" alt="康乃馨星幣_獵戶座" onclick="openModal(this)">
-                <div class="image-caption">康乃馨星幣 · 獵戶座</div>
-              </div>
-              <div class="grid-item">
-                    <img loading="lazy" src="https://fortunecord.github.io/fortunecord-artworks/1-taiji-collection/7-fortune-cord-taiji-v1.2/cord-chain-taiji-furry-coin/heart-chain-outer-ring-minimalist-two-eared-beast-taiji.jpg" alt="心鏈-二耳獸幣-太極" onclick="openModal(this)">
-                    <div class="image-caption">心鏈 · 二耳獸幣 · 太極</div>
-              </div>
-              <div class="grid-item">
-                <img loading="lazy" src="https://fortunecord.github.io/fortunecord-artworks/1-taiji-collection/6-fortune-cord-taiji-v1.1/fortune-cord-pre-heaven-blockchain-taiji-furry-round-coin.jpg" alt="區塊鏈太極 · 毛茸圓幣" onclick="openModal(this)">
-                <div class="image-caption">區塊鏈太極 · 毛茸圓幣</div>
-              </div>
-              <div class="grid-item">
-                <img loading="lazy" src="https://fortunecord.github.io/fortunecord-artworks/1-taiji-collection/6-fortune-cord-taiji-v1.1/fortune-cord-pre-heaven-taiji-cross-chain-outer-ring-2.jpg" alt="先天跨鏈太極" onclick="openModal(this)">
-                <div class="image-caption">先天跨鏈太極</div>                  
-              </div>    
-              <div class="grid-item">
-                <img loading="lazy" src="https://fortunecord.github.io/fortunecord-artworks/10-stellar-radiance/star-coin-pulse-later-heaven-bagua-round-coin-spiral-cord-chain-ray.jpg" alt="星幣脈衝 · 後天八卦圓幣 · 螺旋繩鏈光芒" onclick="openModal(this)">
-                <div class="image-caption">恆星閃耀 · 後天八卦圓幣 · 螺旋繩鏈光芒</div>
-              </div>
-              <div class="grid-item">
-                <img loading="lazy" src="https://fortunecord.github.io/fortunecord-artworks/10-stellar-radiance/star-coin-pulse-floral-perforation-round-coin-figure-eight-cord-ray.jpg" alt="星幣脈衝 · 花穿孔圓幣 · 8字形繩光芒" onclick="openModal(this)">
-                <div class="image-caption">恆星閃耀 · 花穿孔圓幣 · 8字形繩光芒</div>
-              </div>
-              <div class="grid-item">
-                <img loading="lazy" src="https://fortunecord.github.io/fortunecord-artworks/13-cyber-alchemy/cyber-alchemy-coin-stellar-radiance-square-hole-heart-coin-straight-ray-1.png" alt="恆星閃耀 · 賽博鍊金心幣 · 直線光芒" onclick="openModal(this)" class="cyber-png">
-                <div class="image-caption">恆星閃耀 · 賽博鍊金心幣 · 直線芒</div>
-              </div>    
-              <div class="grid-item">
-                <img loading="lazy" src="https://fortunecord.github.io/fortunecord-artworks/13-cyber-alchemy/cyber-alchemy-coin-stellar-radiance-water-ripple-ray.png" alt="星幣脈衝 · 賽博鍊金幣 · 水波紋光芒" onclick="openModal(this)" class="cyber-png">
-                <div class="image-caption">星幣脈衝 · 花穿孔圓幣 · 水波紋光芒</div>
-              </div>
-              <div class="grid-item">
-                <img loading="lazy" src="https://fortunecord.github.io/fortunecord-artworks/13-cyber-alchemy/cyber-alchemy-coin-little-dipper-3.png" alt="小熊座小北斗寶石星幣" onclick="openModal(this)" class="cyber-png">
-                <div class="image-caption">小熊座 · 小北斗寶石星幣</div> 
-              </div>
-              <div class="grid-item">
-                <img loading="lazy" src="https://fortunecord.github.io/fortunecord-artworks/13-cyber-alchemy/cyber-alchemy-coin-aquila-2.png" alt="賽博鍊金幣 · 天鷹座星象連接線" onclick="openModal(this)" class="cyber-png">
-                <div class="image-caption">賽博鍊金幣 · 天鷹座星線</div>
-              </div>
-              <div class="grid-item">
-                <img loading="lazy" src="https://fortunecord.github.io/fortunecord-artworks/13-cyber-alchemy/cyber-alchemy-coin-pisces.png" alt="賽博鍊金 · 雙魚星座連線圖" onclick="openModal(this)" class="cyber-png">
-                <div class="image-caption">賽博鍊金 · 雙魚星座連線圖</div>
-              </div>
-              <div class="grid-item">
-                <img loading="lazy" src="https://fortunecord.github.io/fortunecord-artworks/13-cyber-alchemy/cyber-alchemy-coin-heart-shaped-yin-yang-line-frame-taiji.png" alt="賽博鍊金 · 心幣太極" onclick="openModal(this)" class="cyber-png">
-                <div class="image-caption">賽博鍊金 · 心幣太極</div>
-              </div>
-              <div class="grid-item">
-                <img loading="lazy" src="https://fortunecord.github.io/fortunecord-artworks/13-cyber-alchemy/cyber-alchemy-coin-later-heaven-taiji.png" alt="賽博鍊金 · 後天太極" onclick="openModal(this)" class="cyber-png">
-                <div class="image-caption">賽博鍊金 · 後天太極</div>
-              </div>  
-              <div class="grid-item">
-                    <img loading="lazy" src="https://fortunecord.github.io/fortunecord-artworks/13-cyber-alchemy/cyber-alchemy-coin-taiji-hetu.png" alt="賽博鍊金幣 · 太極河圖" onclick="openModal(this)" class="cyber-png">
-                    <div class="image-caption">賽博鍊金幣 · 太極河圖</div>
-              </div>    
-              <div class="grid-item">
-                <img loading="lazy" src="https://fortunecord.github.io/fortunecord-artworks/12-fortune-craft/cyber-alchemy-coin-money-tree.png" alt="搖錢術 · 異形幣 · 搖錢樹" onclick="openModal(this)" class="cyber-png">
-                <div class="image-caption">搖錢術 · 異形幣 ·搖錢樹</div>
-              </div>   
-        </div>
-    </div>
-
-    <div class="intro-text">
-        <p>古代，星幣鏈金術士的工作，是看清鏈金的本相，把圓、方、繩這些本相，一筆一筆畫出來。</p>
-        <p>圓是天道循環，財富流轉不息；方是規矩邊界，賺多少留多少，心裡有數；繩是連結——把散落的財富串起來，把斷了的流轉接起來。</p>
-        <p>白幣為顯，流動生長；黑幣為藏，根基穩當。一顯一藏，一進一守，方是完整的財富觀。</p>
-        <p>靜候同頻者，以此繩共織萬物：印刷品、紡織品、珠寶、星空頂、食品包裝、NFT。</p>
-    </div>
-
-    <div class="contact">
-        <p>對“財繩”視覺系統感興趣，希望將其應用於您自己的太極、星座或星象符號再創作？歡迎聯繫合作或授權。</p>
-        <p>丹 · 星幣視覺藝術工作者</p>
-        <p>📧 咨詢：fortunecord [at] qq [dot] com <span style="font-size:0.85rem;">（請將 [at] 替換為 @，[dot] 替換為 .）</span></p>
-    </div>
-
-    <footer>
-        <div class="footer-logo" style="margin-bottom: 10px;">
-            <img src="assets/coin-cord-star-coin-logo-secondary.svg" alt="Coin Cord Logo" style="height: 80px;">
-        </div>
-        <div class="footer-links">
-            <a href="https://fortunecord.wordpress.com" target="_blank" rel="noopener noreferrer" class="btn-primary">✦ Blog</a>
-            <a href="https://github.com/fortunecord/fortunecord.github.io" target="_blank" rel="noopener noreferrer" class="btn-primary">✦ GitHub</a>
-            <a href="/legal.html" class="btn-primary">✦ Legal</a>
-        </div>
-        <p>© 2026 FortuneCord | 版權所有。</p>
-    </footer>
-</div>
-
-<div class="modal" id="imageModal">
-    <button class="close-btn" onclick="closeModal()">&times;</button>
-    <img id="modalImage" src="" alt="Preview">
-</div>
-
-<script>
-    const modal = document.getElementById('imageModal');
-    const modalImage = document.getElementById('modalImage');
-    function openModal(img) {
-        modalImage.src = img.src;
-        modalImage.alt = img.alt;
-        modal.style.display = 'flex';
-        document.body.style.overflow = 'hidden';
-    }
-    function closeModal() {
-        modal.style.display = 'none';
-        document.body.style.overflow = '';
-    }
-    modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
-    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
-
-        const animLeft = document.getElementById('ceilingAnimationLeft');
-        const animRight = document.getElementById('ceilingAnimationRight');
-        let leftIndex = 1;
-        let rightIndex = 35;
-        const totalImages = 35;
-
-        function updateLeft() {
-                leftIndex = leftIndex >= totalImages ? 1 : leftIndex + 1;
-                animLeft.src = 'assets/animations/anim-' + String(leftIndex).padStart(2, '0') + '.png';
-        }
-
-        function updateRight() {
-                rightIndex = rightIndex <= 1 ? totalImages : rightIndex - 1;
-                animRight.src = 'assets/animations/anim-' + String(rightIndex).padStart(2, '0') + '.png';
-        }
-
-        setInterval(updateLeft, 5000);
-        setInterval(updateRight, 4000);
-</script>
 </body>
 </html>
-    
