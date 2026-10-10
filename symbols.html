@@ -76,7 +76,7 @@
                     </div>
                 </div>
             </div>
-            <span class="tagline"><span class="highlight">Star Coin System</span> — Digital Art of Light & Shadow Aesthetics.</span>
+            <span class="tagline"><span class="highlight">Star Coin System</span> — Tech + Night Tourism / Immersive Spaces · Light & Shadow Digital Art.</span>
         </div>
 
         <div id="content-zh" class="lang-content" style="display: none;">
@@ -187,6 +187,12 @@
             else if (lang === 'zh-tw') { zhTwDiv.style.display = 'block'; }
             else { enDiv.style.display = 'block'; }
             btns.forEach(btn => { btn.classList.toggle('active', btn.dataset.lang === lang); });
+            const homeBtn = document.querySelector('a.btn-primary[href="/"]');
+            if (homeBtn) {
+                if (lang === 'zh') homeBtn.href = '/world-zh.html';
+                else if (lang === 'zh-tw') homeBtn.href = '/world-zh-tw.html';
+                else homeBtn.href = '/world.html';
+            }
         }
         btns.forEach(btn => {
             btn.addEventListener('click', (e) => {
