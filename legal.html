@@ -68,7 +68,7 @@
                     <div class="subtitle-row">
                         <span class="subtitle-en">Chain Alchemyst's Line Art World</span>
                         <div class="hero-buttons">
-                            <a href="/" class="btn-primary">Home</a>
+                            <a href="/" class="btn-primary" id="homeBtn">Home</a>
                             <a href="https://fortunecord.github.io/fortunecord-artworks/" class="btn-primary">Gallery</a>
                             <a href="/symbols.html?lang=en" class="btn-primary">Symbolism</a>
                         </div>
@@ -187,7 +187,7 @@
             else if (lang === 'zh-tw') { zhTwDiv.style.display = 'block'; }
             else { enDiv.style.display = 'block'; }
             btns.forEach(btn => { btn.classList.toggle('active', btn.dataset.lang === lang); });
-            const homeBtn = document.querySelector('a.btn-primary[href="/"]');
+            const homeBtn = document.getElementById('homeBtn');
             if (homeBtn) {
                 if (lang === 'zh') homeBtn.href = '/world-zh.html';
                 else if (lang === 'zh-tw') homeBtn.href = '/world-tw.html';
@@ -198,6 +198,12 @@
                 if (lang === 'zh') legalBtn.href = '/legal.html?lang=zh';
                 else if (lang === 'zh-tw') legalBtn.href = '/legal.html?lang=zh-tw';
                 else legalBtn.href = '/legal.html?lang=en';
+            }
+            const symbolBtn = document.querySelector('a.btn-primary[href^="/symbols.html"]');
+            if (symbolBtn) {
+                if (lang === 'zh') symbolBtn.href = '/symbols.html?lang=zh';
+                else if (lang === 'zh-tw') symbolBtn.href = '/symbols.html?lang=zh-tw';
+                else symbolBtn.href = '/symbols.html?lang=en';
             }
         }
         btns.forEach(btn => {
