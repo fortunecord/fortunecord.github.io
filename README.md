@@ -3,7 +3,7 @@
 
 # fortunecord.github.io
 
-FortuneCord: Star Coin Ceiling Art. Black & white line art for starlight headliners, interiors, and licensing.
+FortuneCord: Star Coin Ceiling Art. Black & white line art for night tourism, immersive spaces, starlight headliners, interiors, and licensing opportunities.
 
 Dan, a star coin visual art practitioner.
 
