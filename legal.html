@@ -193,6 +193,12 @@
                 else if (lang === 'zh-tw') homeBtn.href = '/world-zh-tw.html';
                 else homeBtn.href = '/world.html';
             }
+            const legalBtn = document.querySelector('a.footer-link[href^="/legal.html"]');
+            if (legalBtn) {
+                if (lang === 'zh') legalBtn.href = '/legal.html?lang=zh';
+                else if (lang === 'zh-tw') legalBtn.href = '/legal.html?lang=zh-tw';
+                else legalBtn.href = '/legal.html?lang=en';
+            }
         }
         btns.forEach(btn => {
             btn.addEventListener('click', (e) => {
