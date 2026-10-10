@@ -198,6 +198,12 @@
                 else if (lang === 'zh-tw') legalBtn.href = '/legal.html?lang=zh-tw';
                 else legalBtn.href = '/legal.html?lang=en';
             }
+            const symbolBtn = document.querySelector('a.btn-primary[href^="/symbols.html"]');
+            if (symbolBtn) {
+                if (lang === 'zh') symbolBtn.href = '/symbols.html?lang=zh';
+                else if (lang === 'zh-tw') symbolBtn.href = '/symbols.html?lang=zh-tw';
+                else symbolBtn.href = '/symbols.html?lang=en';
+            }
         }
         btns.forEach(btn => {
             btn.addEventListener('click', (e) => {
