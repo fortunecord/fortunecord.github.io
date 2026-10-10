@@ -183,11 +183,17 @@
         const btns = document.querySelectorAll('.lang-btn');
 
         function setLang(lang) {
-            enDiv.style.display = 'none'; zhDiv.style.display = 'none'; zhTwDiv.style.display = 'none';
+            zhDiv.style.display = 'none'; zhTwDiv.style.display = 'none'; enDiv.style.display = 'none';
             if (lang === 'zh') { zhDiv.style.display = 'block'; }
             else if (lang === 'zh-tw') { zhTwDiv.style.display = 'block'; }
             else { enDiv.style.display = 'block'; }
             btns.forEach(btn => { btn.classList.toggle('active', btn.dataset.lang === lang); });
+            const homeBtn = document.querySelector('a.btn-primary[href="/"]');
+            if (homeBtn) {
+                if (lang === 'zh') homeBtn.href = '/world-zh.html';
+                else if (lang === 'zh-tw') homeBtn.href = '/world-zh-tw.html';
+                else homeBtn.href = '/world.html';
+            }
         }
         btns.forEach(btn => {
             btn.addEventListener('click', (e) => {
