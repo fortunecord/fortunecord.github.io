@@ -69,7 +69,7 @@
                         <span class="subtitle-en">Chain Alchemyst's Line Art World</span>
                         <div class="hero-buttons">
                             <a href="/" class="btn-primary" id="homeBtn">Home</a>
-                            <a href="https://fortunecord.github.io/fortunecord-artworks/" class="btn-primary">Gallery</a>
+                            <a href="https://fortunecord.github.io/fortunecord-artworks/" class="btn-primary" id="galleryBtn">Gallery</a>
                             <a href="/symbols.html?lang=en" class="btn-primary">Symbolism</a>
                         </div>
                     </div>
@@ -187,23 +187,33 @@
             else if (lang === 'zh-tw') { zhTwDiv.style.display = 'block'; }
             else { enDiv.style.display = 'block'; }
             btns.forEach(btn => { btn.classList.toggle('active', btn.dataset.lang === lang); });
+
             const homeBtn = document.getElementById('homeBtn');
             if (homeBtn) {
                 if (lang === 'zh') homeBtn.href = '/world-zh.html';
                 else if (lang === 'zh-tw') homeBtn.href = '/world-tw.html';
                 else homeBtn.href = '/world.html';
             }
+
+            const galleryBtn = document.getElementById('galleryBtn');
+            if (galleryBtn) {
+                if (lang === 'zh') galleryBtn.textContent = '链金图录';
+                else if (lang === 'zh-tw') galleryBtn.textContent = '鏈金圖錄';
+                else galleryBtn.textContent = 'Gallery';
+            }
+
             const legalBtn = document.querySelector('a.footer-link[href^="/legal.html"]');
             if (legalBtn) {
                 if (lang === 'zh') legalBtn.href = '/legal.html?lang=zh';
                 else if (lang === 'zh-tw') legalBtn.href = '/legal.html?lang=zh-tw';
                 else legalBtn.href = '/legal.html?lang=en';
             }
+
             const symbolBtn = document.querySelector('a.btn-primary[href^="/symbols.html"]');
             if (symbolBtn) {
-                if (lang === 'zh') symbolBtn.href = '/symbols.html?lang=zh';
-                else if (lang === 'zh-tw') symbolBtn.href = '/symbols.html?lang=zh-tw';
-                else symbolBtn.href = '/symbols.html?lang=en';
+                if (lang === 'zh') { symbolBtn.href = '/symbols.html?lang=zh'; symbolBtn.textContent = '意象解读'; }
+                else if (lang === 'zh-tw') { symbolBtn.href = '/symbols.html?lang=zh-tw'; symbolBtn.textContent = '意象解讀'; }
+                else { symbolBtn.href = '/symbols.html?lang=en'; symbolBtn.textContent = 'Symbolism'; }
             }
         }
         btns.forEach(btn => {
