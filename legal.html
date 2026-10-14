@@ -190,9 +190,9 @@
 
             const homeBtn = document.getElementById('homeBtn');
             if (homeBtn) {
-                if (lang === 'zh') homeBtn.href = '/world-zh.html';
-                else if (lang === 'zh-tw') homeBtn.href = '/world-tw.html';
-                else homeBtn.href = '/world.html';
+                if (lang === 'zh') { homeBtn.href = '/world-zh.html'; homeBtn.textContent = '首页'; }
+                else if (lang === 'zh-tw') { homeBtn.href = '/world-tw.html'; homeBtn.textContent = '首頁'; }
+                else { homeBtn.href = '/world.html'; homeBtn.textContent = 'Home'; }
             }
 
             const galleryBtn = document.getElementById('galleryBtn');
